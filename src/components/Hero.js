@@ -1,9 +1,10 @@
-import hero from "./images/heroBackground.jpg"
 
 const Hero = () => {
     return(
         <div className = 'hero-container'>
-            <img className = 'hero' src = {hero} alt = 'hero background'/>
+            <div className = 'background-hero'>
+                
+            </div>
         </div>
     )
 }

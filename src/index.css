@@ -1,14 +1,40 @@
 body {
-    background-color: greenyellow;
+    background-color: rgb(245,245,0247);
     margin: 0%;
 }
 
+/* Hero container */
+
+.background-hero {
+    background-image: url(./components/images/heroBackground.jpg);
+    width: 100%;
+    height: 35em;
+    background-size: cover;
+    background-repeat: none;
+    background-position:center;
+    
+}
 
 /* Nav */
+.navBar{
+    background-color: #262626;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    width: 100%;
+    position: sticky;
+    transition: background-color 0.25s ease-out;
+    z-index: 999;
+    bottom: 0%;
+    top: 0%;
+}
+
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: xxx-large;
+    font-size: xx-large;
     color: aliceblue;
 }
 
@@ -25,7 +51,7 @@ nav {
     align-items: baseline;
 }
 
-.nav-list {
+.navList {
     font-family: 'Fira Sans Condensed', sans-serif;
     color: aliceblue;
     font-size: large;
@@ -34,13 +60,14 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-;
     padding: 0%;
     transition: all .2s ease-in-out; 
+    margin: 0%;
 }
 
-.nav-list > li:hover {
-    transform: scale(1.15);
+
+.navList > li:hover {
+   
     color: rgb(203, 103, 103);
 }
 
@@ -55,6 +82,7 @@ nav {
 }
 
 /* Main */
+
 main {
     margin: 1rem ;
     display: grid;
@@ -65,6 +93,8 @@ main {
 }
 
 .section-title{
+    grid-column: 3/5;
+    margin-inline: 10px;
     font-family: 'Fira Sans Condensed', sans-serif;
     color: #262626;
     position: relative;
@@ -72,7 +102,7 @@ main {
 .section-title:after{
     content: '';
     color:rgb(203, 103, 103);
-    width: 25%;
+    width: 15%;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -80,6 +110,51 @@ main {
     border-style: solid;
 }
 
+/*Effectign all card internals*/
+
+.card-article {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image {
+    border-radius: 5px;
+}
+
+.card-date {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    font-size: 1rem;
+    background-color: white;
+    position: absolute;
+    width: fit-content;
+    color: #262626;
+}
+
+.card-description{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    margin:0;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+}
+
+.card-author {
+    margin: 0%;
+}
+
+.card-summary {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    margin-bottom: 0%;
+    font-size: 1.5rem;
+}
 
 /* hero news 3 cards*/
 .news-hero {
@@ -88,30 +163,24 @@ main {
     grid-template-columns: repeat(8,1fr);
     gap: 1em;
 }
-
 .news-banner{
+    border-radius: 10px;
     grid-column: 1/6;
     grid-row: 1/3;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215) ;
+   
     height: 30rem;
 }
 .editor-choice{
+    border-radius: 10px;
     grid-column: 6/9;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
 .latest {
+    border-radius: 10px;
     grid-column: 6/9;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
-
-
-
-
-
-
-
-
-
 
 /*Tech card stack of 3 with slider*/
 .technology-section{
@@ -122,28 +191,29 @@ main {
 }
 
 .tec-card-one{
-    height: 35rem;
+    border-radius: 10px;
+    height: 45rem;
     grid-column: 1/5;
-    background-color: rgb(245,245,247)
+    background-color: rgb(214,216,215)
 }
 .tec-card-two{
+    height: 45rem;
+    border-radius: 10px;
     grid-column: 5/9;
-    background-color: rgb(245,245,247)
+    background-color: rgb(214,216,215)
 }
 .tec-card-three{
+    height: 45rem;
+    border-radius: 10px;
     grid-column: 9/13;
-    background-color: rgb(245,245,247)
+    background-color: rgb(214,216,215)
 }
 .tec-slide{
+    border-radius: 10px;
     height: 30rem;
     grid-column: 1/13;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
-
-
-
-
-
 
 /* Social media Set Up page section */
 .set-up-section{
@@ -152,72 +222,96 @@ main {
     grid-template-columns: repeat(8,1fr);
     gap: 1em
 }
-
 .set-slide-one{
+    border-radius: 10px;
     height: 35rem;
     grid-column: 1/5;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
 .set-slide-two{
-    
+    border-radius: 10px;
     grid-column: 5/9;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
 
-
-
-
-
-
-
-
-
-
 /*Hobby card section of 3*/
+
 .hobby-section{
-    
     grid-column: 3/11;
     display: grid;
     grid-template-columns: repeat(12,1fr);
     gap: 1em
 }
-
 .hobby-card-one{
-    height: 35rem;
+    border-radius: 10px;
+    height: 45rem;
     grid-column: 1/5;
-    background-color: rgb(245,245,247)
+    background-color: rgb(214,216,215)
 }
 .hobby-card-two{
+    height: 45rem;
+    border-radius: 10px;
     grid-column: 5/9;
-    background-color: rgb(245,245,247)
+    background-color: rgb(214,216,215)
 }
 .hobby-card-three{
+    height: 45rem;
+    border-radius: 10px;
     grid-column: 9/13;
-    background-color: rgb(245,245,247)
+    background-color: rgb(214,216,215)
 }
 
-
-
 /*Food section of 3*/
+
 .food-section {
     grid-column: 3/11;
     display: grid;
     grid-template-columns: repeat(8,1fr);
     gap: 1em
 }
-
 .food-card-one{
+    border-radius: 10px;
     height: 15rem;
     grid-column: 1/9;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
 .food-card-two{
+    border-radius: 10px;
     height: 15rem;
     grid-column: 1/9;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
 }
 .food-card-three{
+    border-radius: 10px;
     height: 15rem;
     grid-column: 1/9;
-    background-color: rgb(245,245,247);
+    background-color: rgb(214,216,215);
+}
+
+/* Footer section */
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #262626;
+
+}
+.footer-icons > ul{
+    display: flex;
+    flex-direction: row;
+}
+.icon-list > li{
+    width: 5rem;
+    list-style: none ;
+}
+.icon-list > li > img {
+    width: 3rem;
+}
+.footer-summary {
+    font-size: large;
+    font-family: 'Fira Sans Condensed',sans-serif;
+    color: azure;
 }
