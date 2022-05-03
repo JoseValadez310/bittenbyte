@@ -42,13 +42,13 @@ const Main = () => {
             
 
 
-            <h1 className = 'section-title'>Technology</h1>
-                <div className = 'technology-section' >
-                    
+            
+            <div className = 'technology-section' >
+                <h1 className = 'section-title'>Technology</h1>    
                     <div className = 'tec-card-one'>
                         <div className = 'card-article'>
                             <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} alt = ' Soon hear you' />
+                            <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'something' />
                                 <div className = 'card-description'>
                                     <h1 className = 'card-title'>
                                         {techArticle[techLength-1].title}
@@ -66,16 +66,16 @@ const Main = () => {
                     <div className = 'tec-card-two'>
                         <div className = 'card-article'>
                             <small className = 'card-date'> {techArticle[techLength-2].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} alt = 'Coming Soon hear you' />
+                            <img className = 'card-image' src = {techArticle[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                                 <div className = 'card-description'>
                                     <h1 className = 'card-title'>
-                                        {techArticle[techLength-1].title}
+                                        {techArticle[techLength-2].title}
                                         </h1>
                                     <h4 className = 'card-author'>
-                                        {techArticle[techLength-1].author}
+                                        {techArticle[techLength-2].author}
                                         </h4>
                                     <p className = 'card-summary'>
-                                        {techArticle[techLength-1].summary}
+                                        {techArticle[techLength-2].summary}
                                     </p>
                                 </div>      
                         </div>
@@ -84,16 +84,16 @@ const Main = () => {
                     <div className = 'tec-card-three'>
                         <div className = 'card-article'>    
                             <small className = 'card-date'> {techArticle[techLength-3].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} alt = 'Coming Soon hear you' />
+                            <img className = 'card-image' src = {techArticle[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                                 <div className = 'card-description'>
                                     <h1 className = 'card-title'>
-                                        {techArticle[techLength-1].title}
+                                        {techArticle[techLength-3].title}
                                         </h1>
                                     <h4 className = 'card-author'>
-                                        {techArticle[techLength-1].author}
+                                        {techArticle[techLength-3].author}
                                         </h4>
                                     <p className = 'card-summary'>
-                                        {techArticle[techLength-1].summary}
+                                        {techArticle[techLength-3].summary}
                                     </p>
                                 </div>
                         </div>
@@ -109,8 +109,9 @@ const Main = () => {
 
 
 
-            <h1 className = 'section-title'>Set-Ups</h1>
-                <div className = 'set-up-section'>
+            
+            <div className = 'set-up-section'>
+                <h1 className = 'section-title'>Set-Ups</h1>
                     <div className = 'set-slide-one'>
                         <h1>
                         set up slide 
@@ -125,12 +126,13 @@ const Main = () => {
 
                 </div>
 
-            <h1 className = 'section-title' >Hobbies</h1>
-                <div className = 'hobby-section'>
+            
+            <div className = 'hobby-section'>
+                <h1 className = 'section-title' >Hobbies</h1>
                     <div className = 'hobby-card-one'>
                         <div className = 'card-article'>                        
                             <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} alt = 'Coming Soon hear you' />    
+                            <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'Coming Soon near you' />    
                                 <div className = 'card-description'>
                                     <h1 className = 'card-title'>
                                         {techArticle[techLength-1].title}
@@ -148,7 +150,7 @@ const Main = () => {
                     <div className = 'hobby-card-two'>
                         <div className = 'card-article'>        
                             <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} alt = 'Coming Soon hear you' />
+                            <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                                 <div className = 'card-description'>
                                     <h1 className = 'card-title'>
                                         {techArticle[techLength-1].title}
@@ -166,7 +168,7 @@ const Main = () => {
                     <div className = 'hobby-card-three'>
                         <div className = 'card-article'>
                             <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} alt = 'Coming Soon hear you' />
+                            <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                                 <div className = 'card-description'>
                                     <h1 className = 'card-title'>
                                         {techArticle[techLength-1].title}
@@ -185,57 +187,73 @@ const Main = () => {
 
 
 
-            <h1 className = 'section-title'>Food</h1>
-                <div className = 'food-section'>
-                    
+            
+            <div className = 'food-section'>
+                <h1 className = 'section-title'>Food</h1>           
                     <div className = 'food-card-one'>
-                        <div className = 'card-article'> 
-                            <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].img} alt = 'Coming Soon hear you' />
+                        <div className = 'side-card-article'> 
+                            <div className = 'card-description'>
+                                <h1 className = 'card-title'>
+                                    {techArticle[techLength-1].title}
+                                    </h1>
+                                <h4 className = 'card-author'>
+                                    {techArticle[techLength-1].author}
+                                    </h4>
+                                <p className = 'card-summary'>
+                                    {techArticle[techLength-1].summary}
+                                </p>
+                            </div>
                             
-                            <h1 className = 'card-title'>
-                                {techArticle[techLength-1].title}
-                                </h1>
-                            <h4 className = 'card-author'>
-                                {techArticle[techLength-1].author}
-                                </h4>
-                            <p className = 'summary'>
-                                {techArticle[techLength-1].summary}
-                            </p>
+                            <div className = 'image-container'>
+                                <small className = 'card-date'> {techArticle[techLength-1].date} </small>
+                                <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
+                            </div>
+                            
                         </div>
                     </div>
 
                     <div className = 'food-card-two'>
-                        <div className = 'card-article'>   
-                            <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].img} alt = 'Coming Soon hear you' />
-                            
-                            <h1 className = 'card-title'>
-                                {techArticle[techLength-1].title}
-                                </h1>
-                            <h4 className = 'card-author'>
-                                {techArticle[techLength-1].author}
-                                </h4>
-                            <p className = 'summary'>
-                                {techArticle[techLength-1].summary}
-                            </p>        
+
+                        <div className = 'side-card-article'> 
+                            <div className = 'image-container'>
+                                <small className = 'card-date'> {techArticle[techLength-1].date} </small>
+                                <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
+                            </div>
+
+                            <div className = 'card-description'>
+                                <h1 className = 'card-title'>
+                                    {techArticle[techLength-1].title}
+                                    </h1>
+                                <h4 className = 'card-author'>
+                                    {techArticle[techLength-1].author}
+                                    </h4>
+                                <p className = 'card-summary'>
+                                    {techArticle[techLength-1].summary}
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <div className = 'food-card-three'>
-                        <div className = 'card-article'>
-                            <small className = 'card-date'> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].img} alt = 'Coming Soon hear you' />
+                
+                        <div className = 'side-card-article'> 
+                            <div className = 'card-description'>
+                                <h1 className = 'card-title'>
+                                    {techArticle[techLength-1].title}
+                                    </h1>
+                                <h4 className = 'card-author'>
+                                    {techArticle[techLength-1].author}
+                                    </h4>
+                                <p className = 'card-summary'>
+                                    {techArticle[techLength-1].summary}
+                                </p>
+                            </div>
                             
-                            <h1 className = 'card-title'>
-                                {techArticle[techLength-1].title}
-                                </h1>
-                            <h4 className = 'card-author'>
-                                {techArticle[techLength-1].author}
-                                </h4>
-                            <p className = 'summary'>
-                                {techArticle[techLength-1].summary}
-                            </p>  
+                            <div className = 'image-container'>
+                                <small className = 'card-date'> {techArticle[techLength-1].date} </small>
+                                <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

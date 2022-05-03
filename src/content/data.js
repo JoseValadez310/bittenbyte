@@ -57,19 +57,19 @@ const data = {
         {
             'id'    : 5,
             'date'  : 'April 3, 2020',
-            'image' : 'url',
-            'title' : 'Understanding how to create a blog tester',
+            'image' : image.tech2,
+            'title' : "Apple's Newest Data Mine",
             'author': 'Jose Valadez',
-            'summary' : 'Understanding the size of the text is a very important. I dont need it to be too small nor too large. It also has to be readable for the reader. I should test it with my distance text reading test. This is where I take off my glasses and try to read what’s on screen from a few step away. If can sucessfully read everything on screen, then I pass. ',
+            'summary' : "I have focused a bit too much energy on the card's appearance. The time spent would have been better used on figuring out my routes. I think I will give myself deadlines in hopes of increasing productivity  ",
             'content' : 'the blog post'
         },
         {
             'id'    : 6,
             'date'  : 'April 5, 2020',
-            'image' : 'url',
-            'title' : 'Understanding how to create a blog tester',
+            'image' : image.tech1,
+            'title' : 'Learning the Step towards',
             'author': 'Jose Valadez',
-            'summary' : 'Understanding the size of the text is a very important. I dont need it to be too small nor too large. It also has to be readable for the reader. I should test it with my distance text reading test. This is where I take off my glasses and try to read what’s on screen from a few step away. If can sucessfully read everything on screen, then I pass. ',
+            'summary' : " This section should be dedicated to the Articles thesis. If not that a catchy saying or quote. As a result i might increase the font size  ",
             'content' : 'the blog post'
         },
         {
@@ -78,7 +78,7 @@ const data = {
             'image' : image.tech0 ,
             'title' : "Nvidia's Newest Deal ",
             'author': 'Baby Yoda',
-            'summary' : 'Understanding the size of the text is a very important. I dont need it to be too small nor too large. It also has to be readable for the reader. I should test it with my distance text reading test. This is where I take off my glasses and try to read what’s on screen from a few step away. If can sucessfully read everything on screen, then I pass. ',
+            'summary' : 'Have you ever been stuck between a wet noodle and a hard boiled egg? No, okay because nor have I...anyways, welcome to the latest entry of Bitten Bites special Tech opener ',
             'content' : 'the blog post'
         }
         
