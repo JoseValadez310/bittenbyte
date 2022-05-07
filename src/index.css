@@ -1,6 +1,5 @@
 body {
-     background-color: rgb(245,245,0247); 
-   
+    background-color: rgb(248,248,255); 
     margin: 0%;
 }
 
@@ -115,23 +114,24 @@ main {
 
 .card-article {
     padding: 0%;
-    border-radius: 10px 10px 0px 0px;
+    
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .side-card-article {
     height: inherit;
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
 }
 .card-image {
-    width:auto;
+    height: auto;
     border-radius: 10px 10px 0px 0px;
 }
 
 .image-container > img {
-    width: 35rem;
+    width: 30rem;
     border-radius: 0px 10px 0px 10px;
 }
 
@@ -157,6 +157,7 @@ main {
 }
 
 .card-title {
+    text-align: center;
     font-size: 2rem;
     font-family: 'Playfair Display', serif;
     font-weight: 100;
@@ -181,25 +182,26 @@ main {
     grid-template-columns: repeat(8,1fr);
     gap: 1em;
 }
+
+.news-banner,
+.editor-choice, 
+.latest{
+    border-radius: 10px;
+    box-shadow:  0px 5px 10px -5px #262626;
+    background-color: white;
+    overflow: hidden;
+}
+.editor-choice, 
+.latest{
+    grid-column: 5/9;
+    height: 20rem;
+}
 .news-banner{
-    border-radius: 10px;
-    grid-column: 1/6;
+    grid-column: 1/5;
     grid-row: 1/3;
-    background-color: white ;
-    height: 40rem;
+    height: 41rem;
 }
-.editor-choice{
-    border-radius: 10px;
-    grid-column: 6/9;
-    background-color: white;;
-    overflow: hidden;
-}
-.latest {
-    border-radius: 10px;
-    grid-column: 6/9;
-    background-color: white;;
-    overflow: hidden;
-}
+
 
 /*Tech card stack of 3 with slider*/
 .technology-section{
@@ -209,7 +211,10 @@ main {
     gap: 1em
 }
 
-.tec-card-one, .tec-card-two, .tec-card-three, .tec-slide{
+.tec-card-one, 
+.tec-card-two, 
+.tec-card-three, 
+.tec-slide{
     box-shadow:  0px 5px 10px -5px #262626;
     border-radius: 10px;
     height: 45rem;
@@ -234,7 +239,8 @@ main {
     grid-template-columns: repeat(8,1fr);
     gap: 1em
 }
-.set-slide-one, .set-slide-two {
+.set-slide-one, 
+.set-slide-two {
     box-shadow:  0px 5px 10px -5px #262626;
     border-radius: 10px;
     height: 45rem;
@@ -254,7 +260,9 @@ main {
     grid-template-columns: repeat(12,1fr);
     gap: 1em
 }
-.hobby-card-one, .hobby-card-two, .hobby-card-three {
+.hobby-card-one, 
+.hobby-card-two, 
+.hobby-card-three {
     box-shadow:  0px 5px 10px -5px #262626;
     border-radius: 10px;
     height: 45rem;
@@ -276,10 +284,12 @@ main {
     grid-template-columns: repeat(8,1fr);
     gap: 1em
 }
-.food-card-one, .food-card-two, .food-card-three{
+.food-card-one, 
+.food-card-two, 
+.food-card-three{
     box-shadow:  0px 5px 10px -5px #262626;
     border-radius: 10px;
-    height: 20rem;
+    height: 19rem;
     grid-column: 1/9;
     background-color: white;
     overflow: hidden;
@@ -303,15 +313,16 @@ main {
 
 }
 .footer-icons > ul{
+    padding: 0%;
     display: flex;
     flex-direction: row;
 }
 .icon-list > li{
-    width: 5rem;
+    width: 2.5rem;
     list-style: none ;
 }
 .icon-list > li > img {
-    width: 3rem;
+    width: 2rem;
 }
 .footer-summary {
     font-size: large;
