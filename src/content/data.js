@@ -3,7 +3,7 @@ import image from '../components/images/card-images/images'
 const data = {
 
     'news-hero': [
-        {'new': 'Hello and Welcome to Bitten Byte'},
+        {'new': 'Bitten Bites is a one many show ran by Me! Jose Valadez.'},
         {'editor' : 0 },
         {'latest' : 0 }
     ],
@@ -76,27 +76,27 @@ const data = {
             'id'    : 1,
             'date'  : "April 3, 2022",
             'image' : image.hobby.hobby1,
-            'title' : 'title',
+            'title' : 'Drones',
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
+            'summary' : 'it sounds like a drone, it looks like a drone, it cost as much as a drone... that might mean...its a drone. This weeks article will look at home made Drones',
             'content' : 'the blog post'
         },
         {
             'id'    : 2,
             'date'  : "April 4, 2022",
             'image' : image.hobby.hobby2,
-            'title' : 'title',
+            'title' : 'Wood Work',
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
+            'summary' : 'Wood work, an activity that might result in either an amazing living room focual point or one less figure to count on... this weekly article will duscuss the amazing art of Wood',
             'content' : 'the blog post'
         },
         {
             'id'    : 3,
             'date'  : "April 5, 2022",
             'image' : image.hobby.hobby3,
-            'title' : 'title',
+            'title' : 'In Door Rock Climbing',
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
+            'summary' : 'Rock Climbing, an exercise meant to strength the upper body, clear your mind and something to bragg at work. An out door activity brought in doors...this Weekly article will look at Hanger 18 and other in door rocky climbing gyms. ',
             'content' : 'the blog post'
         }
     ],
@@ -106,7 +106,7 @@ const data = {
             'id'    : 1,
             'date'  : "May 1, 2022",
             'image' : image.food.food1,
-            'title' : 'title',
+            'title' : 'Summary styling',
             'author': 'Jose Valadez',
             'summary' : 'I wonder why we have so much purple spacing when last night it was working perfectly fine. I think it might hvae to do with the summary sizing. NAd yes it does So having a much large text benefits the end user as it looks muhc clearer',
             'content' : 'the blog post'
@@ -115,18 +115,18 @@ const data = {
             'id'    : 2,
             'date'  : "May 2, 2022",
             'image' : image.food.food2,
-            'title' : 'title',
+            'title' : 'Near Completion',
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
+            'summary' : 'The Bitten Bites landing page is near completion. All we need to do is work on our image slider. Afterwards we will work on the React Rounters, making our single page experince feel like a multipage application.',
             'content' : 'the blog post'
         },
         {
             'id'    : 3,
             'date'  : "May 5, 2022",
             'image' : image.food.food3,
-            'title' : 'title',
+            'title' : 'Beers of Century',
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
+            'summary' : 'None the less, I think I wil lbe getting myself some beers today. I might get myself either Happy Dads or Patagonia Beers.',
             'content' : 'the blog post'
         }
     ],

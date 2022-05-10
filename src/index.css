@@ -2,40 +2,33 @@ body {
     background-color: rgb(248,248,255); 
     margin: 0%;
 }
-
-/* Hero container */
-
-.background-hero {
-    background-image: url(./components/images/heroBackground.jpg);
-    width: 100%;
-    height: 35em;
-    background-size: cover;
-    background-repeat: none;
-    background-position:center;
-    
+body::-webkit-scrollbar {
+    width: .5em;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #262626;
 }
 
-/* Nav */
+/* Nav (nav the higher)with two phases logo and centered nav */
 .navBar{
+    align-self: center;
     background-color: #262626;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: baseline;
-    width: 100%;
     position: sticky;
-    transition: background-color 0.25s ease-out;
     z-index: 999;
     bottom: 0%;
     top: 0%;
 }
 
-
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: xx-large;
     color: aliceblue;
+    position: absolute;
 }
 
 .logo:hover {
@@ -43,42 +36,75 @@ body {
 }
 
 nav {
+    height: 3rem;
     background-color: #262626;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
 }
 
-.navList {
+.centered-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    height: inherit;
+    flex-wrap: wrap;
+}
+
+.navList-left,
+.navList-right {
     font-family: 'Fira Sans Condensed', sans-serif;
     color: aliceblue;
     font-size: large;
-    margin-top: 1rem;
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
     gap: 1em;
-    padding: 0%;
-    transition: all .2s ease-in-out; 
-    margin: 0%;
+    padding-inline: 8.5rem;
+    margin-top: 1.1rem;
+}
+.navList-left{
+    width: 213px;
 }
 
-
-.navList > li:hover {
-   
+.centered-nav, .navList-left> li:hover {
+    color: rgb(203, 103, 103);
+}
+.centered-nav, .navList-right> li:hover {
     color: rgb(203, 103, 103);
 }
 
-/* Hero */
-
+/* Hero container */
 .hero-container {
     display: flex;
     flex-direction: column;
     position: static;
     height: 100%;
     margin-bottom: 1rem;
+}
+
+.background-hero {
+    background-image: url(./components/images/heroBackground.jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: none;
+    background-position:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    
+}
+.background-hero-content{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    border-radius: 10px ;
+    text-align: center;
 }
 
 /* Main */
@@ -114,7 +140,6 @@ main {
 
 .card-article {
     padding: 0%;
-    
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -140,11 +165,11 @@ main {
     padding: 5px;
     margin: 20px;
     font-size: 1rem;
-    background-color: white;;
+    background-color:white;
     overflow: hidden;
     position: absolute;
     width: fit-content;
-    color: #262626;
+    color: black;
 }
 
 .card-description{
@@ -154,6 +179,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .card-title {
@@ -175,8 +201,8 @@ main {
     font-size: 1.40rem;
 }
 
-/* hero news 3 cards*/
-.news-hero {
+/* hero news 2 cards*/
+.news-section {
     grid-column: 3/11;
     display: grid;
     grid-template-columns: repeat(8,1fr);
@@ -184,22 +210,35 @@ main {
 }
 
 .news-banner,
-.editor-choice, 
-.latest{
+.editor-choice {
     border-radius: 10px;
-    box-shadow:  0px 5px 10px -5px #262626;
+    box-shadow:  0px 5px 10px -5px grey;
     background-color: white;
     overflow: hidden;
+    height: 25rem;
 }
-.editor-choice, 
-.latest{
-    grid-column: 5/9;
-    height: 20rem;
+
+.editor-choice {
+    grid-column: 1/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .news-banner{
-    grid-column: 1/5;
-    grid-row: 1/3;
-    height: 41rem;
+    grid-column: 1/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-banner-content, .editor-choice-content {
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 100;
+    text-align: center;
+    
 }
 
 
@@ -215,11 +254,11 @@ main {
 .tec-card-two, 
 .tec-card-three, 
 .tec-slide{
-    box-shadow:  0px 5px 10px -5px #262626;
+    box-shadow:  0px 5px 8px -5px grey;
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
-    background-color: white;;
+    background-color: white;
     overflow: hidden;
 }
 .tec-card-two{
@@ -241,7 +280,7 @@ main {
 }
 .set-slide-one, 
 .set-slide-two {
-    box-shadow:  0px 5px 10px -5px #262626;
+    box-shadow:  0px 5px 8px -5px grey;
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
@@ -263,7 +302,7 @@ main {
 .hobby-card-one, 
 .hobby-card-two, 
 .hobby-card-three {
-    box-shadow:  0px 5px 10px -5px #262626;
+    box-shadow:  0px 5px 8px -5px grey;
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
@@ -287,7 +326,7 @@ main {
 .food-card-one, 
 .food-card-two, 
 .food-card-three{
-    box-shadow:  0px 5px 10px -5px #262626;
+    box-shadow:  0px 5px 8px -5px grey;
     border-radius: 10px;
     height: 19rem;
     grid-column: 1/9;

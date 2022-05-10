@@ -20,24 +20,24 @@ const Main = () => {
 
     return(
         <main>
-            <div className = 'news-hero'>
-                <div className = 'news-banner'>
-                    <h1>
-                        {dataSet['news-hero'][0].new}
-                    </h1>
-                </div>
 
-                <div className = 'editor-choice'>
-                    <h1>
-                        Welcome to Bitten Byte
-                    </h1>
-                </div>
+            <div className = 'news-section'>
+                <h1 className = 'section-title'>Latest</h1>  
+                    <div className = 'news-banner'>
+                        <div className = 'news-banner-content'>
+                            <p>
+                                {dataSet['news-hero'][0].new}
+                            </p>
+                        </div>
+                    </div>
 
-                <div className = 'latest'>
-                    <h1>
-                        Welcome to Bitten Byte
-                    </h1>
-                </div>
+                    <div className = 'editor-choice'>
+                        <div className = 'editor-choice-content'>
+                            <p>
+                                Hello, something else will go here. 
+                            </p>
+                        </div>
+                    </div>
             </div>
             
 

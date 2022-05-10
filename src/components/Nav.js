@@ -19,31 +19,35 @@ const Nav = () => {
 
     return(
         <nav className = 'navBar'>
-            {navList? <div className = 'logo'> Bitten Byte </div>  
+            {navList? <div className = 'logo'> Bitten Bite </div>  
                 :
-                <> 
-                    <div className = 'logo'> Bitten Byte </div>  
-                        <ul className = 'navList'>
-                            <li>
-                                Technology
-                                </li>
-                            <li>
-                                Set-Ups
-                                </li>
-                            <li>
-                                Hobbies
-                                </li>
-                            <li>
-                                Food
-                                </li>
-                            <li>
-                                Archive
-                                </li>
-                            <li>
-                                About
-                                </li>
-                        </ul>  
-                </>
+                <div className = 'centered-nav'> 
+                    <ul className = 'navList-left'>
+                        <li>
+                            Food
+                            </li>
+                        <li>
+                            Set-Ups
+                            </li>
+                        <li>
+                            Hobbies
+                            </li>
+                    </ul>
+                        
+                    <div className = 'logo'> Bitten Bite </div>  
+                            
+                    <ul className = 'navList-right'>
+                        <li>
+                            Technology
+                            </li>
+                        <li>
+                            Archive
+                            </li>
+                        <li>
+                            About
+                            </li>
+                    </ul>  
+            </div>
             }
         </nav>    
     )
