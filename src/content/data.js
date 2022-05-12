@@ -124,7 +124,7 @@ const data = {
             'id'    : 3,
             'date'  : "May 5, 2022",
             'image' : image.food.food3,
-            'title' : 'Beers of Century',
+            'title' : 'Beers of the Century',
             'author': 'Jose Valadez',
             'summary' : 'None the less, I think I wil lbe getting myself some beers today. I might get myself either Happy Dads or Patagonia Beers.',
             'content' : 'the blog post'
