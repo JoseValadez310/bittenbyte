@@ -39,10 +39,7 @@ const Main = () => {
                         </div>
                     </div>
             </div>
-            
-
-
-            
+                
             <div className = 'technology-section' >
                 <h1 className = 'section-title'>Technology</h1>    
                     <div className = 'tec-card-one'>
@@ -105,10 +102,6 @@ const Main = () => {
                         </h1>
                     </div>
                 </div>
-        
-
-
-
             
             <div className = 'set-up-section'>
                 <h1 className = 'section-title'>Set-Ups</h1>
@@ -183,10 +176,6 @@ const Main = () => {
                         </div>
                     </div>
                 </div>
-
-
-
-
             
             <div className = 'food-section'>
                 <h1 className = 'section-title'>Food</h1>           
@@ -213,7 +202,6 @@ const Main = () => {
                     </div>
 
                     <div className = 'food-card-two'>
-
                         <div className = 'side-card-article'> 
                             <div className = 'image-container'>
                                 <small className = 'card-date'> {foodArticle[foodLength-2].date} </small>
@@ -235,7 +223,6 @@ const Main = () => {
                     </div>
 
                     <div className = 'food-card-three'>
-                
                         <div className = 'side-card-article'> 
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
@@ -253,7 +240,6 @@ const Main = () => {
                                 <small className = 'card-date'> {foodArticle[foodLength-3].date} </small>
                                 <img className = 'card-image' src = {foodArticle[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                             </div>
-                            
                         </div>
                     </div>
                 </div>

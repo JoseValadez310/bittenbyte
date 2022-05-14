@@ -35,10 +35,7 @@ const data = {
             'author': 'Baby Yoda',
             'summary' : 'Have you ever been stuck between a wet noodle and a hard boiled egg? No, okay because nor have I...anyways, welcome to the latest entry of Bitten Bites special Tech opener ',
             'content' : 'the blog post'
-        }
-        
-        
-        
+        }   
     ],
 
     'set-up-section': [
