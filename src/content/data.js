@@ -41,30 +41,39 @@ const data = {
     'set-up-section': [
         {
             'id'    : 1,
-            'date'  : 0,
-            'image' : 'url',
-            'title' : 'title',
+            'image' : image.setUp.setUp1,
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
-            'content' : 'the blog post'
+            'about' : 'the blog post'
         },
         {
             'id'    : 2,
-            'date'  : 0,
-            'image' : 'url',
-            'title' : 'title',
+            'image' : image.setUp.setUp2,
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
-            'content' : 'the blog post'
+            'about' : 'the blog post'
         },
         {
             'id'    : 3,
-            'date'  : 0,
-            'image' : 'url',
-            'title' : 'title',
+            'image' : image.setUp.setUp3,
             'author': 'Jose Valadez',
-            'summary' : 'no more than 25 words',
-            'content' : 'the blog post'
+            'about' : 'the blog post'
+        },
+        {
+            'id'    : 4,
+            'image' : image.setUp.setUp4,
+            'author': 'Jose Valadez',
+            'about' : 'the blog post'
+        },
+        {
+            'id'    : 5,
+            'image' : image.setUp.setUp5,
+            'author': 'Jose Valadez',
+            'about' : 'the blog post'
+        },
+        {
+            'id'    : 6,
+            'image' : image.setUp.setUp6,
+            'author': 'Jose Valadez',
+            'about' : 'the blog post'
         }
     ],
 

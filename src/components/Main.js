@@ -1,5 +1,5 @@
 import dataSet from '../content/data'
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 
 const Main = () => {
 
@@ -8,15 +8,36 @@ const Main = () => {
    
     const setUpArticle = dataSet['set-up-section']
     const setUpLength = setUpArticle.length
-
+   
     const hobbyArticle = dataSet['hobby-section']
     const hobbyLength = hobbyArticle.length
 
     const foodArticle = dataSet['food-section']
     const foodLength = foodArticle.length
 
-    
+    const [looper,setLooper] = useState({
+        userPosts : setUpLength,
+        counter  : 0
+    })
 
+   console.log(looper.counter)
+
+    useEffect (() => {
+        const interval = setInterval(() => {
+            setLooper(prevState => {
+            
+                return{
+                    ...prevState,
+                    counter: prevState.counter < prevState.userPosts-1? prevState.counter += 1 : prevState.counter = 0
+
+                }
+                
+            })
+            
+        }, 8000)
+        return () => clearInterval(interval)
+
+    }, [looper])
 
     return(
         <main>
@@ -106,15 +127,15 @@ const Main = () => {
             <div className = 'set-up-section'>
                 <h1 className = 'section-title'>Set-Ups</h1>
                     <div className = 'set-slide-one'>
-                        <h1>
-                        set up slide 
-                        </h1>
+                       
+                        <img className = 'setUp-slider' src = {looper.counter === 5 ?setUpArticle[5].image : setUpArticle[looper.counter].image} alt = 'post from the community' />
+
                     </div>
 
                     <div className = 'set-slide-two'>
-                        <h1>
-                        set up slide 
-                        </h1>
+                       
+                        <img className = 'setUp-slider' src = {looper.counter === 5 ?setUpArticle[0].image : setUpArticle[looper.counter+1].image} alt = 'post from the community' />
+            
                     </div>
 
                 </div>

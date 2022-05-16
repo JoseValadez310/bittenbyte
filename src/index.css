@@ -282,13 +282,16 @@ main {
 .set-slide-two {
     box-shadow:  0px 5px 8px -5px grey;
     border-radius: 10px;
-    height: 45rem;
+    height: 41rem;
     grid-column: 1/5;
     background-color: white;;
     overflow: hidden;
 }
 .set-slide-two{
     grid-column: 5/9;
+}
+.setUp-slider{
+    width: 33rem;
 }
 
 /*Hobby card section of 3*/
