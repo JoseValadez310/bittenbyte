@@ -2,25 +2,23 @@ import {useState} from 'react'
 const Nav = () => {
 
  
-    const [navList,setNavList] = useState(true) 
+    // const [navList,setNavList] = useState(true) 
     
-    const changeNav = () => {
-        if(window.scrollY >= 101) {
+    // const changeNav = () => {
+    //     if(window.scrollY >= 101) {
     
-            setNavList(false);
-        } else {
+    //         setNavList(false);
+    //     } else {
 
-            setNavList(true);
-        }
-    }
+    //         setNavList(true);
+    //     }
+    // }
     
 
-    window.addEventListener('scroll', changeNav)
+    // window.addEventListener('scroll', changeNav)
 
     return(
         <nav className = 'navBar'>
-            {navList? <div className = 'logo'> Bitten Bite </div>  
-                :
                 <div className = 'centered-nav'> 
                     <ul className = 'navList-left'>
                         <li>
@@ -33,9 +31,7 @@ const Nav = () => {
                             Hobbies
                             </li>
                     </ul>
-                        
-                    <div className = 'logo'> Bitten Bite </div>  
-                            
+                    <div className = 'logo'> Bitten Bite </div>      
                     <ul className = 'navList-right'>
                         <li>
                             Technology
@@ -48,7 +44,6 @@ const Nav = () => {
                             </li>
                     </ul>  
             </div>
-            }
         </nav>    
     )
 }

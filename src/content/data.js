@@ -1,4 +1,4 @@
-import image from '../components/images/card-images/images'
+import image from './images'
 
 const data = {
 
