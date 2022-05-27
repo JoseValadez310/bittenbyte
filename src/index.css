@@ -1,10 +1,4 @@
 body {
-    background-color: rgb(248,248,255); 
-    margin: 0%;
-}
-
-.body-active{
-    background-color: #262626;
     margin: 0%;
 }
 
@@ -12,12 +6,13 @@ body::-webkit-scrollbar {
     width: .5em;
 }
 body::-webkit-scrollbar-thumb {
-    background-color: #262626;
+    
+    background-color: #454444;
 }
 
 /* Nav (nav the higher)with two phases logo and centered nav */
 .navBar{
-    background-color: #262626;
+    background-color: #454444;
     position: sticky;
     z-index: 999;
     bottom: 0%;
@@ -27,7 +22,7 @@ body::-webkit-scrollbar-thumb {
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: xx-large;
-    color: aliceblue;
+    color: white;
     padding-inline: 3rem;
 }
 
@@ -47,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 .navList-left,
 .navList-right {
     font-family: 'Fira Sans Condensed', sans-serif;
-    color: aliceblue;
+    color: white;
     font-size: large;
     list-style: none;
     display: flex;
@@ -70,7 +65,6 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     position: static;
     height: 100%;
-    margin-bottom: 1rem;
 }
 .background-hero {
     background-image: url(../src/content/images/heroBackground.jpg);
@@ -99,13 +93,23 @@ body::-webkit-scrollbar-thumb {
 /* Main */
 
 main {
-    margin: 1rem ;
+    padding: 1rem ;
     display: grid;
     grid-template-columns: repeat(12,9.42rem);
     grid-auto-flow: row;
     justify-content: center;
-    gap: 1em;
+    background-color: rgb(248,248,255); 
 }
+
+.main-active {
+    padding: 1rem ;
+    display: grid;
+    grid-template-columns: repeat(12,9.42rem);
+    grid-auto-flow: row;
+    justify-content: center;
+    background-color: #262626;
+}
+
 .section-title{
     grid-column: 1/4;
     margin-inline: 10px;
@@ -139,7 +143,7 @@ main {
     align-self: center;
 }
 .switch-box {
-    padding-inline: 1rem;
+    padding-inline: .5rem;
 }
 /* Hide default HTML checkbox */
 .switch input {
@@ -187,10 +191,12 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-.lightModeSwitch, .darkModeSwitch {
+.lightModeSwitch{
+    width: 2.5rem;
+}
+.darkModeSwitch {
     width: 2rem;
 }
-
 /* Rounded sliders */
 .slider.round {
     border-radius: 12px;
@@ -207,12 +213,37 @@ input:checked + .slider:before {
     flex-direction: column;
     width: 100%;
     overflow: hidden;
+    height: inherit;
+    background-color: white;   
 }
+
+.card-article-active{
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    height: inherit;   
+    background-color: #65626277;
+}
+
 .side-card-article {
     height: inherit;
+    width: inherit;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.side-card-article-active {
+    height: inherit;
+    width: inherit;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #65626277;
 }
 .card-image {
     height: auto;
@@ -226,11 +257,22 @@ input:checked + .slider:before {
     padding: 5px;
     margin: 20px;
     font-size: 1rem;
-    background-color:white;
     overflow: hidden;
     position: absolute;
     width: fit-content;
     color: black;
+    background-color:white;
+}
+.card-date-active{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    font-size: 1rem;
+    overflow: hidden;
+    position: absolute;
+    width: fit-content;
+    color: white;
+    background-color:#65626277;
 }
 
 .card-description{
@@ -319,7 +361,6 @@ input:checked + .slider:before {
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
-    background-color: white;
     overflow: hidden;
 }
 .tec-card-two{
@@ -346,7 +387,6 @@ input:checked + .slider:before {
     border-radius: 10px;
     height: 41rem;
     grid-column: 1/5;
-    background-color: white;;
     overflow: hidden;
 }
 .set-slide-two{
@@ -422,7 +462,6 @@ input:checked + .slider:before {
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
-    background-color: white;
     overflow: hidden;
 }
 .hobby-card-two{
@@ -447,7 +486,6 @@ input:checked + .slider:before {
     border-radius: 10px;
     height: 19rem;
     grid-column: 1/9;
-    background-color: white;
     overflow: hidden;
 }
 .food-card-two{
@@ -465,7 +503,7 @@ input:checked + .slider:before {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    background-color: #262626;
+    background-color: #454444;
 
 }
 .footer-icons > ul{

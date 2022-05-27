@@ -26,16 +26,8 @@ function handleLooperSubtract() {
     looper === 0? setLooper(setUpLength - 1) : setLooper(prevState => prevState - 1) 
 }
 
-const [darkMode, setDarkMode] = useState(()=> (false))
-
-function handleDarkMode() {
-   setDarkMode(!darkMode)
-}
-console.log(darkMode === false? "lights on" : "lights off")
-
-
 return(
-    <main>
+    <main className = {props.darkMode === true? "main-active":"main"}>
         <div className = 'news-section'>
             <h1 className = 'section-title'>Latest</h1>  
 
@@ -43,7 +35,7 @@ return(
                         <img className = 'lightModeSwitch' src = {icon.lightMode} alt = 'PNG of the Sun' />
                             <div className = 'switch-box' >
                                 <label className = 'switch'>
-                                    <input type="checkbox" onClick = {handleDarkMode}/>
+                                    <input type="checkbox" onClick = {props.handleDarkMode}/>
                                     <span className = 'slider round'></span>
                                 </label>
                             </div>
@@ -70,8 +62,8 @@ return(
         <div className = 'technology-section' >
             <h1 className = 'section-title'>Technology</h1>    
                 <div className = 'tec-card-one'>
-                    <div className = 'card-article'>
-                        <small className = 'card-date'> {techArticle[techLength-1].date} </small>
+                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>       
+                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {techArticle[techLength-1].date} </small>
                         <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'something' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
@@ -88,8 +80,8 @@ return(
                 </div>
 
                 <div className = 'tec-card-two'>
-                    <div className = 'card-article'>
-                        <small className = 'card-date'> {techArticle[techLength-2].date} </small>
+                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>    
+                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {techArticle[techLength-2].date} </small>
                         <img className = 'card-image' src = {techArticle[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
@@ -106,8 +98,8 @@ return(
                 </div>
 
                 <div className = 'tec-card-three'>
-                    <div className = 'card-article'>    
-                        <small className = 'card-date'> {techArticle[techLength-3].date} </small>
+                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>       
+                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {techArticle[techLength-3].date} </small>
                             <img className = 'card-image' src = {techArticle[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -146,8 +138,8 @@ return(
         <div className = 'hobby-section'>
             <h1 className = 'section-title' >Hobbies</h1>
                 <div className = 'hobby-card-one'>
-                    <div className = 'card-article'>                        
-                        <small className = 'card-date'> {hobbyArticle[hobbyLength-1].date} </small>
+                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>                           
+                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {hobbyArticle[hobbyLength-1].date} </small>
                             <img className = 'card-image' src = {hobbyArticle[hobbyLength-1].image} loading="lazy" alt = 'Coming Soon near you' />    
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -164,8 +156,8 @@ return(
                 </div>
 
                 <div className = 'hobby-card-two'>
-                    <div className = 'card-article'>        
-                        <small className = 'card-date'> {hobbyArticle[hobbyLength-2].date} </small>
+                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>            
+                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {hobbyArticle[hobbyLength-2].date} </small>
                             <img className = 'card-image' src = {hobbyArticle[hobbyLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -182,8 +174,8 @@ return(
                 </div>
 
                 <div className = 'hobby-card-three'>
-                    <div className = 'card-article'>
-                        <small className = 'card-date'> {hobbyArticle[hobbyLength-3].date} </small>
+                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>    
+                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {hobbyArticle[hobbyLength-3].date} </small>
                             <img className = 'card-image' src = {hobbyArticle[hobbyLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -203,7 +195,7 @@ return(
         <div className = 'food-section'>
             <h1 className = 'section-title'>Food</h1>           
                 <div className = 'food-card-one'>
-                    <div className = 'side-card-article'> 
+                    <div className = {props.darkMode === false? 'side-card-article': 'side-card-article-active'}>  
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {foodArticle[foodLength-1].title}
@@ -217,7 +209,7 @@ return(
                         </div>
                         
                         <div className = 'image-container'>
-                            <small className = 'card-date'> {foodArticle[foodLength-1].date} </small>
+                            <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {foodArticle[foodLength-1].date} </small>
                             <img className = 'card-image' src = {foodArticle[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
                         
@@ -225,9 +217,9 @@ return(
                 </div>
 
                 <div className = 'food-card-two'>
-                    <div className = 'side-card-article'> 
+                    <div className = {props.darkMode === false? 'side-card-article': 'side-card-article-active'}> 
                         <div className = 'image-container'>
-                            <small className = 'card-date'> {foodArticle[foodLength-2].date} </small>
+                            <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {foodArticle[foodLength-2].date} </small>
                             <img className = 'card-image' src = {foodArticle[foodLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
 
@@ -246,7 +238,7 @@ return(
                 </div>
 
                 <div className = 'food-card-three'>
-                    <div className = 'side-card-article'> 
+                    <div className = {props.darkMode === false? 'side-card-article': 'side-card-article-active'}> 
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {foodArticle[foodLength-3].title}
@@ -260,7 +252,7 @@ return(
                         </div>
                         
                         <div className = 'image-container'>
-                            <small className = 'card-date'> {foodArticle[foodLength-3].date} </small>
+                            <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {foodArticle[foodLength-3].date} </small>
                             <img className = 'card-image' src = {foodArticle[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
                     </div>
