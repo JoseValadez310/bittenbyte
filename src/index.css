@@ -52,6 +52,7 @@ body::-webkit-scrollbar-thumb {
     gap: 1em;
     padding: 0%;
 }
+
 .centered-nav, .navList-left> li:hover {
     color: rgb(203, 103, 103);
 }
@@ -69,7 +70,7 @@ body::-webkit-scrollbar-thumb {
 .background-hero {
     background-image: url(../src/content/images/heroBackground.jpg);
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-size: cover;
     background-repeat: none;
     background-position:center;
@@ -114,7 +115,6 @@ main {
     grid-column: 1/4;
     margin-inline: 10px;
     font-family: 'Fira Sans Condensed', sans-serif;
-    color: #262626;
     position: relative;
 }
 .section-title:after{
@@ -205,6 +205,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+
 /*Effectign all card internals*/
 
 .card-article {
@@ -214,17 +215,7 @@ input:checked + .slider:before {
     width: 100%;
     overflow: hidden;
     height: inherit;
-    background-color: white;   
-}
-
-.card-article-active{
-    padding: 0%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow: hidden;
-    height: inherit;   
-    background-color: #65626277;
+    box-shadow:  0px 5px 10px -5px grey;
 }
 
 .side-card-article {
@@ -236,13 +227,7 @@ input:checked + .slider:before {
     justify-content: space-between;
 }
 
-.side-card-article-active {
-    height: inherit;
-    width: inherit;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.side-card-article #dark  {
     background-color: #65626277;
 }
 .card-image {
@@ -252,6 +237,7 @@ input:checked + .slider:before {
 .image-container > img {
     width: 30rem;
 }
+
 .card-date {
     border-radius: 5px;
     padding: 5px;
@@ -260,19 +246,6 @@ input:checked + .slider:before {
     overflow: hidden;
     position: absolute;
     width: fit-content;
-    color: black;
-    background-color:white;
-}
-.card-date-active{
-    border-radius: 5px;
-    padding: 5px;
-    margin: 20px;
-    font-size: 1rem;
-    overflow: hidden;
-    position: absolute;
-    width: fit-content;
-    color: white;
-    background-color:#65626277;
 }
 
 .card-description{
@@ -304,6 +277,8 @@ input:checked + .slider:before {
     font-size: 1.40rem;
 }
 
+
+
 /* hero news 2 cards*/
 .news-section {
     grid-column: 3/11;
@@ -315,7 +290,7 @@ input:checked + .slider:before {
 .news-banner,
 .editor-choice {
     border-radius: 10px;
-    box-shadow:  0px 5px 10px -5px grey;
+   
     background-color: white;
     overflow: hidden;
     height: 25rem;
@@ -355,9 +330,8 @@ input:checked + .slider:before {
 
 .tec-card-one, 
 .tec-card-two, 
-.tec-card-three,
-.tec-slide {
-    box-shadow:  0px 5px 8px -5px grey;
+.tec-card-three{
+    
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
@@ -370,9 +344,6 @@ input:checked + .slider:before {
     grid-column: 9/13;
 }
  
-.tec-slide{
-    grid-column: 1/13;
-} 
 
 /* Social media Set Up page section */
 .set-up-section{
@@ -383,7 +354,7 @@ input:checked + .slider:before {
 }
 .set-slide-one, 
 .set-slide-two {
-    box-shadow:  0px 5px 8px -5px grey;
+    
     border-radius: 10px;
     height: 41rem;
     grid-column: 1/5;
@@ -458,7 +429,7 @@ input:checked + .slider:before {
 .hobby-card-one, 
 .hobby-card-two, 
 .hobby-card-three {
-    box-shadow:  0px 5px 8px -5px grey;
+    
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
@@ -482,7 +453,7 @@ input:checked + .slider:before {
 .food-card-one, 
 .food-card-two, 
 .food-card-three{
-    box-shadow:  0px 5px 8px -5px grey;
+    
     border-radius: 10px;
     height: 19rem;
     grid-column: 1/9;
@@ -522,6 +493,47 @@ input:checked + .slider:before {
     font-size: large;
     font-family: 'Fira Sans Condensed',sans-serif;
     color: azure;
+}
+
+
+/* Dark Mode color values can changes*/
+
+#main-light {
+    background-color: #F2F2F2;
+
+}
+
+#main-dark {
+    background-color: #262626;;
+}
+
+#card-light {
+  
+    color: black;
+    background-color:white;
+}
+
+#card-dark {
+    color: #F2F2F2;
+    background-color:#454444;
+    box-shadow: none;
+}
+
+#date-light {
+    color: black;
+    background-color: #F2F2F2;
+}
+#date-dark {
+    color: #F2F2F2;
+    background-color: #454444;
+
+}
+#section-title-light{
+    color: #262626;
+}
+
+#section-title-dark{
+    color: #F2F2F2;
 }
 
 @media only screen and (max-width: 1680px) {

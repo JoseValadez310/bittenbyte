@@ -27,44 +27,51 @@ function handleLooperSubtract() {
 }
 
 return(
-    <main className = {props.darkMode === true? "main-active":"main"}>
+    <main id = {props.darkMode === false? 'main-light':'main-dark'}>
         <div className = 'news-section'>
-            <h1 className = 'section-title'>Latest</h1>  
+           
+            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Latest</h1>  
+               
+                <div className = 'switch-container'>  
+                    <img className = 'lightModeSwitch' src = {icon.lightMode} alt = 'PNG of the Sun' />
+                        <div className = 'switch-box' >
+                            <label className = 'switch'>
+                                <input type="checkbox" onClick = {props.handleDarkMode}/>
+                                <span className = 'slider round'></span>
+                            </label>
+                        </div>
+                    <img className = 'darkModeSwitch' src = {icon.darkMode} alt = 'PNG of the Moon' /> 
+                </div>
 
-                    <div className = 'switch-container'>  
-                        <img className = 'lightModeSwitch' src = {icon.lightMode} alt = 'PNG of the Sun' />
-                            <div className = 'switch-box' >
-                                <label className = 'switch'>
-                                    <input type="checkbox" onClick = {props.handleDarkMode}/>
-                                    <span className = 'slider round'></span>
-                                </label>
-                            </div>
-                        <img className = 'darkModeSwitch' src = {icon.darkMode} alt = 'PNG of the Moon' /> 
-                    </div>
-
-                    <div className = 'news-banner'>
+                <div className = 'news-banner'>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>
                         <div className = 'news-banner-content'>
                             {/* <p>
                                 {dataSet['news-hero'][0].new}
                             </p> */}
                         </div>
                     </div>
+                </div>
 
-                    <div className = 'editor-choice'>
+                <div className = 'editor-choice'>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>
                         <div className = 'editor-choice-content'>
                             <p>
                                 {/* Welcome to Bitten Bite. Our mission will follow that of creating meanful tales. To undertsand Bitten Bite is to know its a show ran by a single person with a ring to rule them all. Hello dear reader, I hope you find something you'll enjoy. I'm also wondering if i can run a site without wifi. Local site. */}
                             </p>
                         </div>
                     </div>
+                </div>
         </div>
             
+       
+       
         <div className = 'technology-section' >
-            <h1 className = 'section-title'>Technology</h1>    
+            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Technology</h1>     
                 <div className = 'tec-card-one'>
-                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>       
-                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {techArticle[techLength-1].date} </small>
-                        <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'something' />
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {techArticle[techLength-1].date} </small>
+                            <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'something' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
                                     {techArticle[techLength-1].title}
@@ -79,9 +86,11 @@ return(
                     </div>
                 </div>
 
+
+
                 <div className = 'tec-card-two'>
-                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>    
-                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {techArticle[techLength-2].date} </small>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                        <small className = 'card-date'  id = {props.darkMode === false? 'date-light' : 'date-dark'}> {techArticle[techLength-2].date} </small>
                         <img className = 'card-image' src = {techArticle[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
@@ -98,32 +107,26 @@ return(
                 </div>
 
                 <div className = 'tec-card-three'>
-                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>       
-                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {techArticle[techLength-3].date} </small>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                        <small className = 'card-date'  id = {props.darkMode === false? 'date-light' : 'date-dark'}> {techArticle[techLength-3].date} </small>
                             <img className = 'card-image' src = {techArticle[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
-                        <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {techArticle[techLength-3].title}
-                                </h1>
-                            <h4 className = 'card-author'>
-                                {techArticle[techLength-3].author}
-                                </h4>
-                            <p className = 'card-summary'>
-                                {techArticle[techLength-3].summary}
-                            </p>
-                        </div>
+                            <div className = 'card-description'>
+                                <h1 className = 'card-title'>
+                                    {techArticle[techLength-3].title}
+                                    </h1>
+                                <h4 className = 'card-author'>
+                                    {techArticle[techLength-3].author}
+                                    </h4>
+                                <p className = 'card-summary'>
+                                    {techArticle[techLength-3].summary}
+                                </p>
+                            </div>
                     </div>
                 </div>
-
-                <div className = 'tec-slide'>
-                    <h1>
-                    Tech slide 
-                    </h1>
-                </div>  
             </div>
         
         <div className = 'set-up-section'>
-            <h1 className = 'section-title'>Community Set-Ups</h1>
+            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Community Set-Ups</h1>
                 <div className = 'set-slide-one'>
                     <img className = 'setUp-slider' src = {looper === setUpLength-1? setUpArticle[setUpLength-1].image : setUpArticle[looper].image} alt = 'post from the community'/>
                         </div>
@@ -136,10 +139,10 @@ return(
         </div>
         
         <div className = 'hobby-section'>
-            <h1 className = 'section-title' >Hobbies</h1>
+            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'} >Hobbies</h1>
                 <div className = 'hobby-card-one'>
-                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>                           
-                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {hobbyArticle[hobbyLength-1].date} </small>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobbyArticle[hobbyLength-1].date} </small>
                             <img className = 'card-image' src = {hobbyArticle[hobbyLength-1].image} loading="lazy" alt = 'Coming Soon near you' />    
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -156,8 +159,8 @@ return(
                 </div>
 
                 <div className = 'hobby-card-two'>
-                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>            
-                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {hobbyArticle[hobbyLength-2].date} </small>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobbyArticle[hobbyLength-2].date} </small>
                             <img className = 'card-image' src = {hobbyArticle[hobbyLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -174,8 +177,8 @@ return(
                 </div>
 
                 <div className = 'hobby-card-three'>
-                    <div className = {props.darkMode === false? 'card-article': 'card-article-active'}>    
-                        <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {hobbyArticle[hobbyLength-3].date} </small>
+                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobbyArticle[hobbyLength-3].date} </small>
                             <img className = 'card-image' src = {hobbyArticle[hobbyLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
@@ -193,9 +196,9 @@ return(
             </div>
         
         <div className = 'food-section'>
-            <h1 className = 'section-title'>Food</h1>           
+            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Food</h1>           
                 <div className = 'food-card-one'>
-                    <div className = {props.darkMode === false? 'side-card-article': 'side-card-article-active'}>  
+                    <div className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {foodArticle[foodLength-1].title}
@@ -209,7 +212,7 @@ return(
                         </div>
                         
                         <div className = 'image-container'>
-                            <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {foodArticle[foodLength-1].date} </small>
+                            <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {foodArticle[foodLength-1].date} </small>
                             <img className = 'card-image' src = {foodArticle[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
                         
@@ -217,9 +220,9 @@ return(
                 </div>
 
                 <div className = 'food-card-two'>
-                    <div className = {props.darkMode === false? 'side-card-article': 'side-card-article-active'}> 
+                    <div className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}> 
                         <div className = 'image-container'>
-                            <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {foodArticle[foodLength-2].date} </small>
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {foodArticle[foodLength-2].date} </small>
                             <img className = 'card-image' src = {foodArticle[foodLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
 
@@ -238,7 +241,7 @@ return(
                 </div>
 
                 <div className = 'food-card-three'>
-                    <div className = {props.darkMode === false? 'side-card-article': 'side-card-article-active'}> 
+                    <div className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>     
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {foodArticle[foodLength-3].title}
@@ -252,7 +255,7 @@ return(
                         </div>
                         
                         <div className = 'image-container'>
-                            <small className = {props.darkMode === false? 'card-date': 'card-date-active'}> {foodArticle[foodLength-3].date} </small>
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {foodArticle[foodLength-3].date} </small>
                             <img className = 'card-image' src = {foodArticle[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
                     </div>
