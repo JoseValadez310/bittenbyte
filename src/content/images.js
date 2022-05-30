@@ -8,11 +8,11 @@ const images = {
    
     setUp : {
         setUp1: require('../content/images/card-images/setUp-images/alexandru-acea-TMkrN9QZERw-unsplash.jpg'),
-        setUp2: require('../content/images/card-images/setUp-images/howard-bouchevereau-RSCirJ70NDM-unsplash.jpg'),
-        setUp3: require('../content/images/card-images/setUp-images/linus-mimietz-01hQvBUC7rI-unsplash.jpg'),
-        setUp4: require('../content/images/card-images/setUp-images/max-andrey-TlRQin0iwjE-unsplash.jpg'),
-        setUp5: require('../content/images/card-images/setUp-images/michael-soledad-NrR6ByFMBas-unsplash.jpg'),
-        setUp6: require('../content/images/card-images/setUp-images/sebastian-bednarek-_Q5b2wE-tb8-unsplash.jpg')
+        setUp2: require('../content/images/card-images/setUp-images/alexandru-acea-GhwCef9VRr4-unsplash.jpg'),
+        setUp3: require('../content/images/card-images/setUp-images/alexandru-acea-Zg9R__O-8fM-unsplash.jpg'),
+        setUp4: require('../content/images/card-images/setUp-images/aram-sabah-MvEKhA-4s6M-unsplash.jpg'),
+        setUp5: require('../content/images/card-images/setUp-images/howard-bouchevereau-RSCirJ70NDM-unsplash.jpg'),
+        setUp6: require('../content/images/card-images/setUp-images/guillaume-issaly-1gVHLWIBDp8-unsplash.jpg')
         },
     
     hobby : {

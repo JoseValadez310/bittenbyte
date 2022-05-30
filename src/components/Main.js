@@ -1,5 +1,5 @@
 import dataSet from '../content/data'
-import icon from '../content/images/icon-links/icons'
+import icon from '../content/images/card-images/icon-links/icons'
 import { useState } from 'react'
 
 const Main = (props) => {
@@ -129,14 +129,18 @@ return(
             <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Community Set-Ups</h1>
                 <div className = 'set-slide-one'>
                     <img className = 'setUp-slider' src = {looper === setUpLength-1? setUpArticle[setUpLength-1].image : setUpArticle[looper].image} alt = 'post from the community'/>
-                        </div>
-                <img src = {icon.arrow} onClick = {handleLooperSubtract} className = "arrowLeft" alt = 'left arrow clicker'/> 
+                </div> 
+                <div className = 'arrowLeft-box'>
+                    <img src = {icon.arrow} onClick = {handleLooperSubtract} className = "arrowLeft" alt = 'left arrow clicker'/> 
+                </div>
                 
                 <div className = 'set-slide-two'>
                     <img className = 'setUp-slider' src = {looper === setUpLength-1? setUpArticle[0].image : setUpArticle[looper+1].image } alt = 'post from the community'/>
-                        </div>
-                <img src = {icon.arrow} onClick = {handleLooperAdd} className = "arrowRight" alt = 'right arrow clicker'/>
-        </div>
+                </div>
+                <div className = 'arrowRight-box'>
+                    <img src = {icon.arrow} onClick = {handleLooperAdd} className = "arrowRight" alt = 'right arrow clicker'/>
+                </div>
+            </div>
         
         <div className = 'hobby-section'>
             <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'} >Hobbies</h1>
