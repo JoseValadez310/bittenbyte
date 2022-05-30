@@ -362,7 +362,7 @@ input:checked + .slider:before {
 }
 
 .setUp-slider{
-    height: 60rem;
+    height: 80vh;
 }
 .arrowLeft-box{
     grid-column: 4/5;

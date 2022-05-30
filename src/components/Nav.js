@@ -1,4 +1,8 @@
 import {useState} from 'react'
+import { Link } from 'react-router-dom'
+
+
+
 const Nav = () => {
 
  
@@ -20,29 +24,27 @@ const Nav = () => {
     return(
         <nav className = 'navBar'>
                 <div className = 'centered-nav'> 
-                    <ul className = 'navList-left'>
-                        <li>
-                            Food
-                            </li>
-                        <li>
-                            Set-Ups
-                            </li>
-                        <li>
-                            Hobbies
-                            </li>
-                    </ul>
-                    <div className = 'logo'> Bitten Bite </div>      
-                    <ul className = 'navList-right'>
-                        <li>
-                            Technology
-                            </li>
-                        <li>
-                            Archive
-                            </li>
-                        <li>
-                            About
-                            </li>
-                    </ul>  
+                    <Link to = '/Food'>
+                        Food 
+                            </Link>
+                    <Link to = '/Comunity'> 
+                        Set-Ups 
+                            </Link>  
+                    <Link to = '/Hobby'> 
+                        Hobbies 
+                            </Link>
+                
+                <Link to ='/Home' className = 'logo'> Bitten Bite </Link>      
+                    
+                    <Link to = '/Technology'>
+                        Technology
+                            </Link>
+                    <Link to = '/Archive'>
+                        Archive
+                            </Link>
+                    <Link to = '/About'>
+                        About
+                            </Link>
             </div>
         </nav>    
     )
