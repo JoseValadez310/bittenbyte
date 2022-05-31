@@ -1,0 +1,28 @@
+
+/* Footer section */
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #454444;
+}
+.footer-icons > ul{
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+}
+.icon-list > li{
+    width: 2.5rem;
+    list-style: none ;
+}
+.icon-list > li > img {
+    width: 2rem;
+}
+.footer-summary {
+    font-size: large;
+    font-family: 'Fira Sans Condensed',sans-serif;
+    color: azure;
+}

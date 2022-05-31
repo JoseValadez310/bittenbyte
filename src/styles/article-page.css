@@ -1,0 +1,48 @@
+.article-details {
+    text-align: center;
+    grid-column: 4/10;
+}
+
+.article-title {
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+}
+.article-author, .article-date {
+    margin-bottom: 0%;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 100;
+}
+
+.article-share-icon {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.article-share-icon > img {
+    width: 3rem;
+}
+
+.article-image-wrapper {
+    grid-column: 4/10;
+    overflow: hidden;
+}
+.article-image-wrapper > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article-image-credit  {
+    grid-column: 10/11;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.article-image-credit > small {
+    padding-top: 100% ;
+    transform: rotate(90deg);
+}

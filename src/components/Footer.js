@@ -1,4 +1,5 @@
 import icon from "../content/images/card-images/icon-links/icons"
+import "../styles/footer-component.css"
 
 const Footer = () => {
     return(

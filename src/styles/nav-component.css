@@ -1,0 +1,40 @@
+.navBar{
+    background-color: #454444;
+    position: sticky;
+    z-index: 999;
+    bottom: 0%;
+    top: 0%;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: xx-large;
+    color: white;
+    padding-inline: 3rem;
+}
+
+.centered-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    height: inherit;
+    flex-wrap: wrap;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: large;
+    list-style: none;
+    gap: 1em;
+    padding: 0%;
+}
+
+.centered-nav > a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.logo:hover {
+    text-decoration: underline rgb(203, 103, 103) ;
+}
+.nav-link:hover {
+    color: rgb(203, 103, 103);
+}

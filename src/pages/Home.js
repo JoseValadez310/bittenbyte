@@ -1,8 +1,9 @@
 import dataSet from '../content/data'
 import icon from '../content/images/card-images/icon-links/icons'
+import "../styles/home-page.css"
 import { useState } from 'react'
 
-const Main = (props) => {
+const Home = (props) => {
 
 const techArticle = dataSet['technology-section']
 const techLength = techArticle.length
@@ -36,7 +37,7 @@ return(
                     <img className = 'lightModeSwitch' src = {icon.lightMode} alt = 'PNG of the Sun' />
                         <div className = 'switch-box' >
                             <label className = 'switch'>
-                                <input type="checkbox" onClick = {props.handleDarkMode}/>
+                                <input type="checkbox" id = {props.darkMode === false? null : 'switch-checked'} onClick = {props.handleDarkMode}/>
                                 <span className = 'slider round'></span>
                             </label>
                         </div>
@@ -63,8 +64,6 @@ return(
                     </div>
                 </div>
         </div>
-            
-       
        
         <div className = 'technology-section' >
             <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Technology</h1>     
@@ -85,8 +84,6 @@ return(
                             </div>
                     </div>
                 </div>
-
-
 
                 <div className = 'tec-card-two'>
                     <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
@@ -269,4 +266,4 @@ return(
     )
 }
 
-export default Main
+export default Home

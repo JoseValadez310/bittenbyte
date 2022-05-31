@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import "../styles/nav-component.css"
+//import {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -24,25 +25,25 @@ const Nav = () => {
     return(
         <nav className = 'navBar'>
                 <div className = 'centered-nav'> 
-                    <Link to = '/Food'>
+                    <Link className = 'nav-link' to = '/Article'>
                         Food 
                             </Link>
-                    <Link to = '/Comunity'> 
+                    <Link className = 'nav-link' to = '/Comunity'> 
                         Set-Ups 
                             </Link>  
-                    <Link to = '/Hobby'> 
+                    <Link className = 'nav-link' to = '/Hobby'> 
                         Hobbies 
                             </Link>
                 
-                <Link to ='/Home' className = 'logo'> Bitten Bite </Link>      
+                <Link to ='/' className = 'logo'> Bitten Bite </Link>      
                     
-                    <Link to = '/Technology'>
+                    <Link className = 'nav-link' to = '/Technology'>
                         Technology
                             </Link>
-                    <Link to = '/Archive'>
+                    <Link className = 'nav-link' to = '/Archive'>
                         Archive
                             </Link>
-                    <Link to = '/About'>
+                    <Link className = 'nav-link' to = '/About'>
                         About
                             </Link>
             </div>

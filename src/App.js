@@ -1,9 +1,10 @@
 
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import Main from "./components/Main";
+import Home from "./pages/Home";
 import Footer from "./components/Footer"
-import Article from "./components/Article";
+import Article from "./pages/Article";
+
 import { useState } from "react"
 import { BrowserRouter , Routes, Route } from "react-router-dom"
 
@@ -20,7 +21,7 @@ const App = () => {
       <BrowserRouter>
         <Nav />
           <Routes>
-            <Route path = "/Home" element = {[<Hero />,<Main handleDarkMode = {handleDarkMode} darkMode = {darkMode}/>] } />
+            <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} darkMode = {darkMode}/>]} />
             <Route path = "/Article"  element = {<Article />} />
           </Routes>
         <Footer />
