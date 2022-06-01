@@ -225,6 +225,7 @@ input:checked + .slider:before {
     height: 45rem;
     grid-column: 1/5;
     overflow: hidden;
+    text-decoration: none;
 }
 .tec-card-two{
     grid-column: 5/9;

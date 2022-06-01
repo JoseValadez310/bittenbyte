@@ -1,6 +1,6 @@
 import "../styles/nav-component.css"
 //import {useState} from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -25,27 +25,27 @@ const Nav = () => {
     return(
         <nav className = 'navBar'>
                 <div className = 'centered-nav'> 
-                    <Link className = 'nav-link' to = '/Article'>
+                    <NavLink className = 'nav-link' to = '/Food'>
                         Food 
-                            </Link>
-                    <Link className = 'nav-link' to = '/Comunity'> 
+                            </NavLink>
+                    <NavLink className = 'nav-link' to = '/Comunity'> 
                         Set-Ups 
-                            </Link>  
-                    <Link className = 'nav-link' to = '/Hobby'> 
+                            </NavLink>  
+                    <NavLink className = 'nav-link' to = '/Hobby'> 
                         Hobbies 
-                            </Link>
+                            </NavLink>
                 
-                <Link to ='/' className = 'logo'> Bitten Bite </Link>      
+                <NavLink to ='/' className = 'logo'> Bitten Bite </NavLink>      
                     
-                    <Link className = 'nav-link' to = '/Technology'>
+                    <NavLink className = 'nav-link' to = '/Technology'>
                         Technology
-                            </Link>
-                    <Link className = 'nav-link' to = '/Archive'>
+                            </NavLink>
+                    <NavLink className = 'nav-link' to = '/Archive'>
                         Archive
-                            </Link>
-                    <Link className = 'nav-link' to = '/About'>
+                            </NavLink>
+                    <NavLink className = 'nav-link' to = '/About'>
                         About
-                            </Link>
+                            </NavLink>
             </div>
         </nav>    
     )

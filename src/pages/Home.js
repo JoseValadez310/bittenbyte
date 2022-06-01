@@ -1,31 +1,34 @@
-import dataSet from '../content/data'
+import data from '../content/data'
 import icon from '../content/images/card-images/icon-links/icons'
 import "../styles/home-page.css"
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = (props) => {
 
-const techArticle = dataSet['technology-section']
-const techLength = techArticle.length
+const technology = data['technology']
+const techLength = technology.length
 
-const setUpArticle = dataSet['set-up-section']
-const setUpLength = setUpArticle.length
+const setUp = data['setUp']
+const setUpLength = setUp.length
 
-const hobbyArticle = dataSet['hobby-section']
-const hobbyLength = hobbyArticle.length
+const hobby = data['hobby']
+const hobbyLength = hobby.length
 
-const foodArticle = dataSet['food-section']
-const foodLength = foodArticle.length
+const food = data['food']
+const foodLength = food.length
 
-const [looper, setLooper] = useState(() => (0)) 
+    const [looper, setLooper] = useState(() => (0)) 
 
-function handleLooperAdd() {
-    looper === setUpLength-1? setLooper(0) : setLooper(prevState => prevState + 1) 
-}
+    function handleLooperAdd() {
+        looper === setUpLength-1? setLooper(0) : setLooper(prevState => prevState + 1) 
+    }
 
-function handleLooperSubtract() {
-    looper === 0? setLooper(setUpLength - 1) : setLooper(prevState => prevState - 1) 
-}
+    function handleLooperSubtract() {
+        looper === 0? setLooper(setUpLength - 1) : setLooper(prevState => prevState - 1) 
+    }
+
+  
 
 return(
     <main id = {props.darkMode === false? 'main-light':'main-dark'}>
@@ -48,7 +51,7 @@ return(
                     <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>
                         <div className = 'news-banner-content'>
                             {/* <p>
-                                {dataSet['news-hero'][0].new}
+                                {data['news-hero'][0].new}
                             </p> */}
                         </div>
                     </div>
@@ -66,73 +69,81 @@ return(
         </div>
        
         <div className = 'technology-section' >
-            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Technology</h1>     
-                <div className = 'tec-card-one'>
-                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
-                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {techArticle[techLength-1].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-1].image} loading="lazy" alt = 'something' />
+            <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Technology</h1>  
+
+                
+                <div className = 'tec-card-one' >
+                    <Link className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.passThroughDetails('technology',technology[techLength-1].id)} to = "/Article">       
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-1].date} </small>
+                            <img className = 'card-image' src = {technology[techLength-1].image} loading="lazy" alt = 'something' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
-                                    {techArticle[techLength-1].title}
+                                    {technology[techLength-1].title}
                                     </h1>
                                 <h4 className = 'card-author'>
-                                    {techArticle[techLength-1].author}
+                                    {technology[techLength-1].author}
                                     </h4>
                                 <p className = 'card-summary'>
-                                    {techArticle[techLength-1].summary}
+                                    {technology[techLength-1].summary}
                                 </p>
                             </div>
-                    </div>
+                    </Link>
                 </div>
 
+                
+                
+                
                 <div className = 'tec-card-two'>
-                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
-                        <small className = 'card-date'  id = {props.darkMode === false? 'date-light' : 'date-dark'}> {techArticle[techLength-2].date} </small>
-                        <img className = 'card-image' src = {techArticle[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
+                    <Link className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.passThroughDetails('technology', technology[techLength-2].id)} to = "/Article">       
+                        <small className = 'card-date'  id = {props.darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-2].date} </small>
+                        <img className = 'card-image' src = {technology[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
-                                    {techArticle[techLength-2].title}
+                                    {technology[techLength-2].title}
                                     </h1>
                                 <h4 className = 'card-author'>
-                                    {techArticle[techLength-2].author}
+                                    {technology[techLength-2].author}
                                     </h4>
                                 <p className = 'card-summary'>
-                                    {techArticle[techLength-2].summary}
+                                    {technology[techLength-2].summary}
                                 </p>
                             </div>      
-                    </div>
+                    </Link>
                 </div>
 
+                
+                
+                
                 <div className = 'tec-card-three'>
-                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
-                        <small className = 'card-date'  id = {props.darkMode === false? 'date-light' : 'date-dark'}> {techArticle[techLength-3].date} </small>
-                            <img className = 'card-image' src = {techArticle[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
+                    <Link className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.passThroughDetails('technology',technology[techLength-3].id)} to = "/Article">       
+                        <small className = 'card-date'  id = {props.darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-3].date} </small>
+                            <img className = 'card-image' src = {technology[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                             <div className = 'card-description'>
                                 <h1 className = 'card-title'>
-                                    {techArticle[techLength-3].title}
+                                    {technology[techLength-3].title}
                                     </h1>
                                 <h4 className = 'card-author'>
-                                    {techArticle[techLength-3].author}
+                                    {technology[techLength-3].author}
                                     </h4>
                                 <p className = 'card-summary'>
-                                    {techArticle[techLength-3].summary}
+                                    {technology[techLength-3].summary}
                                 </p>
                             </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         
         <div className = 'set-up-section'>
             <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Community Set-Ups</h1>
                 <div className = 'set-slide-one'>
-                    <img className = 'setUp-slider' src = {looper === setUpLength-1? setUpArticle[setUpLength-1].image : setUpArticle[looper].image} alt = 'post from the community'/>
+                    <img className = 'setUp-slider' src = {looper === setUpLength-1? setUp[setUpLength-1].image : setUp[looper].image} alt = 'post from the community'/>
                 </div> 
                 <div className = 'arrowLeft-box'>
                     <img src = {icon.arrow} onClick = {handleLooperSubtract} className = "arrowLeft" alt = 'left arrow clicker'/> 
                 </div>
                 
                 <div className = 'set-slide-two'>
-                    <img className = 'setUp-slider' src = {looper === setUpLength-1? setUpArticle[0].image : setUpArticle[looper+1].image } alt = 'post from the community'/>
+                    <img className = 'setUp-slider' src = {looper === setUpLength-1? setUp[0].image : setUp[looper+1].image } alt = 'post from the community'/>
                 </div>
                 <div className = 'arrowRight-box'>
                     <img src = {icon.arrow} onClick = {handleLooperAdd} className = "arrowRight" alt = 'right arrow clicker'/>
@@ -141,125 +152,127 @@ return(
         
         <div className = 'hobby-section'>
             <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'} >Hobbies</h1>
+
                 <div className = 'hobby-card-one'>
-                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
-                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobbyArticle[hobbyLength-1].date} </small>
-                            <img className = 'card-image' src = {hobbyArticle[hobbyLength-1].image} loading="lazy" alt = 'Coming Soon near you' />    
+                    <Link className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.passThroughDetails('hobby', hobby[hobbyLength-1].id)} to = "/Article">    
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobby[hobbyLength-1].date} </small>
+                            <img className = 'card-image' src = {hobby[hobbyLength-1].image} loading="lazy" alt = 'Coming Soon near you' />    
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
-                                {hobbyArticle[hobbyLength-1].title}
+                                {hobby[hobbyLength-1].title}
                                 </h1>
                             <h4 className = 'card-author'>
-                                {hobbyArticle[hobbyLength-1].author}
+                                {hobby[hobbyLength-1].author}
                                 </h4>
                             <p className = 'card-summary'>
-                                {hobbyArticle[hobbyLength-1].summary}
+                                {hobby[hobbyLength-1].summary}
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className = 'hobby-card-two'>
-                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
-                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobbyArticle[hobbyLength-2].date} </small>
-                            <img className = 'card-image' src = {hobbyArticle[hobbyLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
+                    <Link className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.passThroughDetails('hobby', hobby[hobbyLength-2].id)} to = "/Article">       
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobby[hobbyLength-2].date} </small>
+                            <img className = 'card-image' src = {hobby[hobbyLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
-                                {hobbyArticle[hobbyLength-2].title}
+                                {hobby[hobbyLength-2].title}
                                 </h1>
                             <h4 className = 'card-author'>
-                                {hobbyArticle[hobbyLength-2].author}
+                                {hobby[hobbyLength-2].author}
                                 </h4>
                             <p className = 'card-summary'>
-                                {hobbyArticle[hobbyLength-2].summary}
+                                {hobby[hobbyLength-2].summary}
                             </p>
                         </div>       
-                    </div>
+                    </Link>
                 </div>
 
                 <div className = 'hobby-card-three'>
-                    <div className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
-                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobbyArticle[hobbyLength-3].date} </small>
-                            <img className = 'card-image' src = {hobbyArticle[hobbyLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
+                    <Link className = 'card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.passThroughDetails('hobby', hobby[hobbyLength-3].id)} to = "/Article">     
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {hobby[hobbyLength-3].date} </small>
+                            <img className = 'card-image' src = {hobby[hobbyLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
-                                {hobbyArticle[hobbyLength-3].title}
+                                {hobby[hobbyLength-3].title}
                                 </h1>
                             <h4 className = 'card-author'>
-                                {hobbyArticle[hobbyLength-3].author}
+                                {hobby[hobbyLength-3].author}
                                 </h4>
                             <p className = 'card-summary'>
-                                {hobbyArticle[hobbyLength-3].summary}
+                                {hobby[hobbyLength-3].summary}
                             </p>
                         </div>  
-                    </div>
+                    </Link>
                 </div>
             </div>
         
         <div className = 'food-section'>
             <h1 className = 'section-title' id = {props.darkMode === false? 'section-title-light':'section-title-dark'}>Food</h1>           
+                
                 <div className = 'food-card-one'>
-                    <div className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>       
+                    <Link className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.passThroughDetails('food', food[foodLength-1].id)} to = "/Article">       
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
-                                {foodArticle[foodLength-1].title}
+                                {food[foodLength-1].title}
                                 </h1>
                             <h4 className = 'card-author'>
-                                {foodArticle[foodLength-1].author}
+                                {food[foodLength-1].author}
                                 </h4>
                             <p className = 'card-summary'>
-                                {foodArticle[foodLength-1].summary}
+                                {food[foodLength-1].summary}
                                 </p>
                         </div>
                         
                         <div className = 'image-container'>
-                            <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {foodArticle[foodLength-1].date} </small>
-                            <img className = 'card-image' src = {foodArticle[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
+                            <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-1].date} </small>
+                            <img className = 'card-image' src = {food[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
                         
-                    </div>
+                    </Link>
                 </div>
 
                 <div className = 'food-card-two'>
-                    <div className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}> 
+                    <Link className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.passThroughDetails('food', food[foodLength-2].id)} to = "/Article"> 
                         <div className = 'image-container'>
-                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {foodArticle[foodLength-2].date} </small>
-                            <img className = 'card-image' src = {foodArticle[foodLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-2].date} </small>
+                            <img className = 'card-image' src = {food[foodLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
 
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
-                                {foodArticle[foodLength-2].title}
+                                {food[foodLength-2].title}
                                 </h1>
                             <h4 className = 'card-author'>
-                                {foodArticle[foodLength-2].author}
+                                {food[foodLength-2].author}
                                 </h4>
                             <p className = 'card-summary'>
-                                {foodArticle[foodLength-2].summary}
+                                {food[foodLength-2].summary}
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className = 'food-card-three'>
-                    <div className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'}>     
+                    <Link className = 'side-card-article' id = {props.darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.passThroughDetails('food', food[foodLength-3].id)} to = "/Article">     
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
-                                {foodArticle[foodLength-3].title}
+                                {food[foodLength-3].title}
                                 </h1>
                             <h4 className = 'card-author'>
-                                {foodArticle[foodLength-3].author}
+                                {food[foodLength-3].author}
                                 </h4>
                             <p className = 'card-summary'>
-                                {foodArticle[foodLength-3].summary}
+                                {food[foodLength-3].summary}
                             </p>
                         </div>
                         
                         <div className = 'image-container'>
-                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {foodArticle[foodLength-3].date} </small>
-                            <img className = 'card-image' src = {foodArticle[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
+                        <small className = 'card-date' id = {props.darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-3].date} </small>
+                            <img className = 'card-image' src = {food[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </main>

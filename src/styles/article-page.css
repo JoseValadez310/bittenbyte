@@ -4,7 +4,7 @@
 }
 
 .article-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'Playfair Display', serif;
     font-weight: 100;
 }
@@ -39,10 +39,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .article-image-credit > small {
     padding-top: 100% ;
     transform: rotate(90deg);
+}
+
+.article-content {
+    grid-column: 4/10;
+    font-size: 1.25rem;
+    line-height: 1.75;
 }

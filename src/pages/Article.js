@@ -1,20 +1,24 @@
 import "../styles/article-page.css"
+import data from '../content/data'
 import icon from "../content/images/card-images/icon-links/icons"
-import image from "../content/images"
 
-const Article = () => {
+
+const Article = (props) => {
+    
+    let article = data[props.article.sectionTitle][props.article.sectionId]
+    
 
     return (
         <main>
             <div className = 'article-details'>
                 <h1 className = 'article-title'>
-                    The Wonders of San Francisco
+                    {article.title}
                     </h1>
                 <h4 className = 'article-author'> 
-                    Authour of Article 
+                    {article.author}
                     </h4>
                 <small className = 'article-date'>  
-                    Date of Article 
+                    {article.date}
                     </small>
             </div>
             
@@ -25,11 +29,15 @@ const Article = () => {
             </div>
                 
             <div className = 'article-image-wrapper'>
-                <img src = {image.tech.tech2} alt = 'blog post place holder'/>
+                <img src = {article.image} alt = 'blog post place holder'/>
             </div> 
 
             <div className = 'article-image-credit'>
                     <small>Photo by JRR Token</small> 
+            </div>
+
+            <div className = 'article-content'>
+                {article.story}
             </div>
         </main>
     )
