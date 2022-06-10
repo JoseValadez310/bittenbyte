@@ -4,6 +4,7 @@
     margin-inline: 10px;
     font-family: 'Fira Sans Condensed', sans-serif;
     position: relative;
+    
 }
 .section-title:after{
     content: '';
@@ -22,93 +23,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
 }
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    align-self: center;
-}
-.switch-box {
-    padding-inline: .5rem;
-}
-/* Hide default HTML checkbox */
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-/* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: lightgrey;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 5px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .slider {
-    background-color: lightgrey;
-}
-
-input:focus + .slider {
-    box-shadow: 0 0 1px  lightgrey;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-.lightModeSwitch{
+.switch-container > img {
     width: 2.5rem;
 }
-.darkModeSwitch {
-    width: 2rem;
-}
-/* Rounded sliders */
-.slider.round {
-    border-radius: 12px;
-}
-.slider.round:before {
-    border-radius: 50%;
-}
 
-#switch-checked > input:checked{
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
 
-/*Effectign all card internals*/
+/*Card Article internals*/
 
 .card-article {
     padding: 0%;
     display: flex;
     flex-direction: column;
+    justify-content: baseline;
     width: 100%;
     overflow: hidden;
     height: inherit;
     box-shadow:  0px 5px 10px -5px grey;
+    text-decoration: none;
 }
 
 .side-card-article {
@@ -118,6 +51,8 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-decoration: none;
+    overflow: hidden;
 }
 
 .side-card-article #dark  {
@@ -147,14 +82,14 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
 
 .card-title {
     text-align: center;
     font-size: 2rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display SC', serif;
     font-weight: 100;
 }
 
@@ -164,10 +99,11 @@ input:checked + .slider:before {
 }
 
 .card-summary {
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     color: grey;
     margin-bottom: 0%;
-    font-size: 1.40rem;
+    font-size: large;
+    line-height: 160%;
 }
 
 
@@ -225,7 +161,7 @@ input:checked + .slider:before {
     height: 45rem;
     grid-column: 1/5;
     overflow: hidden;
-    text-decoration: none;
+    
 }
 .tec-card-two{
     grid-column: 5/9;
@@ -257,18 +193,24 @@ input:checked + .slider:before {
     grid-column: 4/5;
     grid-row: 3/4;
     display: flex;
-    flex-direction: row-reverse;
-    height: 55%;
+    justify-content: center;
+    align-items: flex-end;
+    
 }
 .arrowRight-box{
     grid-column: 5/6;
     grid-row: 3/4;
     display: flex;
-    flex-direction: row;
-    height: 55%;
+    justify-content: center;
+    align-items: center;
 }
 .arrowLeft {
     transform: rotate(-0.5turn);
+}
+
+.arrowLeft, .arrowRight {
+    padding-top: 2px;
+    height: 3rem;
 }
 
 
@@ -349,6 +291,43 @@ input:checked + .slider:before {
 .food-card-three{
     grid-column: 1/9;
 }
+
+#main-light {
+    background-color: #F2F2F2;
+}
+
+#main-dark {
+    background-color: #262626;;
+}
+
+#card-light {
+    color: black;
+    background-color:white;
+}
+
+#card-dark {
+    color: #F2F2F2;
+    background-color:#454444;
+    box-shadow: none;
+}
+
+#date-light {
+    color: black;
+    background-color: #F2F2F2;
+}
+#date-dark {
+    color: #F2F2F2;
+    background-color: #454444;
+
+}
+#section-title-light{
+    color: #262626;
+}
+
+#section-title-dark{
+    color: white;
+}
+
 
 @media only screen and (max-width: 1680px) {
     main {

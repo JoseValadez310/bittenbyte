@@ -1,8 +1,8 @@
+/*Title Author and Date */
 .article-details {
     text-align: center;
     grid-column: 4/10;
 }
-
 .article-title {
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif;
@@ -14,17 +14,20 @@
     font-weight: 100;
 }
 
+/*Share link icons*/
 .article-share-icon {
     grid-column: 3/4;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    gap: .5rem;
 }
 .article-share-icon > img {
     width: 3rem;
 }
 
+/* Image placement*/
 .article-image-wrapper {
     grid-column: 4/10;
     overflow: hidden;
@@ -34,20 +37,35 @@
     border-radius: 10px;
 }
 
+/* Image credit*/
 .article-image-credit  {
     grid-column: 10/11;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .article-image-credit > small {
     padding-top: 100% ;
     transform: rotate(90deg);
 }
 
+/* Article Story/Content font and inline sizing */
 .article-content {
     grid-column: 4/10;
     font-size: 1.25rem;
     line-height: 1.75;
+}
+
+/* Articl-Page dark mode values*/
+#main-dark{
+    background-color: #262626;
+}
+#article-details-dark {
+    color: #F2F2F2;
+}
+#article-image-credit-dark{
+    color: #F2F2F2;
+}
+#article-content-dark {
+    color: #F2F2F2;
 }

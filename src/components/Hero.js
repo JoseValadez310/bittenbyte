@@ -4,12 +4,12 @@ const Hero = () => {
         <div className = 'hero-container'>
             <div className = 'background-hero'>
                 <div className = 'background-hero-content'>
-                    <p>
-                        Welcome to Bitten Bite, a blog dedicated to everyday essentials.
-                    </p>
-                    <p>
-                        Technology - Community - Hobby - Food
-                    </p>   
+                    <h1>
+                        Entertained by Curiosity 
+                    </h1>  
+                    <small> 
+                        Technology - Community - Hobby - Food 
+                    </small> 
                 </div>
             </div>
         </div>

@@ -7,10 +7,15 @@ const Article = (props) => {
     
     let article = data[props.article.sectionTitle][props.article.sectionId]
     
+    function indentingParagraphs() {
+        
+    }
+
+    
 
     return (
-        <main>
-            <div className = 'article-details'>
+        <main id = {props.darkMode? 'main-dark' : ' '}>
+            <div className = 'article-details' id = {props.darkMode? 'article-details-dark' : ' '}>
                 <h1 className = 'article-title'>
                     {article.title}
                     </h1>
@@ -32,11 +37,11 @@ const Article = (props) => {
                 <img src = {article.image} alt = 'blog post place holder'/>
             </div> 
 
-            <div className = 'article-image-credit'>
+            <div className = 'article-image-credit'  id = {props.darkMode? 'article-image-credit-dark' : ' '}>
                     <small>Photo by JRR Token</small> 
             </div>
 
-            <div className = 'article-content'>
+            <div className = 'article-content'  id = {props.darkMode? 'article-content-dark' : ' '}>
                 {article.story}
             </div>
         </main>

@@ -12,22 +12,19 @@ import { BrowserRouter , Routes, Route } from "react-router-dom"
 const App = () => {
 
   const [darkMode, setDarkMode] = useState(() => (false))
-
   const [article, setArticle] = useState({ sectionTitle: "", sectionId: null})
 
-  function handleDarkMode() {
-    setDarkMode(!darkMode)
-  }
+    function handleDarkMode() {
+      setDarkMode(!darkMode)
+    }
 
-  function passThroughDetails(section, id) {
-    setArticle(prevState => ({
-      ...prevState,
-      sectionTitle : section,
-      sectionId : id
-    }))
-  }
-
-  console.log(`clicked section of ${article.sectionTitle} and article id of ${article.sectionId}`)
+    function passThroughDetails(section, id) {
+      setArticle(prevState => ({
+        ...prevState,
+        sectionTitle : section,
+        sectionId : id
+      }))
+    }
 
   return (
     <>
@@ -35,7 +32,7 @@ const App = () => {
         <Nav />
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} passThroughDetails = {passThroughDetails} darkMode = {darkMode}/>]} />
-            <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article}/>]} />
+            <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
           </Routes>
         <Footer />
       </BrowserRouter>

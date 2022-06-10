@@ -24,28 +24,26 @@ const Nav = () => {
 
     return(
         <nav className = 'navBar'>
-                <div className = 'centered-nav'> 
-                    <NavLink className = 'nav-link' to = '/Food'>
-                        Food 
-                            </NavLink>
-                    <NavLink className = 'nav-link' to = '/Comunity'> 
-                        Set-Ups 
-                            </NavLink>  
-                    <NavLink className = 'nav-link' to = '/Hobby'> 
-                        Hobbies 
-                            </NavLink>
-                
-                <NavLink to ='/' className = 'logo'> Bitten Bite </NavLink>      
-                    
-                    <NavLink className = 'nav-link' to = '/Technology'>
-                        Technology
-                            </NavLink>
-                    <NavLink className = 'nav-link' to = '/Archive'>
-                        Archive
-                            </NavLink>
-                    <NavLink className = 'nav-link' to = '/About'>
-                        About
-                            </NavLink>
+                <NavLink to ='/' className = 'logo'> Bitten Bite </NavLink>  
+                <div className = 'nav-links'> 
+                            <NavLink className = 'navLink' to = '/Technology'>
+                                Technology
+                                    </NavLink>
+                            <NavLink className = 'navLink' to = '/Comunity'> 
+                                Set-Ups 
+                                    </NavLink>  
+                            <NavLink className = 'navLink' to = '/Hobby'> 
+                                Hobbies 
+                                    </NavLink>
+                            <NavLink className = 'navLink' to = '/Food'>
+                                Food 
+                                    </NavLink>
+                            <NavLink className = 'navLink' to = '/Archive'>
+                                Archive
+                                    </NavLink>
+                            <NavLink className = 'navLink' to = '/About'>
+                                About
+                                    </NavLink>
             </div>
         </nav>    
     )

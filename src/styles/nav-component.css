@@ -4,41 +4,45 @@
     z-index: 999;
     bottom: 0%;
     top: 0%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display SC', serif;
     font-size: xx-large;
     color: white;
-    padding-inline: 3rem;
+    margin-inline: 2px;
+    text-decoration: none;
 }
 
-.centered-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: baseline;
-    height: inherit;
+.nav-links {
+    margin-inline: 2px;
     flex-wrap: wrap;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: "Fira Sans Condensed", sans-serif ;
     font-size: large;
     list-style: none;
-    gap: 1em;
-    padding: 0%;
+    
 }
 
-.centered-nav > a {
+
+
+.nav-links > .navLink {
+    padding-inline: .45rem;
     text-decoration: none;
     color: #F2F2F2;
 }
 
 .logo:hover {
-    text-decoration: underline rgb(203, 103, 103) ;
+    color:rgb(203, 103, 103);
 }
-.nav-link:hover {
+.navLink:hover {
     color: rgb(203, 103, 103);
 } 
 
-.centered-nav .nav-link.active {
+.nav-links .navLink.active {
     color: rgb(203, 103, 103);
 }
