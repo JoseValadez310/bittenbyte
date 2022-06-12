@@ -6,19 +6,23 @@ import Footer from "./components/Footer"
 import Article from "./pages/Article";
 import ScrollToTopOnMount from './components/ScrolltoTop'
 
-import { useState } from "react"
+import { useState, useEffect} from "react"
 import { BrowserRouter , Routes, Route } from "react-router-dom"
 
 const App = () => {
 
+  // Dark/Light mode handler
   const [darkMode, setDarkMode] = useState(() => (false))
-  const [article, setArticle] = useState({ sectionTitle: "", sectionId: null})
-
+  
     function handleDarkMode() {
       setDarkMode(!darkMode)
     }
 
-    function passThroughDetails(section, id) {
+  // Article Page content display 
+
+    const [article, setArticle] = useState( localStorage.length === 0? {sectionTitle : "", sectionId : null} : JSON.parse(localStorage.article) )
+   
+    function PassThroughDetails(section, id) {
       setArticle(prevState => ({
         ...prevState,
         sectionTitle : section,
@@ -26,12 +30,20 @@ const App = () => {
       }))
     }
 
+  
+      useEffect(()=>{
+        localStorage.setItem('article', JSON.stringify(article)) 
+        console.log(localStorage, 'has been saved')
+      },[article])
+    
+   
+  
   return (
     <>
       <BrowserRouter>
         <Nav />
           <Routes>
-            <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} passThroughDetails = {passThroughDetails} darkMode = {darkMode}/>]} />
+            <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
           </Routes>
         <Footer />
