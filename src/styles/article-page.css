@@ -52,8 +52,10 @@
 /* Article Story/Content font and inline sizing */
 .article-content {
     grid-column: 4/10;
-    font-size: 1.25rem;
-    line-height: 1.75;
+    font-size: 1.15rem;
+    line-height: 1.95;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: #7E7E7E;
 }
 
 /* Articl-Page dark mode values*/
@@ -67,5 +69,5 @@
     color: #F2F2F2;
 }
 #article-content-dark {
-    color: #F2F2F2;
+    color: #7E7E7E;
 }

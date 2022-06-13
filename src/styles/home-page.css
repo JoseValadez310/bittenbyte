@@ -19,7 +19,7 @@
 
 /*Dark Mode switch*/
 .switch-container {
-    grid-column: 8/9;
+    grid-column: 9/10;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -109,7 +109,66 @@
 
 
 /* hero news 2 cards*/
-.news-section {
+.news-section{
+    grid-column: 3/11;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    gap: 1em;
+}
+
+.latest-panel-one{
+    grid-column: 1/4;
+}
+
+.latest-panel-two{
+    grid-column: 4/7;
+}
+ 
+.latest-panel-three{
+    grid-column: 7/10;
+}
+
+.panel-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.panel-card-odd {
+    padding: 1rem;
+}
+
+
+.panel-author {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 100;
+}
+
+.panel-title {
+    font-family: 'Playfair Display SC', serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .news-section {
     grid-column: 3/11;
     display: grid;
     grid-template-columns: repeat(8,1fr);
@@ -145,7 +204,7 @@
     font-weight: 100;
     text-align: center;
     
-}
+} */
 
 
 /*Tech card stack of 3 with slider*/
@@ -156,17 +215,17 @@
     gap: 1em
 }
 
-.tec-card-one, .tec-card-two, .tec-card-three {
+.tech-card-one, .tech-card-two, .tech-card-three {
     border-radius: 10px;
     height: 45rem;
     grid-column: 1/5;
     overflow: hidden;
     
 }
-.tec-card-two{
+.tech-card-two{
     grid-column: 5/9;
 }
-.tec-card-three{   
+.tech-card-three{   
     grid-column: 9/13;
 }
  
@@ -181,14 +240,14 @@
 .set-slide-one, .set-slide-two {
     grid-column: 1/5;
     overflow: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 80vh;
 }
 .set-slide-two{
     grid-column: 5/9;
 }
 
-.setUp-slider{
-    height: 80vh;
-}
 .arrowLeft-box{
     grid-column: 4/5;
     grid-row: 3/4;
@@ -326,6 +385,10 @@
 
 #section-title-dark{
     color: white;
+}
+
+#panel-card-dark {
+    background-color: #454444 ;
 }
 
 

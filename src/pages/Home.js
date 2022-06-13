@@ -40,35 +40,93 @@ return(
         <div className = 'news-section'>
            
             <h1 className = 'section-title' id = {darkMode === false? 'section-title-light':'section-title-dark'}>Latest</h1>  
+               
                {/* Light Switch  */}
                 <div className = 'switch-container'  onClick = {props.handleDarkMode}> 
                     <img src = {darkMode? icon.lightMode : icon.darkMode} alt = 'Website Dark/Light Switch' /> 
                 </div>
 
-                <div className = 'news-banner'>
+                    <div className = 'latest-panel-one'>
+                        <div className = 'panel-card-odd'>
+                            <small className = 'panel-author'> <i>Jose Valadez</i></small>
+                            <h3 className = 'panel-title'> Starting a Blog </h3>
+                            <span><small>June 12, 2022</small> - <small> Hobby </small></span>
+                        </div>
+                    <br/>
+                        <div className = 'panel-card' id = {darkMode === false ? null : 'panel-card-dark'} >
+                            <small className = 'panel-author' > <i>Master Windo</i> </small>
+                            <h3 className = 'panel-title'> Star Wars the Video Games</h3>
+                            <span><small>September 12, 2022</small> - <small> Community </small></span>
+                        </div>
+                    </div>
+
+                    <div className = 'latest-panel-two'>
+                        <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
+                            <small className = 'panel-author'> <i>Jacob Meyers </i> </small>
+                            <h3 className = 'panel-title'> Discovering your Tech Podcast</h3>
+                            <span><small>June 12, 2022</small> - <small> Community </small></span>
+                        </div>
+                    <br/>
+                        <div className = 'panel-card-odd'>
+                            <small className = 'panel-author'> <i>San Homie</i> </small>
+                            <h3 className = 'panel-title'> Let's think about solar</h3>
+                            <span><small>February  12, 2022</small> - <small> Technology</small></span>
+                        </div>
+                    </div>
+                
+                    <div className = 'latest-panel-three'>
+                        <div className = 'panel-card-odd'>
+                            <small className = 'panel-author'> <i>Gabriel James</i> </small>
+                            <h3 className = 'panel-title'> Consider your fan options </h3>
+                            <span><small>January 12, 2022</small> - <small>Technology </small></span>
+                        </div>
+                    <br/>
+                        <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
+                            <small className = 'panel-author'> <i>Patagonia Jr</i> </small>
+                            <h3 className = 'panel-title'>Hand book to Picking a Beer</h3>
+                            <span><i><small>June 12, 2022 </small> - <small> Food</small></i></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {/* <div className = 'news-banner'>
                     <div className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}>
                         <div className = 'news-banner-content'>
                             {/* <p>
                                 {data['news-hero'][0].new}
-                            </p> */}
+                            </p> 
                         </div>
                     </div>
-                </div>
-
+                </div> 
+                
                 <div className = 'editor-choice'>
                     <div className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}>
                         <div className = 'editor-choice-content'>
                             <p>
-                                {/* Welcome to Bitten Bite. Our mission will follow that of creating meanful tales. To undertsand Bitten Bite is to know its a show ran by a single person with a ring to rule them all. Hello dear reader, I hope you find something you'll enjoy. I'm also wondering if i can run a site without wifi. Local site. */}
+                                 Welcome to Bitten Bite. Our mission will follow that of creating meanful tales. To undertsand Bitten Bite is to know its a show ran by a single person with a ring to rule them all. Hello dear reader, I hope you find something you'll enjoy. I'm also wondering if i can run a site without wifi. Local site. 
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> */}
         </div>
        
         <div className = 'technology-section' >
             <h1 className = 'section-title' id = {darkMode === false? 'section-title-light':'section-title-dark'}>Technology</h1> 
-                <div className = 'tec-card-one' >
+                <div className = 'tech-card-one' >
                     <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('technology',technology[techLength-1].id)} to = "/Article">       
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-1].date} </small>
                             <img className = 'card-image' src = {technology[techLength-1].image} loading="lazy" alt = 'something' />
@@ -76,9 +134,9 @@ return(
                                 <h1 className = 'card-title'>
                                     {technology[techLength-1].title}
                                     </h1>
-                                <h4 className = 'card-author'>
+                                <h4 className = 'card-author'><i>
                                     {technology[techLength-1].author}
-                                    </h4>
+                                    </i></h4>
                                 <p className = 'card-summary'>
                                     {technology[techLength-1].summary}
                                 </p>
@@ -86,7 +144,7 @@ return(
                     </Link>
                 </div>
 
-                <div className = 'tec-card-two'>
+                <div className = 'tech-card-two'>
                     <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.PassThroughDetails('technology', technology[techLength-2].id)} to = "/Article">       
                         <small className = 'card-date'  id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-2].date} </small>
                         <img className = 'card-image' src = {technology[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
@@ -94,9 +152,9 @@ return(
                                 <h1 className = 'card-title'>
                                     {technology[techLength-2].title}
                                     </h1>
-                                <h4 className = 'card-author'>
-                                    {technology[techLength-2].author}
-                                    </h4>
+                                <h4 className = 'card-author'><i>
+                                    {technology[techLength-2].author} 
+                                    </i></h4>
                                 <p className = 'card-summary'>
                                     {technology[techLength-2].summary}
                                 </p>
@@ -104,7 +162,7 @@ return(
                     </Link>
                 </div>
 
-                <div className = 'tec-card-three'>
+                <div className = 'tech-card-three'>
                     <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.PassThroughDetails('technology',technology[techLength-3].id)} to = "/Article">       
                         <small className = 'card-date'  id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-3].date} </small>
                             <img className = 'card-image' src = {technology[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
@@ -112,9 +170,9 @@ return(
                                 <h1 className = 'card-title'>
                                     {technology[techLength-3].title}
                                     </h1>
-                                <h4 className = 'card-author'>
+                                <h4 className = 'card-author'><i>
                                     {technology[techLength-3].author}
-                                    </h4>
+                                    </i></h4>
                                 <p className = 'card-summary'>
                                     {technology[techLength-3].summary}
                                 </p>
@@ -151,9 +209,9 @@ return(
                             <h1 className = 'card-title'>
                                 {hobby[hobbyLength-1].title}
                                 </h1>
-                            <h4 className = 'card-author'>
+                            <h4 className = 'card-author'><i>
                                 {hobby[hobbyLength-1].author}
-                                </h4>
+                                </i></h4>
                             <p className = 'card-summary'>
                                 {hobby[hobbyLength-1].summary}
                             </p>
@@ -169,9 +227,9 @@ return(
                             <h1 className = 'card-title'>
                                 {hobby[hobbyLength-2].title}
                                 </h1>
-                            <h4 className = 'card-author'>
+                            <h4 className = 'card-author'><i>
                                 {hobby[hobbyLength-2].author}
-                                </h4>
+                                </i></h4>
                             <p className = 'card-summary'>
                                 {hobby[hobbyLength-2].summary}
                             </p>
@@ -187,9 +245,9 @@ return(
                             <h1 className = 'card-title'>
                                 {hobby[hobbyLength-3].title}
                                 </h1>
-                            <h4 className = 'card-author'>
+                            <h4 className = 'card-author'><i>
                                 {hobby[hobbyLength-3].author}
-                                </h4>
+                                </i></h4>
                             <p className = 'card-summary'>
                                 {hobby[hobbyLength-3].summary}
                             </p>
@@ -207,9 +265,9 @@ return(
                             <h1 className = 'card-title'>
                                 {food[foodLength-1].title}
                                 </h1>
-                            <h4 className = 'card-author'>
+                            <h4 className = 'card-author'><i>
                                 {food[foodLength-1].author}
-                                </h4>
+                                </i> </h4>
                             <p className = 'card-summary'>
                                 {food[foodLength-1].summary}
                                 </p>
@@ -234,9 +292,9 @@ return(
                             <h1 className = 'card-title'>
                                 {food[foodLength-2].title}
                                 </h1>
-                            <h4 className = 'card-author'>
+                            <h4 className = 'card-author'><i>
                                 {food[foodLength-2].author}
-                                </h4>
+                                </i></h4>
                             <p className = 'card-summary'>
                                 {food[foodLength-2].summary}
                             </p>
@@ -250,9 +308,9 @@ return(
                             <h1 className = 'card-title'>
                                 {food[foodLength-3].title}
                                 </h1>
-                            <h4 className = 'card-author'>
+                            <h4 className = 'card-author'><i>
                                 {food[foodLength-3].author}
-                                </h4>
+                                </i></h4>
                             <p className = 'card-summary'>
                                 {food[foodLength-3].summary}
                             </p>
