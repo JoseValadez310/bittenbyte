@@ -47,7 +47,7 @@ return(
                 </div>
 
                     <div className = 'latest-panel-one'>
-                        <div className = 'panel-card-odd'>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
                             <small className = 'panel-author'> <i>Jose Valadez</i></small>
                             <h3 className = 'panel-title'> Starting a Blog </h3>
                             <span><small>June 12, 2022</small> - <small> Hobby </small></span>
@@ -67,7 +67,7 @@ return(
                             <span><small>June 12, 2022</small> - <small> Community </small></span>
                         </div>
                     <br/>
-                        <div className = 'panel-card-odd'>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
                             <small className = 'panel-author'> <i>San Homie</i> </small>
                             <h3 className = 'panel-title'> Let's think about solar</h3>
                             <span><small>February  12, 2022</small> - <small> Technology</small></span>
@@ -75,7 +75,7 @@ return(
                     </div>
                 
                     <div className = 'latest-panel-three'>
-                        <div className = 'panel-card-odd'>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
                             <small className = 'panel-author'> <i>Gabriel James</i> </small>
                             <h3 className = 'panel-title'> Consider your fan options </h3>
                             <span><small>January 12, 2022</small> - <small>Technology </small></span>
@@ -84,7 +84,7 @@ return(
                         <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
                             <small className = 'panel-author'> <i>Patagonia Jr</i> </small>
                             <h3 className = 'panel-title'>Hand book to Picking a Beer</h3>
-                            <span><i><small>June 12, 2022 </small> - <small> Food</small></i></span>
+                            <span className = 'panel-date-section'><i><small>June 12, 2022 </small> - <small> Food</small></i></span>
                         </div>
                     </div>
 

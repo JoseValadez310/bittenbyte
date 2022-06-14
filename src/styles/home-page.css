@@ -128,26 +128,37 @@
     grid-column: 7/10;
 }
 
-.panel-card {
-    background-color: white;
+.panel-card, .panel-card-odd  {
     border-radius: 10px;
     padding: 1rem;
+    font-size: large;
 }
 
 .panel-card-odd {
-    padding: 1rem;
-}
+    color: #F2F2F2;
+} 
 
-
-.panel-author {
+.panel-author, .panel-date-section {
     font-family: 'Fira Sans Condensed', sans-serif;
     font-weight: 100;
 }
 
 .panel-title {
-    font-family: 'Playfair Display SC', serif;
+    font-family:'Playfair Display SC', serif;
+    font-weight: 100;
 }
 
+/*  Dark Mode Active  */
+#panel-card-dark {
+    background-color: #454444 ;
+    color: #F2F2F2;
+}
+
+#panel-card-light {
+    border-radius: 10px;
+    background-color: white;
+    color: #454444 ;
+}
 
 
 
@@ -241,11 +252,17 @@
     grid-column: 1/5;
     overflow: hidden;
     border-radius: 10px;
-    overflow: hidden;
     height: 80vh;
 }
 .set-slide-two{
     grid-column: 5/9;
+}
+
+.set-slide-one > img {
+    height: inherit;
+}
+.set-slide-two > img {
+    height: inherit;
 }
 
 .arrowLeft-box{
@@ -387,9 +404,6 @@
     color: white;
 }
 
-#panel-card-dark {
-    background-color: #454444 ;
-}
 
 
 @media only screen and (max-width: 1680px) {
