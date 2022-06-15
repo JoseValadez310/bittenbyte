@@ -11,24 +11,27 @@ const data = {
     'technology': [
         {
             'id'    : 0,
+            'section':'Technology',
             'date'  : 'April 3, 2020',
             'image' : image.tech.tech1,
-            'title' : "Apple's Newest Data Mine",
+            'title' : "Laptop vs Desktop",
             'author': 'Jose Valadez',
             'summary' : "I have focused a bit too much energy on the card's appearance. The time spent would have been better used on figuring out my routes. I think I will give myself deadlines in hopes of increasing productivity",
             'story' : "Focusrite, the British manufacturer of audio interfaces and recording tools, is introducing a new line of devices designed for home podcast recording. The Vocaster One and Vocaster Two take the key parts of Focusrite’s popular interfaces and tailor them to amateur podcasters and other home audio creators.   Focusrite’s Scarlett line of audio interfaces has been a consumer standard over the past few years for podcasters who need to plug XLR microphones into their computer (to the point where I saw one in the trailer for a movie about a podcast just last week).    But even as it’s become a hit in the podcast world, Focusrite has mostly marketed itself as a company for musicians (the tagline on its website is “We believe in enriching peoples’ lives through music”), and its interfaces have traditionally been designed for recording instruments and singers.With the introduction of the Vocaster One and Two, Focusrite is making dedicated hardware for the podcast voice with a new design and podcast-specific features.    The Vocaster One is a USB-C one-input interface for a mobile setup, and the Vocaster Two adds a two-input / two headphone output setup with the ability to take in audio from a device via Bluetooth."
         },
         { 
             'id'    : 1,
+            'section':'Technology',
             'date'  : 'April 5, 2020',
             'image' : image.tech.tech2,
-            'title' : 'Learning the Step towards',
+            'title' : 'iFix it',
             'author': 'Jose Valadez',
             'summary' : " This should be dedicated to the Articles thesis. If not that a catchy saying or quote. As a result i might increase the font size  ",
             'story' : 'the blog post'
         },
         {
             'id'    : 2,
+            'section':'Technology',
             'date'  : 'September 10, 2022',
             'image' : image.tech.tech3 ,
             'title' : "Nvidia's Newest Deal ",
@@ -38,6 +41,7 @@ const data = {
         } ,
         {
             'id'    : 3,
+            'section':'Technology',
             'date'  : 'April 3, 2020',
             'image' : image.tech.tech1,
             'title' : "Apple's Newest Data Mine",
@@ -50,36 +54,42 @@ const data = {
     'setUp': [
         {
             'id'    : 0,
+            'section':'',
             'image' : image.setUp.setUp1,
             'author': 'Jose Valadez',
             'about' : 'the blog post'
         },
         {
             'id'    : 1,
+            'section':'',
             'image' : image.setUp.setUp2,
             'author': 'Jose Valadez',
             'about' : 'the blog post'
         },
         {
             'id'    : 2,
+            'section':'',
             'image' : image.setUp.setUp3,
             'author': 'Jose Valadez',
             'about' : 'the blog post'
         },
         {
             'id'    : 3,
+            'section':'',
             'image' : image.setUp.setUp4,
             'author': 'Jose Valadez',
             'about' : 'the blog post'
         },
         {
             'id'    : 4,
+            'section':'',
             'image' : image.setUp.setUp5,
             'author': 'Jose Valadez',
             'about' : 'the blog post'
         },
         {
             'id'    : 5,
+            'section':'',
             'image' : image.setUp.setUp6,
             'author': 'Jose Valadez',
             'about' : 'the blog post'
@@ -89,6 +99,7 @@ const data = {
     'hobby': [
         {
             'id'    : 0,
+            'section':'Hobby',
             'date'  : "April 3, 2022",
             'image' : image.hobby.hobby1,
             'title' : 'Drones',
@@ -98,6 +109,7 @@ const data = {
         },
         {
             'id'    : 1,
+            'section':'Hobby',
             'date'  : "April 4, 2022",
             'image' : image.hobby.hobby2,
             'title' : 'Wood Work',
@@ -107,6 +119,7 @@ const data = {
         },
         {
             'id'    : 2,
+            'section':'Hobby',
             'date'  : "April 5, 2022",
             'image' : image.hobby.hobby3,
             'title' : 'In Door Rock Climbing',
@@ -119,6 +132,7 @@ const data = {
     'food': [
         {
             'id'    : 0,
+            'section':'Food',
             'date'  : "May 1, 2022",
             'image' : image.food.food1,
             'title' : 'Summary styling',
@@ -128,6 +142,7 @@ const data = {
         },
         {
             'id'    : 1,
+            'section':'Food',
             'date'  : "May 2, 2022",
             'image' : image.food.food2,
             'title' : 'Near Completion',
@@ -137,6 +152,7 @@ const data = {
         },
         {
             'id'    : 2,
+            'section':'Food',
             'date'  : "May 5, 2022",
             'image' : image.food.food3,
             'title' : 'Beers of the Century',

@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom'
 
 const Home = (props) => {
 
-// converting to something a little more readable
+// converting props.darkMode to something a little shorter
 
 let darkMode = props.darkMode
 
 // getting the length of article array 
-const technology = data['technology']
-const techLength = technology.length
+const technology = data['technology'] //object containing an array of articles 
+const techLength = technology.length //length of the array aka number of articles
 
 const setUp = data['setUp']
 const setUpLength = setUp.length
@@ -32,9 +32,15 @@ const foodLength = food.length
         function handleLooperSubtract() {
             looper === 0? setLooper(setUpLength - 1) : setLooper(prevState => prevState - 1) 
         }
+    
+    const ranInt = {
+        'technology': Math.floor(Math.random()* techLength), 
+        'hobby': Math.floor(Math.random()* hobbyLength), 
+        'food': Math.floor(Math.random()* foodLength)
+    }  
 
-  
 
+    console.log(ranInt.food, ranInt.hobby, ranInt.technology)
 return(
     <main id = {darkMode === false? 'main-light':'main-dark'}>
         <div className = 'news-section'>
@@ -45,26 +51,26 @@ return(
                 <div className = 'switch-container'  onClick = {props.handleDarkMode}> 
                     <img src = {darkMode? icon.lightMode : icon.darkMode} alt = 'Website Dark/Light Switch' /> 
                 </div>
-
+                    {/* technology discovery panel */}
                     <div className = 'latest-panel-one'>
-                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
-                            <small className = 'panel-author'> <i>Jose Valadez</i></small>
-                            <h3 className = 'panel-title'> Starting a Blog </h3>
-                            <span><small>June 12, 2022</small> - <small> Hobby </small></span>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null} >
+                            <small className = 'panel-author'> <i>{technology[ranInt.technology].author}</i></small>
+                            <h3 className = 'panel-title'> {technology[ranInt.technology].title} </h3>
+                            <span><small> {technology[ranInt.technology].date} </small> - <small> {technology[ranInt.technology].section} </small></span>
                         </div>
-                    <br/>
-                        <div className = 'panel-card' id = {darkMode === false ? null : 'panel-card-dark'} >
+                    <hr/>
+                        <div className = 'panel-card' id = {darkMode === false ? null : 'panel-card-dark'}>
                             <small className = 'panel-author' > <i>Master Windo</i> </small>
                             <h3 className = 'panel-title'> Star Wars the Video Games</h3>
                             <span><small>September 12, 2022</small> - <small> Community </small></span>
                         </div>
                     </div>
-
+                    {/*  hobby discovery panel  */}
                     <div className = 'latest-panel-two'>
                         <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
-                            <small className = 'panel-author'> <i>Jacob Meyers </i> </small>
-                            <h3 className = 'panel-title'> Discovering your Tech Podcast</h3>
-                            <span><small>June 12, 2022</small> - <small> Community </small></span>
+                            <small className = 'panel-author'> <i> {hobby[ranInt.hobby].author} </i> </small>
+                            <h3 className = 'panel-title'> {hobby[ranInt.hobby].title} </h3>
+                            <span><small> {hobby[ranInt.hobby].date} </small> - <small> {hobby[ranInt.hobby].section} </small></span>
                         </div>
                     <br/>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
@@ -73,34 +79,20 @@ return(
                             <span><small>February  12, 2022</small> - <small> Technology</small></span>
                         </div>
                     </div>
-                
+                    {/* food discovery panel*/}
                     <div className = 'latest-panel-three'>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
-                            <small className = 'panel-author'> <i>Gabriel James</i> </small>
-                            <h3 className = 'panel-title'> Consider your fan options </h3>
-                            <span><small>January 12, 2022</small> - <small>Technology </small></span>
+                            <small className = 'panel-author'> <i> {food[ranInt.food].author} </i> </small>
+                            <h3 className = 'panel-title'> {food[ranInt.food].title} </h3>
+                            <span><small> {food[ranInt.food].date} </small> - <small> {food[ranInt.food].section} </small></span>
                         </div>
-                    <br/>
+                    <hr/>
                         <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
                             <small className = 'panel-author'> <i>Patagonia Jr</i> </small>
                             <h3 className = 'panel-title'>Hand book to Picking a Beer</h3>
                             <span className = 'panel-date-section'><i><small>June 12, 2022 </small> - <small> Food</small></i></span>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                 {/* <div className = 'news-banner'>

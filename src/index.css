@@ -51,3 +51,8 @@ main {
 
 
 /* Dark Mode color values can changes*/
+@media only screen and (max-width: 1680px) {
+    .background-hero {
+        height: 45vh;
+    }
+}

@@ -9,9 +9,9 @@ const Article = (props) => {
     
     let article = data[props.article.sectionTitle][props.article.sectionId]
     
-    function indentingParagraphs() {
+    // function indentingParagraphs() {
         
-    }
+    // }
 
     
 
