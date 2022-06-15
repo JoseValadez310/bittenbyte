@@ -1,7 +1,7 @@
 import data from '../content/data'
 import icon from '../content/images/card-images/icon-links/icons'
 import "../styles/home-page.css"
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = (props) => {
@@ -28,24 +28,40 @@ const foodLength = food.length
         function handleLooperAdd() {
             looper === setUpLength-1? setLooper(0) : setLooper(prevState => prevState + 1) 
         }
-
         function handleLooperSubtract() {
             looper === 0? setLooper(setUpLength - 1) : setLooper(prevState => prevState - 1) 
         }
-    
-    const ranInt = {
-        'technology': Math.floor(Math.random()* techLength), 
-        'hobby': Math.floor(Math.random()* hobbyLength), 
-        'food': Math.floor(Math.random()* foodLength)
-    }  
 
+    const [ranInt, setRanInt] = useState({
+        'technologyOne': 0,
+        'technologyTwo': 0,
+        
+        'hobbyOne': 0, 
+        'hobbyTwo': 0,
 
-    console.log(ranInt.food, ranInt.hobby, ranInt.technology)
+        'foodOne': 0,
+        'foodTwo': 0
+    })
+
+    useEffect(() => {
+        setRanInt(prevState => ({
+            ...prevState,
+            "technologyOne": Math.floor(Math.random()* techLength),
+            "technologyTwo": Math.floor(Math.random()* techLength),
+
+            "hobbyOne": Math.floor(Math.random()* hobbyLength),
+            "hobbyTwo": Math.floor(Math.random()* hobbyLength),
+
+            "foodOne": Math.floor(Math.random()* foodLength),
+            "foodTwo": Math.floor(Math.random()* foodLength)
+        }))
+    },[])
+
 return(
     <main id = {darkMode === false? 'main-light':'main-dark'}>
         <div className = 'news-section'>
            
-            <h1 className = 'section-title' id = {darkMode === false? 'section-title-light':'section-title-dark'}>Latest</h1>  
+            <h1 className = 'section-title' id = {darkMode === false? 'section-title-light':'section-title-dark'}>Discovery</h1>  
                
                {/* Light Switch  */}
                 <div className = 'switch-container'  onClick = {props.handleDarkMode}> 
@@ -54,43 +70,69 @@ return(
                     {/* technology discovery panel */}
                     <div className = 'latest-panel-one'>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null} >
-                            <small className = 'panel-author'> <i>{technology[ranInt.technology].author}</i></small>
-                            <h3 className = 'panel-title'> {technology[ranInt.technology].title} </h3>
-                            <span><small> {technology[ranInt.technology].date} </small> - <small> {technology[ranInt.technology].section} </small></span>
+                            <small className = 'panel-author'> <i>
+                                {technology[ranInt.technologyOne].author}
+                                </i></small>
+                            <h3 className = 'panel-title'> 
+                                {technology[ranInt.technologyOne].title} 
+                                </h3>
+                            <span className = 'panel-date-section'><small> 
+                                {technology[ranInt.technologyOne].date} </small> - <small> {technology[ranInt.technologyOne].section} </small></span>
                         </div>
                     <hr/>
                         <div className = 'panel-card' id = {darkMode === false ? null : 'panel-card-dark'}>
-                            <small className = 'panel-author' > <i>Master Windo</i> </small>
-                            <h3 className = 'panel-title'> Star Wars the Video Games</h3>
-                            <span><small>September 12, 2022</small> - <small> Community </small></span>
+                            <small className = 'panel-author'> <i>
+                                {technology[ranInt.technologyTwo].author}
+                                </i></small>
+                            <h3 className = 'panel-title'> 
+                                {technology[ranInt.technologyTwo].title}
+                                </h3>
+                            <span className = 'panel-date-section'><small>
+                                 {technology[ranInt.technologyTwo].date} </small> - <small> {technology[ranInt.technologyTwo].section} </small></span>
                         </div>
                     </div>
                     {/*  hobby discovery panel  */}
                     <div className = 'latest-panel-two'>
                         <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
-                            <small className = 'panel-author'> <i> {hobby[ranInt.hobby].author} </i> </small>
-                            <h3 className = 'panel-title'> {hobby[ranInt.hobby].title} </h3>
-                            <span><small> {hobby[ranInt.hobby].date} </small> - <small> {hobby[ranInt.hobby].section} </small></span>
-                        </div>
+                            <small className = 'panel-author'> <i> 
+                                {hobby[ranInt.hobbyOne].author} 
+                                </i> </small>
+                            <h3 className = 'panel-title'> 
+                                {hobby[ranInt.hobbyOne].title} 
+                                </h3>
+                            <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyOne].date} </small> - <small> {hobby[ranInt.hobbyOne].section} </small></span>
+                        </div> 
                     <br/>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
-                            <small className = 'panel-author'> <i>San Homie</i> </small>
-                            <h3 className = 'panel-title'> Let's think about solar</h3>
-                            <span><small>February  12, 2022</small> - <small> Technology</small></span>
-                        </div>
+                            <small className = 'panel-author'> <i> 
+                                {hobby[ranInt.hobbyTwo].author} 
+                                </i> </small>
+                            <h3 className = 'panel-title'> 
+                                {hobby[ranInt.hobbyTwo].title} 
+                                </h3>
+                            <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyTwo].date} </small> - <small> {hobby[ranInt.hobbyTwo].section} </small></span>
+                        </div> 
                     </div>
                     {/* food discovery panel*/}
                     <div className = 'latest-panel-three'>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
-                            <small className = 'panel-author'> <i> {food[ranInt.food].author} </i> </small>
-                            <h3 className = 'panel-title'> {food[ranInt.food].title} </h3>
-                            <span><small> {food[ranInt.food].date} </small> - <small> {food[ranInt.food].section} </small></span>
+                            <small className = 'panel-author'> <i> 
+                                {food[ranInt.foodOne].author}
+                                 </i> </small>
+                            <h3 className = 'panel-title'> 
+                                {food[ranInt.foodOne].title} 
+                                </h3>
+                            <span className = 'panel-date-section'><small> {food[ranInt.foodOne].date} </small> - <small> {food[ranInt.foodOne].section} </small></span>
                         </div>
                     <hr/>
                         <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
-                            <small className = 'panel-author'> <i>Patagonia Jr</i> </small>
-                            <h3 className = 'panel-title'>Hand book to Picking a Beer</h3>
-                            <span className = 'panel-date-section'><i><small>June 12, 2022 </small> - <small> Food</small></i></span>
+                            <small className = 'panel-author'> <i>
+                                {food[ranInt.foodTwo].author}
+                                </i> </small>
+                            <h3 className = 'panel-title'>
+                                {food[ranInt.foodTwo].title}
+                            </h3>
+                            <span className = 'panel-date-section'><small>{food[ranInt.foodTwo].date} </small> - <small> {food[ranInt.foodTwo].section}</small></span>
                         </div>
                     </div>
 

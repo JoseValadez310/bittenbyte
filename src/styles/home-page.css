@@ -29,7 +29,6 @@
     width: 2.5rem;
 }
 
-
 /*Card Article internals*/
 
 .card-article {
@@ -63,7 +62,7 @@
     border-radius: 0px 0px 0px 0px;
 }
 .image-container > img {
-    width: 30rem;
+    width: 35rem;
 }
 
 .card-date {
@@ -256,13 +255,6 @@
 }
 .set-slide-two{
     grid-column: 5/9;
-}
-
-.set-slide-one > img {
-    height: inherit;
-}
-.set-slide-two > img {
-    height: inherit;
 }
 
 .arrowLeft-box{
