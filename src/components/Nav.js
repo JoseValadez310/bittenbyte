@@ -26,7 +26,7 @@ const Nav = () => {
         <nav className = 'navBar'>
                 <NavLink to ='/' className = 'logo'> Bitten Bite </NavLink>  
                 <div className = 'nav-links'> 
-                            <NavLink className = 'navLink' to = '/Technology'>
+                            <NavLink className = 'navLink' to = '/Technology/Archive/'>
                                 Technology
                                     </NavLink>
                             <NavLink className = 'navLink' to = '/Comunity'> 
