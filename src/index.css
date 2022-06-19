@@ -1,16 +1,12 @@
 body {
     margin: 0%;
 }
-
 body::-webkit-scrollbar {
     width: .5em;
 }
 body::-webkit-scrollbar-thumb {
     background-color: #454444;
 }
-
-
-
 
 /* Hero container */
 .hero-container {
@@ -48,9 +44,6 @@ main {
     justify-content: center;
 }
 
-
-
-/* Dark Mode color values can changes*/
 @media only screen and (max-width: 1680px) {
     .background-hero {
         height: 45vh;

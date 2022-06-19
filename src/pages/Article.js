@@ -4,8 +4,6 @@ import icon from "../content/images/card-images/icon-links/icons"
 
 
 const Article = (props) => {
-
-    console.log(props)
     
     let article = data[props.article.sectionTitle][props.article.sectionId]
     

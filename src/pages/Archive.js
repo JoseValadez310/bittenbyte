@@ -1,12 +1,14 @@
+import SearchBar from "../components/SearchBar";
 
 
-
-const Archive = () => {
+const Archive = (props) => {
 
     return(
 
         <main>
-            <h1> Archive Section for technology Article </h1>
+            <SearchBar />
+
+            <h1> {props.article.sectionTitle} </h1>
         </main>
 
     )

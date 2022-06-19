@@ -1,7 +1,7 @@
 
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-import SearchBar from "./components/SearchBar";
+
 import Home from "./pages/Home";
 import Footer from "./components/Footer"
 import Article from "./pages/Article";
@@ -31,23 +31,21 @@ const App = () => {
         sectionId : id
       }))
     }
-
   
-      useEffect(()=>{
-        localStorage.setItem('article', JSON.stringify(article)) 
-        console.log(localStorage, 'has been saved')
-      },[article])
+    useEffect(()=>{
+      localStorage.setItem('article', JSON.stringify(article)) 
+    },[article])
     
    
   
   return (
     <>
       <BrowserRouter>
-        <Nav />
+        <Nav PassThroughDetails = {PassThroughDetails}/>
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
-            <Route path = "/Technology/Archive/" element = {[<ScrollToTopOnMount />, <SearchBar/> , <Archive darkMode = {darkMode}/>]} />
+            <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} article = {article} />]} />
           </Routes>
         <Footer />
       </BrowserRouter>
