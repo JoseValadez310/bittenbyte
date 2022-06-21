@@ -2,7 +2,6 @@
     grid-column: 4/10; 
 }
 .search-container {
-   
     height: 2.5rem;
     width: 100%;
     background-color: #D2D2D2;
@@ -17,10 +16,10 @@
     padding-inline: 1rem;
 }
 
-.search-section {
+.search-section-title {
     color: #808080;
-    width: 6.75rem;
-    margin: 0%;
+    width: fit-content;
+    margin-right: 1%
 }
 .searchBar{
     background-color: #D2D2D2;
@@ -28,7 +27,7 @@
     display: flex;
     padding-right: 1rem;
     margin-top: 1.5px;
-    width: inherit;
+    width: 100%;
 }
 
 input:focus {

@@ -1,25 +1,45 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import article from '../content/data'
 import '../styles/search-bar-component.css'
 import icon from "../content/images/card-images/icon-links/searchSVG.svg"
 
 
 const SearchBar = (props) => {
+    
+    const sectionTitle = props.title.toLowerCase()
+   
+    const [titleArray, setTitleSearch] = useState()
+
+        useEffect(()=>{
+            let savedTitles = []
+
+            article[sectionTitle].forEach(element => {
+                savedTitles.push(element.title)
+            });
+
+            setTitleSearch(savedTitles)
+        },[sectionTitle])
+
 
     const [searchValue, setSearchValue] = useState('')
-
-    const handleSearch = (event) => {
-        setSearchValue(event.target.value)
+        const handleSearch = (event) => {
+            setSearchValue(event.target.value)
+            search()
         }
+        
+      
+    
+    function search() {
+        console.log(titleArray.filter(item => item.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1))
+    }
 
-    console.log(article)
 
 
     return (
         <div className ='search-wrapper'>
             <div className='search-container'>
                 <img className = 'search-icon' src = {icon} height = {30} alt = 'search icon'/>
-                <span className = 'search-section'>{props.sectionID} :</span>
+                <p className = 'search-section-title'>{`${sectionTitle}:`}</p>
                 <input 
                     className = 'searchBar' 
                     type = 'text' placeholder = 'Search an Article' 

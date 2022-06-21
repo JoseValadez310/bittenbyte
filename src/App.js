@@ -1,7 +1,6 @@
 
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
-
 import Home from "./pages/Home";
 import Footer from "./components/Footer"
 import Article from "./pages/Article";

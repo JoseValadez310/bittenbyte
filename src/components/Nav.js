@@ -34,9 +34,6 @@ const Nav = (props) => {
                             <NavLink className = 'navLink' to = '/Archive/Food' onClick = {() => props.PassThroughDetails('Food', null)}>
                                 Food 
                                     </NavLink>
-                            <NavLink className = 'navLink' to = '/Archive'>
-                                Archive
-                                    </NavLink>
                             <NavLink className = 'navLink' to = '/About'>
                                 About
                                     </NavLink>

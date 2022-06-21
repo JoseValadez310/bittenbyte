@@ -1,14 +1,15 @@
 import SearchBar from "../components/SearchBar";
-
+import "../styles/archive-page.css"
 
 const Archive = (props) => {
 
+
     return(
-
+       
         <main>
-            <SearchBar />
-
-            <h1> {props.article.sectionTitle} </h1>
+            <SearchBar title = {props.article.sectionTitle}/>
+            <div className = "archive-article-display">
+                </div>
         </main>
 
     )
