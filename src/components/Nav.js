@@ -22,16 +22,16 @@ const Nav = (props) => {
         <nav className = 'navBar'>
                 <NavLink to ='/' className = 'logo'> Bitten Bite </NavLink>  
                 <div className = 'nav-links'> 
-                            <NavLink className = 'navLink' to = '/Archive/Technology' onClick = {() => props.PassThroughDetails('Technology', null)}>
+                            <NavLink className = 'navLink' to = '/Archive/Technology' onClick = {() => props.tabSection('Technology')}>
                                 Technology
                                     </NavLink>
                             <NavLink className = 'navLink' to = '/Comunity'> 
                                 Set-Ups 
                                     </NavLink>  
-                            <NavLink className = 'navLink' to = '/Archive/Hobby' onClick = {() => props.PassThroughDetails('Hobby', null)}>
+                            <NavLink className = 'navLink' to = '/Archive/Hobby' onClick = {() => props.tabSection('Hobby')}>
                                 Hobbies 
                                     </NavLink>
-                            <NavLink className = 'navLink' to = '/Archive/Food' onClick = {() => props.PassThroughDetails('Food', null)}>
+                            <NavLink className = 'navLink' to = '/Archive/Food' onClick = {() => props.tabSection('Food')}>
                                 Food 
                                     </NavLink>
                             <NavLink className = 'navLink' to = '/About'>

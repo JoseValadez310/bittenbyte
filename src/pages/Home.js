@@ -69,13 +69,15 @@ return(
                 </div>
                     {/* technology discovery panel */}
                     <div className = 'latest-panel-one'>
-                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null} >
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
                             <small className = 'panel-author'> <i>
                                 {technology[ranInt.technologyOne].author}
-                                </i></small>
-                            <h3 className = 'panel-title'> 
-                                {technology[ranInt.technologyOne].title} 
-                                </h3>
+                                    </i> 
+                                        </small>
+                            <h3 className = 'panel-title'> <Link onClick = { () => props.PassThroughDetails('technology', technology[ranInt.technologyOne].id)} to = "/Article">
+                                {technology[ranInt.technologyOne].title}
+                                    </Link>
+                                        </h3>
                             <span className = 'panel-date-section'><small> 
                                 {technology[ranInt.technologyOne].date} </small> - <small> {technology[ranInt.technologyOne].section} </small></span>
                         </div>
@@ -83,57 +85,69 @@ return(
                         <div className = 'panel-card' id = {darkMode === false ? null : 'panel-card-dark'}>
                             <small className = 'panel-author'> <i>
                                 {technology[ranInt.technologyTwo].author}
-                                </i></small>
-                            <h3 className = 'panel-title'> 
+                                    </i> 
+                                        </small>
+                            <h3 className = 'panel-title'> <Link onClick = { () => props.PassThroughDetails('technology', technology[ranInt.technologyTwo].id)} to = "/Article">
                                 {technology[ranInt.technologyTwo].title}
-                                </h3>
+                                    </Link>
+                                        </h3>
                             <span className = 'panel-date-section'><small>
                                  {technology[ranInt.technologyTwo].date} </small> - <small> {technology[ranInt.technologyTwo].section} </small></span>
                         </div>
                     </div>
                     {/*  hobby discovery panel  */}
                     <div className = 'latest-panel-two'>
-                        <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
+                        <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'}>
                             <small className = 'panel-author'> <i> 
                                 {hobby[ranInt.hobbyOne].author} 
-                                </i> </small>
-                            <h3 className = 'panel-title'> 
-                                {hobby[ranInt.hobbyOne].title} 
-                                </h3>
+                                    </i> 
+                                        </small>
+                            <h3 className = 'panel-title'> <Link onClick = { () => props.PassThroughDetails('hobby', hobby[ranInt.hobbyOne].id)} to = "/Article">
+                                {hobby[ranInt.hobbyOne].title}
+                                    </Link>
+                                        </h3>
                             <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyOne].date} </small> - <small> {hobby[ranInt.hobbyOne].section} </small></span>
                         </div> 
                     <br/>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
                             <small className = 'panel-author'> <i> 
                                 {hobby[ranInt.hobbyTwo].author} 
-                                </i> </small>
-                            <h3 className = 'panel-title'> 
-                                {hobby[ranInt.hobbyTwo].title} 
-                                </h3>
+                                    </i> 
+                                        </small>
+                            <h3 className = 'panel-title'> <Link onClick = { () => props.PassThroughDetails('hobby', hobby[ranInt.hobbyTwo].id)} to = "/Article">
+                                {hobby[ranInt.hobbyTwo].title}
+                                    </Link>
+                                        </h3>
                             <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyTwo].date} </small> - <small> {hobby[ranInt.hobbyTwo].section} </small></span>
                         </div> 
                     </div>
                     {/* food discovery panel*/}
                     <div className = 'latest-panel-three'>
-                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null} onClick = { () => props.PassThroughDetails('food', food[ranInt.foodOne].id)} to = "/Article">                            
                             <small className = 'panel-author'> <i> 
                                 {food[ranInt.foodOne].author}
-                                 </i> </small>
-                            <h3 className = 'panel-title'> 
-                                {food[ranInt.foodOne].title} 
-                                </h3>
+                                    </i> 
+                                        </small>
+                                <h3 className = 'panel-title'> <Link onClick = { () => props.PassThroughDetails('food', food[ranInt.foodOne].id)} to = "/Article">
+                                    {food[ranInt.foodOne].title}
+                                        </Link>
+                                            </h3>
                             <span className = 'panel-date-section'><small> {food[ranInt.foodOne].date} </small> - <small> {food[ranInt.foodOne].section} </small></span>
                         </div>
                     <hr/>
-                        <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'} >
+                        <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'}> 
                             <small className = 'panel-author'> <i>
                                 {food[ranInt.foodTwo].author}
-                                </i> </small>
-                            <h3 className = 'panel-title'>
+                                </i> 
+                                    </small>
+                            <h3 className = 'panel-title'> <Link onClick = { () => props.PassThroughDetails('food', food[ranInt.foodTwo].id)} to = "/Article">
                                 {food[ranInt.foodTwo].title}
-                            </h3>
+                                    </Link>
+                                        </h3>
                             <span className = 'panel-date-section'><small>{food[ranInt.foodTwo].date} </small> - <small> {food[ranInt.foodTwo].section}</small></span>
+                        
                         </div>
+                        
                     </div>
 
 

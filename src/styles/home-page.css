@@ -88,8 +88,8 @@
 .card-title {
     text-align: center;
     font-size: 2rem;
-    font-family: 'Playfair Display SC', serif;
-    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
 }
 
 .card-author {
@@ -98,7 +98,7 @@
 }
 
 .card-summary {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Yantramanav', sans-serif;
     color: grey;
     margin-bottom: 0%;
     font-size: large;
@@ -133,7 +133,7 @@
     font-size: large;
 }
 
-.panel-card-odd {
+ .panel-card-odd {
     color: #F2F2F2;
 } 
 
@@ -143,13 +143,22 @@
 }
 
 .panel-title {
-    font-family:'Playfair Display SC', serif;
-    font-weight: 100;
+    font-family:'Playfair Display', serif;
+    font-weight: 400;
+  
+}
+.panel-title > a {
+    text-decoration: none;
+    color: #454444 ;
 }
 
 /*  Dark Mode Active  */
 #panel-card-dark {
     background-color: #454444 ;
+    color: #F2F2F2;
+    
+}
+#panel-card-dark > .panel-title > a {
     color: #F2F2F2;
 }
 
@@ -158,25 +167,9 @@
     background-color: white;
     color: #454444 ;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#panel-card-light > .panel-title > a {
+    color: #454444 ;
+}
 
 /* .news-section {
     grid-column: 3/11;
@@ -253,6 +246,15 @@
     border-radius: 10px;
     height: 80vh;
 }
+
+/* setting the internal image height, the width might over lap but its hidden*/
+.set-slide-one > img{
+    height: 80vh;
+}
+.set-slide-two > img{
+    height: 80vh;
+}
+
 .set-slide-two{
     grid-column: 5/9;
 }

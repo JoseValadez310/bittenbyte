@@ -3,11 +3,13 @@ import "../styles/archive-page.css"
 
 const Archive = (props) => {
 
-
+  
+    let tab = props.currentTab
+    
     return(
        
         <main>
-            <SearchBar title = {props.article.sectionTitle}/>
+            <SearchBar title = {tab}/>
             <div className = "archive-article-display">
                 </div>
         </main>

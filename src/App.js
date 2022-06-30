@@ -21,30 +21,45 @@ const App = () => {
 
   // Article Page content display 
 
-    const [article, setArticle] = useState( localStorage.length === 0? {sectionTitle : "", sectionId : null} : JSON.parse(localStorage.article) )
+    const [article, setArticle] = useState( sessionStorage.length === 0? {sectionTitle : "", sectionId : null} : JSON.parse(sessionStorage.article) )
    
     function PassThroughDetails(section, id) {
-      setArticle(prevState => ({
-        ...prevState,
-        sectionTitle : section,
-        sectionId : id
-      }))
+        setArticle(prevState => ({
+          ...prevState,
+          sectionTitle : section,
+          sectionId : id
+        }))
+
     }
   
     useEffect(()=>{
-      localStorage.setItem('article', JSON.stringify(article)) 
+      sessionStorage.setItem('article', JSON.stringify(article)) 
     },[article])
     
-   
+  // passing data to correct tab search 
+
+    const [currentTab, setCurrentTab] = useState(JSON.parse(sessionStorage.getItem('tab')))
+    
+    function tabSection(section) {
+      if(section !== undefined){
+        setCurrentTab(section)
+      }
+    }
+
+    useEffect(() => {
+      sessionStorage.setItem('tab', JSON.stringify(currentTab))
+    },[currentTab])
+
+    console.log(currentTab)
   
   return (
     <>
       <BrowserRouter>
-        <Nav PassThroughDetails = {PassThroughDetails}/>
+        <Nav tabSection = {tabSection}/>
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
-            <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} article = {article} />]} />
+            <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} />]} />
           </Routes>
         <Footer />
       </BrowserRouter>

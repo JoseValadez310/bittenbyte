@@ -6,7 +6,7 @@ import icon from "../content/images/card-images/icon-links/searchSVG.svg"
 
 const SearchBar = (props) => {
     // if a different tab has been selected, erase search bar value 
-
+    // title => section title 
     console.log(' page load ')
     const sectionTitle = props.title.toLowerCase()
     
