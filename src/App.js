@@ -29,9 +29,9 @@ const App = () => {
           sectionTitle : section,
           sectionId : id
         }))
-
     }
-  
+  console.log(article.sectionID)
+
     useEffect(()=>{
       sessionStorage.setItem('article', JSON.stringify(article)) 
     },[article])
@@ -49,8 +49,6 @@ const App = () => {
     useEffect(() => {
       sessionStorage.setItem('tab', JSON.stringify(currentTab))
     },[currentTab])
-
-    console.log(currentTab)
   
   return (
     <>
@@ -59,7 +57,7 @@ const App = () => {
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
-            <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} />]} />
+            <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
           </Routes>
         <Footer />
       </BrowserRouter>

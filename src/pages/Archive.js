@@ -9,7 +9,7 @@ const Archive = (props) => {
     return(
        
         <main>
-            <SearchBar title = {tab}/>
+            <SearchBar title = {tab} PassThroughDetails = {props.PassThroughDetails}/>
             <div className = "archive-article-display">
                 </div>
         </main>

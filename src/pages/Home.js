@@ -43,19 +43,38 @@ const foodLength = food.length
         'foodTwo': 0
     })
 
-    useEffect(() => {
-        setRanInt(prevState => ({
-            ...prevState,
-            "technologyOne": Math.floor(Math.random()* techLength),
-            "technologyTwo": Math.floor(Math.random()* techLength),
+    useEffect( 
+        function randomPanelNums() {
+            let techOne = Math.floor(Math.random()* techLength)
+            let techTwo = Math.floor(Math.random()* techLength)
+                if(techOne === techTwo){
+                    techTwo === 0? techTwo++ : techTwo-- 
+                }
 
-            "hobbyOne": Math.floor(Math.random()* hobbyLength),
-            "hobbyTwo": Math.floor(Math.random()* hobbyLength),
+                let hobbyOne = Math.floor(Math.random()* hobbyLength)
+                let hobbyTwo = Math.floor(Math.random()* hobbyLength)
+                    if(hobbyOne === hobbyTwo){
+                        hobbyOne === 0? hobbyTwo++ : hobbyTwo-- 
+                    }
+            
+                    let foodOne = Math.floor(Math.random()* foodLength)
+                    let foodTwo = Math.floor(Math.random()* foodLength)
+                        if(foodOne === foodTwo){
+                            foodTwo === 0? foodTwo++ : foodTwo-- 
+                        }
 
-            "foodOne": Math.floor(Math.random()* foodLength),
-            "foodTwo": Math.floor(Math.random()* foodLength)
-        }))
-    },[])
+            console.log(techOne, techTwo, foodOne, foodTwo, hobbyOne, hobbyTwo)
+            
+            setRanInt(prevState => ({
+                ...prevState,
+                'technologyOne': techOne,
+                'technologyTwo': techTwo,
+                'hobbyOne': hobbyOne, 
+                'hobbyTwo': hobbyTwo,
+                'foodOne': foodOne,
+                'foodTwo': foodTwo
+            }))
+        },[])
 
 return(
     <main id = {darkMode === false? 'main-light':'main-dark'}>
@@ -68,8 +87,9 @@ return(
                     <img src = {darkMode? icon.lightMode : icon.darkMode} alt = 'Website Dark/Light Switch' /> 
                 </div>
                     {/* technology discovery panel */}
+                    
                     <div className = 'latest-panel-one'>
-                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : 'panel-card-dark-odd'}>
                             <small className = 'panel-author'> <i>
                                 {technology[ranInt.technologyOne].author}
                                     </i> 
@@ -95,6 +115,7 @@ return(
                                  {technology[ranInt.technologyTwo].date} </small> - <small> {technology[ranInt.technologyTwo].section} </small></span>
                         </div>
                     </div>
+                   
                     {/*  hobby discovery panel  */}
                     <div className = 'latest-panel-two'>
                         <div className = 'panel-card'  id = {darkMode === false ? null : 'panel-card-dark'}>
@@ -109,7 +130,7 @@ return(
                             <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyOne].date} </small> - <small> {hobby[ranInt.hobbyOne].section} </small></span>
                         </div> 
                     <br/>
-                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null}>
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : 'panel-card-dark-odd'}>
                             <small className = 'panel-author'> <i> 
                                 {hobby[ranInt.hobbyTwo].author} 
                                     </i> 
@@ -121,9 +142,10 @@ return(
                             <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyTwo].date} </small> - <small> {hobby[ranInt.hobbyTwo].section} </small></span>
                         </div> 
                     </div>
+                    
                     {/* food discovery panel*/}
                     <div className = 'latest-panel-three'>
-                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : null} onClick = { () => props.PassThroughDetails('food', food[ranInt.foodOne].id)} to = "/Article">                            
+                        <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : 'panel-card-dark-odd'} onClick = { () => props.PassThroughDetails('food', food[ranInt.foodOne].id)} to = "/Article">                            
                             <small className = 'panel-author'> <i> 
                                 {food[ranInt.foodOne].author}
                                     </i> 
