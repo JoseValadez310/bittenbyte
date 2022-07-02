@@ -20,7 +20,7 @@ const Nav = (props) => {
    
     return(
         <nav className = 'navBar'>
-                <NavLink to ='/' className = 'logo'> Bitten Bite </NavLink>  
+                <NavLink to ='/' className = 'logo'> BITTEN BYTE </NavLink>  
                 <div className = 'nav-links'> 
                             <NavLink className = 'navLink' to = '/Archive/Technology' onClick = {() => props.tabSection('Technology')}>
                                 Technology

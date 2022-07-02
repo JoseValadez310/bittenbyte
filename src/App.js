@@ -30,7 +30,6 @@ const App = () => {
           sectionId : id
         }))
     }
-  console.log(article.sectionID)
 
     useEffect(()=>{
       sessionStorage.setItem('article', JSON.stringify(article)) 

@@ -8,24 +8,23 @@ import { Link } from 'react-router-dom'
 const SearchBar = (props) => {
     // if a different tab has been selected, erase search bar value 
     // title => section title 
-    console.log(' page load ')
-    const sectionTitle = props.title.toLowerCase()
+   
+    const tab = props.tab.toLowerCase()
         
         const [arrayTitles, setArrayTitle] = useState()
             useEffect(()=>{
-                console.log(' triggered refresh in first useEffect')
                 let arrayPlaceholder = []
 
                 let i = 0
 
-                article[sectionTitle].forEach(element => {
+                article[tab].forEach(element => {
                     arrayPlaceholder.push([element.title, i++])
                 
                 } );
 
                 setArrayTitle(arrayPlaceholder)
                 setSearchValue('')
-            },[sectionTitle])
+            },[tab])
 
         const [searchValue, setSearchValue] = useState('')
             const handleSearch = (event) => {
@@ -37,7 +36,6 @@ const SearchBar = (props) => {
         const [results, setResults] = useState()
 
             useEffect (() => {
-                console.log(' grabbing results ')
                 let finalValue
                     if (arrayTitles !== undefined){
                         finalValue = arrayTitles.filter(item => item[0].toLowerCase().indexOf(searchValue.toLowerCase()) !== -1)
@@ -49,7 +47,7 @@ const SearchBar = (props) => {
         <div className ='search-wrapper'>
             <div className='search-container'>
                 <img className = 'search-icon' src = {icon} height = {20} alt = 'search icon'/>
-                <p className = 'search-section-title'>{`${sectionTitle}:`}</p>
+                <p className = 'search-section-title'>{`${tab}:`}</p>
                 <input 
                     className = 'searchBar' 
                     type = 'text' placeholder = 'Search an Article' 
@@ -58,7 +56,7 @@ const SearchBar = (props) => {
                 />        
             </div> 
                 { results !== undefined && searchValue.length !== 0 ? 
-                    results.map(item => <p className = 'search-result'><Link onClick = {() => props.PassThroughDetails(sectionTitle, item[1] )} to ='/Article'>{item[0]}</Link></p>) : null 
+                    results.map(item => <p className = 'search-result'><Link onClick = {() => props.PassThroughDetails(tab, item[1] )} to ='/Article'>{item[0]}</Link></p>) : null 
                     }
             </div> 
     )

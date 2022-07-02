@@ -1,5 +1,54 @@
 .archive-article-display {
     grid-column: 4/10;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+}
+.archive-card-main{
+    grid-column: 1/ span 2;
+    grid-row: span 2 ;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: .24rem;
+  
 }
 
+.archive-card-summary {
+    padding-inline: .5rem;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+}
+.archive-card{ 
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: .24rem;
+    width: 1fr;
+}
+.archive-card-image-container{
+    width: 100%;
+}
+.archive-card-image {
+    width: 100%;
+}
+
+.archive-card-content-wrapper {
+    margin-block: 1rem;
+}
+
+.archive-card-title {
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    padding-inline: .5rem;
+    margin: 0%;
+}
+
+.archive-card-author {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 100;
+    padding-inline: .5rem;
+}
 /*dark mode active */
