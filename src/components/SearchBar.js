@@ -27,10 +27,6 @@ const SearchBar = (props) => {
                 setSearchValue('')
             },[sectionTitle])
 
-
-        
-
-
         const [searchValue, setSearchValue] = useState('')
             const handleSearch = (event) => {
                 if(event.target.value !== ' ') {
@@ -42,16 +38,13 @@ const SearchBar = (props) => {
 
             useEffect (() => {
                 console.log(' grabbing results ')
-                setResults( search() )
+                let finalValue
+                    if (arrayTitles !== undefined){
+                        finalValue = arrayTitles.filter(item => item[0].toLowerCase().indexOf(searchValue.toLowerCase()) !== -1)
+                    }
+                setResults( finalValue )
             }, [searchValue])
-            
-            
-            function search() {
-                if (arrayTitles !== undefined){
-                    return arrayTitles.filter(item => item[0].toLowerCase().indexOf(searchValue.toLowerCase()) !== -1)
-                }
-            }
-console.log(results)
+
     return (
         <div className ='search-wrapper'>
             <div className='search-container'>
@@ -67,9 +60,7 @@ console.log(results)
                 { results !== undefined && searchValue.length !== 0 ? 
                     results.map(item => <p className = 'search-result'><Link onClick = {() => props.PassThroughDetails(sectionTitle, item[1] )} to ='/Article'>{item[0]}</Link></p>) : null 
                     }
-            
-     
-        </div> 
+            </div> 
     )
 }
 
