@@ -59,7 +59,8 @@
     grid-column: 4/10;
     font-size: 1.15rem;
     line-height: 1.95;
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
     color: #7E7E7E;
     padding-block: 1rem;
 }

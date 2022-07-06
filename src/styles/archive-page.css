@@ -5,6 +5,7 @@
     grid-template-rows: auto;
 
 }
+
 .archive-card-main{
     grid-column: 1/ span 2;
     grid-row: span 2 ;
@@ -12,14 +13,15 @@
     border-radius: 10px;
     overflow: hidden;
     margin: .24rem;
-  
 }
 
 .archive-card-summary {
     padding-inline: .5rem;
-    font-family: 'Yantramanav', sans-serif;
-    font-weight: 100;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+    
 }
+
 .archive-card{ 
     background-color: #F2F2F2;
     border-radius: 10px;
@@ -27,9 +29,11 @@
     margin: .24rem;
     width: 1fr;
 }
+
 .archive-card-image-container{
     width: 100%;
 }
+
 .archive-card-image {
     width: 100%;
 }
@@ -44,6 +48,7 @@
     font-weight: 400;
     padding-inline: .5rem;
     margin: 0%;
+    text-decoration: inherit;
 }
 
 .archive-card-author {
@@ -52,3 +57,17 @@
     padding-inline: .5rem;
 }
 /*dark mode active */
+
+
+/*link related color and decoration */
+a {
+    text-decoration: none; 
+}
+
+.archive-card-main > a:visited{
+   color: #454444;
+}
+
+.archive-card > a:visited{
+    color: #454444;
+ }

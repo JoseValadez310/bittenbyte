@@ -98,7 +98,8 @@
 }
 
 .card-summary {
-    font-family: 'Yantramanav', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
     color: grey;
     margin-bottom: 0%;
     font-size: large;
