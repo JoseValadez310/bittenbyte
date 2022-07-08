@@ -56,7 +56,7 @@ const SearchBar = (props) => {
                 />        
             </div> 
                 { results !== undefined && searchValue.length !== 0 ? 
-                    results.map(item => <p className = 'search-result'><Link onClick = {() => props.PassThroughDetails(tab, item[1] )} to ='/Article'>{item[0]}</Link></p>) : null 
+                    results.map(item => <p className = 'search-result'><Link onClick = {() => props.PassThroughDetails(tab, item[1] )} to ={`/Article/${item[0]}`}>{item[0]}</Link></p>) : null 
                     }
             </div> 
     )

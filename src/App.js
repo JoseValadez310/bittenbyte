@@ -13,7 +13,7 @@ import { BrowserRouter , Routes, Route } from "react-router-dom"
 const App = () => {
 
   // Dark/Light mode handler
-  const [darkMode, setDarkMode] = useState(() => (false))
+  const [darkMode, setDarkMode] = useState(() => (true))
   
     function handleDarkMode() {
       setDarkMode(!darkMode)
@@ -55,7 +55,7 @@ const App = () => {
         <Nav tabSection = {tabSection}/>
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
-            <Route path = "/Article/"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
+            <Route path = "/Article/:title"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
             <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
           </Routes>
         <Footer />

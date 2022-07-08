@@ -1,3 +1,5 @@
+
+
 .archive-article-display {
     grid-column: 4/10;
     display: grid;
@@ -43,7 +45,7 @@
 }
 
 .archive-card-title {
-    font-size: 1.5rem;
+    font-size: 1.60rem;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     padding-inline: .5rem;
@@ -53,21 +55,24 @@
 
 .archive-card-author {
     font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: small;
     font-weight: 100;
     padding-inline: .5rem;
 }
 /*dark mode active */
 
 
+
 /*link related color and decoration */
 a {
     text-decoration: none; 
+    color: inherit;
 }
 
 .archive-card-main > a:visited{
-   color: #454444;
+   color: inherit;
 }
 
 .archive-card > a:visited{
-    color: #454444;
+    color: inherit;
  }

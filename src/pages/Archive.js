@@ -6,7 +6,10 @@ import "../styles/archive-page.css"
 
 const Archive = (props) => {
 
+    console.log(props)
+    let darkMode = props.darkMode
     let tab = props.currentTab.toLowerCase()
+
     const [articleDisplay, setArticleDisplay] = useState()
     
         useEffect(()=>{
@@ -14,26 +17,26 @@ const Archive = (props) => {
                 for(let i = data[tab].length-1; i !== -1; i--){
                         if( i === data[tab].length-1 ){
                             arrayPlaceholder.push(
-                                <div className = 'archive-card-main'>
-                                    <Link  onClick = { () => props.PassThroughDetails(tab, data[tab][i].id)} to = "/Article">
+                                <div className = 'archive-card-main' id = {darkMode? "card-dark" : "card-light"}  >
+                                    <Link  onClick = { () => props.PassThroughDetails(tab, data[tab][i].id)} to = {`/Article/${data[tab][i].title}`}>
                                         <div className = 'archive-card-image-container'>
                                             <img className = 'archive-card-image' src = {data[tab][i].image} alt = 'archive article' />
                                         </div>
                                             <br/>
                                         <div>
-                                            <h3 className = 'archive-card-title'> {data[tab][i].title} </h3>
+                                            <h3 className = 'archive-card-title' > {data[tab][i].title} </h3>
                                                 <br/>
                                             <small className = 'archive-card-author'> {data[tab][i].author} - {data[tab][i].date}</small>
                                                 <br/>
-                                            <p className = 'archive-card-summary'> {data[tab][i].summary} </p>
+                                            <p className = 'archive-card-summary' id = {props.darkMode? 'article-content-dark' : ' '} > {data[tab][i].summary} </p>
                                         </div>
                                     </Link>
                                 </div>
                             ) 
                         } else { 
                             arrayPlaceholder.push(
-                                <div className = 'archive-card'>
-                                    <Link  onClick = { () => props.PassThroughDetails(tab, data[tab][i].id)} to = "/Article">
+                                <div className = 'archive-card' id = {darkMode? "card-dark" : "card-light"} >
+                                    <Link  onClick = { () => props.PassThroughDetails(tab, data[tab][i].id)} to = {`/Article/${data[tab][i].title}`}>
                                         <img className = 'archive-card-image' src = {data[tab][i].image} alt = 'archive article' />
                                             <br/>
                                         <div className = 'archive-card-content-wrapper'>
@@ -65,7 +68,7 @@ const Archive = (props) => {
     
     return(
        
-        <main>
+        <main id = {darkMode === false? 'main-light':'main-dark'}>
             <SearchBar tab = {tab} PassThroughDetails = {props.PassThroughDetails}/>
             <div className = "archive-article-display">
                 {articleDisplay}

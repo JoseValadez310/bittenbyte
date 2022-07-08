@@ -38,7 +38,17 @@ const data = {
             'author': 'Baby Yoda',
             'summary' : 'Have you ever been stuck between a wet noodle and a hard boiled egg? No, okay because nor have I...anyways, welcome to the latest entry of Bitten Bites special Tech opener ',
             'story' : 'the blog post'
-        } 
+        }, 
+        {
+            'id'    : 2,
+            'section':'Technology',
+            'date'  : 'July 10, 2022',
+            'image' : image.tech.tech3 ,
+            'title' : "Nvidia's Newest Deal ",
+            'author': 'Baby Yoda',
+            'summary' : 'Have you ever been stuck between a wet noodle and a hard boiled egg? No, okay because nor have I...anyways, welcome to the latest entry of Bitten Bites special Tech opener ',
+            'story' : 'the blog post'
+        }
     ],
 
     'setUp': [
@@ -116,7 +126,18 @@ const data = {
             'author': 'Jose Valadez',
             'summary' : 'Rock Climbing, an exercise meant to strength the upper body, clear your mind and something to bragg at work. An out door activity brought in doors...this Weekly article will look at Hanger 18 and other in door rocky climbing gyms. ',
             'story' : 'the blog post'
-        }
+        },
+        {
+            'id'    : 2,
+            'section':'Hobby',
+            'date'  : "April 5, 2022",
+            'image' : image.hobby.hobby3,
+            'title' : 'In Door Rock Climbing',
+            'author': 'Jose Valadez',
+            'summary' : 'Rock Climbing, an exercise meant to strength the upper body, clear your mind and something to bragg at work. An out door activity brought in doors...this Weekly article will look at Hanger 18 and other in door rocky climbing gyms. ',
+            'story' : 'the blog post'
+        },
+
     ],
 
     'food': [
@@ -149,7 +170,17 @@ const data = {
             'author': 'Jose Valadez',
             'summary' : 'None the less, I think I wil lbe getting myself some beers today. I might get myself either Happy Dads or Patagonia Beers.',
             'story' : 'the blog post'
-        }
+        },
+        {
+            'id'    : 2,
+            'section':'Food',
+            'date'  : "May 5, 2022",
+            'image' : image.food.food3,
+            'title' : 'Beers of the Century',
+            'author': 'Jose Valadez',
+            'summary' : 'None the less, I think I wil lbe getting myself some beers today. I might get myself either Happy Dads or Patagonia Beers.',
+            'story' : 'the blog post'
+        },
     ],
 
 }
