@@ -1,6 +1,9 @@
 import "../styles/article-page.css"
 import data from '../content/data'
-import icon from "../content/images/card-images/icon-links/icons"
+import instagram from '../content/images/card-images/icon-links/iconmonstr-instagram-1.svg'
+import twitter from '../content/images/card-images/icon-links/iconmonstr-twitter-3.svg'
+import email from '../content/images/card-images/icon-links/iconmonstr-email-13.svg'
+import linkedin from '../content/images/card-images/icon-links/iconmonstr-linkedin-3.svg'
 
 
 const Article = (props) => {
@@ -28,9 +31,10 @@ const Article = (props) => {
             </div>
             
             <div className = 'article-share-icon'>
-                <img src = {icon.twitter} alt = 'Sharing link to twitter' />
-                <img src = {icon.email} alt = 'Sharing link through email' />
-                <img src = {icon.linkedin} alt = 'Sharing link linkedin' />
+                <img src = {twitter} alt = 'Sharing link to twitter' />
+                <img src = {email} alt = 'Sharing link through email' />
+                <img src = {linkedin} alt = 'Sharing link linkedin' />
+                <img src = {instagram} alt = 'Sharing link instagram' />
             </div>
                 
             <div className = 'article-image-wrapper'>

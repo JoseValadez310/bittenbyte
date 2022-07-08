@@ -4,6 +4,11 @@ import "../styles/home-page.css"
 import { useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 
+import instagram from '../content/images/card-images/icon-links/iconmonstr-instagram-1.svg'
+import twitter from '../content/images/card-images/icon-links/iconmonstr-twitter-3.svg'
+import email from '../content/images/card-images/icon-links/iconmonstr-email-13.svg'
+import linkedin from '../content/images/card-images/icon-links/iconmonstr-linkedin-3.svg'
+
 const Home = (props) => {
 
 // converting props.darkMode to something a little shorter
@@ -62,8 +67,6 @@ const foodLength = food.length
                         if(foodOne === foodTwo){
                             foodTwo === 0? foodTwo++ : foodTwo-- 
                         }
-
-            console.log(techOne, techTwo, foodOne, foodTwo, hobbyOne, hobbyTwo)
             
             setRanInt(prevState => ({
                 ...prevState,

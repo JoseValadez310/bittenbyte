@@ -5,7 +5,7 @@
     height: 2.5rem;
     width: 100%;
     background-color: #D2D2D2;
-    border-radius: 5px 5px 0px 0px ;
+    /* border-radius: 10px 10px 0px 0px ; */
     overflow: hidden;
     flex-direction: row;
     display: flex;
@@ -50,7 +50,9 @@
 .search-result > a:visited{
     color: inherit;
 }
-
+.search-result:last-child {
+    /* border-radius: 0px 0px 10px 10px; */
+}
 input:focus {
     outline: none;
     color: #454444;

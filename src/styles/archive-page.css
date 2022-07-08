@@ -5,16 +5,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-
+    gap: .5em
 }
 
 .archive-card-main{
     grid-column: 1/ span 2;
     grid-row: span 2 ;
     background-color: #F2F2F2;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden;
-    margin: .24rem;
 }
 
 .archive-card-summary {
@@ -26,10 +25,8 @@
 
 .archive-card{ 
     background-color: #F2F2F2;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden;
-    margin: .24rem;
-    width: 1fr;
 }
 
 .archive-card-image-container{

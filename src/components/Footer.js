@@ -1,4 +1,7 @@
-import icon from "../content/images/card-images/icon-links/icons"
+import instagram from '../content/images/card-images/icon-links/iconmonstr-instagram-1.svg'
+import twitter from '../content/images/card-images/icon-links/iconmonstr-twitter-3.svg'
+import email from '../content/images/card-images/icon-links/iconmonstr-email-13.svg'
+import linkedin from '../content/images/card-images/icon-links/iconmonstr-linkedin-3.svg'
 import "../styles/footer-component.css"
 
 const Footer = () => {
@@ -7,10 +10,10 @@ const Footer = () => {
             <div className = 'footer-container'>
                 <div className = 'footer-icons'>
                     <ul className = 'icon-list'>
-                        <li><img src = {icon.instagram} alt = 'icons'/></li>
-                        <li><img src = {icon.twitter} alt = 'icons'/></li>
-                        <li><img src = {icon.linkedin} alt = 'icons'/></li>
-                        <li><img src = {icon.email} alt = 'icons'/></li>
+                        <li><img src = {instagram} alt = 'icons'/></li>
+                        <li><img src = {twitter} alt = 'icons'/></li>
+                        <li><img src = {linkedin} alt = 'icons'/></li>
+                        <li><img src = {email} alt = 'icons'/></li>
                     </ul>
                 </div>
                 <div className = 'footer-summary'>

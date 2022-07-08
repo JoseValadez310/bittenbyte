@@ -1,8 +1,8 @@
 const icon = {
-    instagram : require('./instagram.png'),
-    twitter : require('./twitter.png'),
-    linkedin : require('./linkedin.png'),
-    email : require('./email.png'),
+    instagram : require('./iconmonstr-instagram-1.svg'),
+    twitter : require('./iconmonstr-twitter-3.svg'),
+    linkedin : require('./iconmonstr-linkedin-3.svg'),
+    email : require('./iconmonstr-email-13.svg'),
     lightMode : require('./lightMode.png'),
     darkMode : require('./darkMode.png'),
     arrow : require('./arrow.png')
