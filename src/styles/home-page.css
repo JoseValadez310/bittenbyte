@@ -100,7 +100,7 @@
 .card-summary {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
-    color: rgba(245, 245, 245, 0.6);
+    color: inherit;
     margin-bottom: 0%;
     font-size: large;
     line-height: 160%;

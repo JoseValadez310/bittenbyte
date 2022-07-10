@@ -6,12 +6,10 @@ import "../styles/archive-page.css"
 
 const Archive = (props) => {
 
-    console.log(props)
     let darkMode = props.darkMode
     let tab = props.currentTab.toLowerCase()
 
     const [articleDisplay, setArticleDisplay] = useState()
-    
         useEffect(()=>{
             let arrayPlaceholder = []
                 for(let i = data[tab].length-1; i !== -1; i--){
