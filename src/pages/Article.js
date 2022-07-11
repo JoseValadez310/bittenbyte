@@ -31,10 +31,12 @@ const Article = (props) => {
             </div>
             
             <div className = 'article-share-icon'>
-                <img src = {twitter} alt = 'Sharing link to twitter' />
-                <img src = {email} alt = 'Sharing link through email' />
-                <img src = {linkedin} alt = 'Sharing link linkedin' />
-                <img src = {instagram} alt = 'Sharing link instagram' />
+                <img className = 'svg-icon' src = {instagram} alt = 'Sharing link instagram' />
+                <img className = 'svg-icon' src = {twitter} alt = 'Sharing link to twitter' />
+                <img className = 'svg-icon' src = {linkedin} alt = 'Sharing link linkedin' />
+                <img className = 'svg-icon' src = {email} alt = 'Sharing link through email' />
+               
+               
             </div>
                 
             <div className = 'article-image-wrapper'>

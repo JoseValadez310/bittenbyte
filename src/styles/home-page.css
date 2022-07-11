@@ -8,7 +8,7 @@
 }
 .section-title:after{
     content: '';
-    color:rgb(203, 103, 103);
+    color: rgb(203, 103, 103);
     width: 15%;
     position: absolute;
     left: 0;
