@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-   
+
 }
 
 .logo {
@@ -24,11 +24,8 @@
     flex-wrap: wrap;
     font-family: "Fira Sans Condensed", sans-serif ;
     font-size: large;
-    list-style: none;
-    
+    list-style: none;    
 }
-
-
 
 .nav-links > .navLink {
     padding-inline: .45rem;

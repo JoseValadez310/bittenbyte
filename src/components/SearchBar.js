@@ -58,17 +58,19 @@ const SearchBar = (props) => {
 
     return (
         <div className ='search-wrapper'>
-            <img className = 'tab-hero-section' src = {tabHero} alt = "hero for current tab section" />
-            <div className='search-container'>
-                <img className = 'search-icon' src = {icon} height = {20} alt = 'search icon'/>
-                <p className = 'search-section-title'>{`${tab}:`}</p>
-                <input 
-                    className = 'searchBar' 
-                    type = 'text' placeholder = 'Search an Article' 
-                    onChange = {handleSearch} 
-                    value = {searchValue} 
-                />        
-            </div> 
+            <div className = 'hero-search-wrapper'>
+                <img className = 'tab-hero-section' src = {tabHero} alt = "hero for current tab section" />
+                <div className='search-container'>
+                    <img className = 'search-icon' src = {icon} height = {20} alt = 'search icon'/>
+                    <p className = 'search-section-title'>{`${tab}:`}</p>
+                    <input 
+                        className = 'searchBar' 
+                        type = 'text' placeholder = 'Search an Article' 
+                        onChange = {handleSearch} 
+                        value = {searchValue} 
+                    />        
+                </div> 
+            </div>
                 { results !== undefined && searchValue.length !== 0 ? 
                     results.map(item => <p className = 'search-result'><Link onClick = {() => props.PassThroughDetails(tab, item[1] )} to ={`/Article/${item[0]}`}>{item[0]}</Link></p>) : null 
                     }

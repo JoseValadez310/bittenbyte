@@ -48,6 +48,8 @@ const App = () => {
     useEffect(() => {
       sessionStorage.setItem('tab', JSON.stringify(currentTab))
     },[currentTab])
+
+
   
   return (
     <>
@@ -56,7 +58,7 @@ const App = () => {
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/:title"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
-            <Route path = "/Archive/:section" element = {[<ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
+            <Route path = "/Archive/:section" element = {[ <ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
           </Routes>
         <Footer />
       </BrowserRouter>

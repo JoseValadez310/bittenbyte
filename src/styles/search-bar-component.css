@@ -1,15 +1,24 @@
 .search-wrapper {
     grid-column: 4/10; 
+   
+}
+
+.hero-search-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .search-container {
     height: 2.5rem;
-    width: 100%;
+    width: 800px;
     background-color: #D2D2D2;
     /* border-radius: 10px 10px 0px 0px ; */
     overflow: hidden;
     flex-direction: row;
     display: flex;
     align-items: center;
+    position: absolute;
+  
 }
 
 .search-icon {
