@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer"
 import Article from "./pages/Article";
 import Archive from "./pages/Archive";
+import About from "./pages/About";
 import ScrollToTopOnMount from './components/ScrolltoTop'
 
 import { useState, useEffect} from "react"
@@ -59,6 +60,7 @@ const App = () => {
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/:title"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
             <Route path = "/Archive/:section" element = {[ <ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
+            <Route path = "/About" element = {<About />} />
           </Routes>
         <Footer />
       </BrowserRouter>
