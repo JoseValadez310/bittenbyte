@@ -18,7 +18,6 @@ const SearchBar = (props) => {
         const [arrayTitles, setArrayTitle] = useState()
             useEffect(()=>{
                 let arrayPlaceholder = []
-                let tabHero
                 let i = 0
 
                 article[tab].forEach(element => {

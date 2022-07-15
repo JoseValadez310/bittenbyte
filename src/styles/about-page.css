@@ -1,0 +1,45 @@
+/* about me*/
+.about-me-container {
+    grid-column: 4/10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.about-me-image-wrapper {
+    height: 35rem;
+    margin-bottom: 1em;
+}
+.about-me-image {
+    height: inherit;
+}
+.about-me-description{
+   
+}
+
+/* Mission Statment */
+.mission-statement-container {
+    grid-column: 4/10;
+    background-color: lightgrey ;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+/* Tab three card info */
+.tab-info-container {
+    grid-column: 4/10;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.tab-info-image-wrapper{
+    
+    width: 100%;
+    height: 45%;
+    overflow: hidden;
+}   
+.tab-info-image {
+    width: inherit;
+}
