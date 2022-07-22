@@ -60,7 +60,7 @@ const App = () => {
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/:title"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
             <Route path = "/Archive/:section" element = {[ <ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
-            <Route path = "/About" element = {<About />} />
+            <Route path = "/About" element = {<About darkMode = {darkMode}/>} />
           </Routes>
         <Footer />
       </BrowserRouter>

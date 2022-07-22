@@ -31,9 +31,9 @@ const Nav = (props) => {
                             <NavLink className = 'navLink' to = '/Archive/Food' onClick = {() => props.tabSection('Food')}>
                                 Food 
                                     </NavLink>
-                            <NavLink className = 'navLink' to = '/Comunity'> 
+                            {/* <NavLink className = 'navLink' to = '/Comunity'> 
                                 Set-Ups 
-                                    </NavLink>  
+                                    </NavLink>   */}
                             <NavLink className = 'navLink' to = '/About'>
                                 About
                                     </NavLink>

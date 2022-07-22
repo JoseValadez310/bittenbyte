@@ -1,22 +1,22 @@
 import "../styles/about-page.css"
-import aboutMe from "../content/images/aboutMe.PNG"
+import aboutMe from "../content/images/aboutMe.jpg"
 import techHero from "../content/images/technology-hero.jpg"
 import hobbyHero from "../content/images/hobby-hero.jpg"
 import foodHero from "../content/images/food-hero.jpg"
 
-const About = () => {
+const About = (props) => {
    
-    
+    let darkMode = props.darkMode
 
     return (
-        <main>  
+        <main id = {darkMode === false? 'main-light':'main-dark'}>  
 
             <div className = 'about-me-container'>
                 <div className = 'about-me-image-wrapper'>
                     <img className = 'about-me-image' src = {aboutMe} alt = 'a self pic' />
                 </div>
-                <div className = 'about-me-description'>
-                    <h3>
+                <div className = 'about-me-description' id = {darkMode === false? 'text-light':'text-dark'}>
+                    <h3 className = 'aboutMe-title'>
                         About Me
                         </h3>
                     <br/>
@@ -24,7 +24,6 @@ const About = () => {
                        Velit amet elit laborum eu adipisicing sit cillum ipsum occaecat non magna sunt. Qui consequat sunt elit ut voluptate occaecat fugiat enim laboris. Ex aliquip occaecat do voluptate laborum reprehenderit commodo exercitation nulla duis minim magna. Amet consequat tempor laborum id sunt id in eu enim aliqua nostrud. 
                         </p>
                 </div>
-                
             </div>
 
             <div className = 'mission-statement-container'>
@@ -37,7 +36,7 @@ const About = () => {
             </div>
 
             
-            <div className = 'tab-info-container '>
+            <div className = 'tab-info-container ' id = {darkMode === false? 'text-light':'text-dark'}>
                 <div className = 'tab-info-card'>
                     <div className = 'tab-info-image-wrapper'>
                         <img className = 'tab-info-image' src = {techHero} alt = 'Technology hero' />
@@ -64,7 +63,7 @@ const About = () => {
 
                 <div className = 'tab-info-card'>
                     <div className = 'tab-info-image-wrapper'>
-                        <img className = 'tab-info-image' src = {foodHero} alt = 'Technology hero' />
+                        <img className = 'tab-info-image' id = 'tab-info-food' src = {foodHero} alt = 'Technology hero' />
                     </div>
                     
                     <div className = 'tab-info-description'>

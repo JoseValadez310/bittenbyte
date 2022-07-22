@@ -2,44 +2,84 @@
 .about-me-container {
     grid-column: 4/10;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 1em;
+    justify-content: center;
+    
 }
-
 .about-me-image-wrapper {
     height: 35rem;
     margin-bottom: 1em;
 }
 .about-me-image {
     height: inherit;
+    border-radius: 10px;
+}
+.aboutMe-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 400;
 }
 .about-me-description{
-   
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
 }
 
 /* Mission Statment */
 .mission-statement-container {
-    grid-column: 4/10;
-    background-color: lightgrey ;
-    padding: 1em;
+    grid-column: 2/12;
+    background-color: lightgrey;
+    padding: 6.5em;
     margin-bottom: 1em;
+    text-align: center;
+    border-radius: 0px;
 }
 
+.mission-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.75rem;
+    font-weight: 400;
+}
+.mission-statement {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+}
 /* Tab three card info */
 .tab-info-container {
-    grid-column: 4/10;
+    grid-column: 3/11;
     display: flex;
     flex-direction: row;
     gap: 1em;
 }
 
 .tab-info-image-wrapper{
-    
+    position: relative;
     width: 100%;
-    height: 45%;
+    height: 52%;
     overflow: hidden;
+    border-radius: 0px;
 }   
+.tab-info-description {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 300;
+}
 .tab-info-image {
+    position:absolute;
     width: inherit;
+    position: relative;
+
+}
+#tab-info-food {
+    bottom: 30px;
+}
+
+
+/* text dark mode */
+#text-light {
+    color: #454444;
+}
+
+#text-dark {
+    color: #F2F2F2;
 }
