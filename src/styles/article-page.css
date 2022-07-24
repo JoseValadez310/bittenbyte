@@ -57,12 +57,15 @@
 /* Article Story/Content font and inline sizing */
 .article-content {
     grid-column: 4/10;
-    font-size: 1.15rem;
-    line-height: 1.95;
+    font-size: 1.2rem;
+    line-height: 1.75;
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 300;
-    color: #7E7E7E;
+    color: black;
     padding-block: 1rem;
+}
+.indent{
+    text-indent: 3em;
 }
 
 /* Articl-Page dark mode values*/

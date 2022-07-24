@@ -406,26 +406,3 @@
 
 
 
-@media only screen and (max-width: 1680px) {
-    main {
-        display: grid;
-        grid-template-columns: repeat(12, 7.5rem);
-        gap: 1em;
-    }
-
-    .card-article {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .setUp-slider{
-        height: 50rem;
-    }
-
-    .set-slide-one > img{
-        width: 60vh;
-    }
-    .set-slide-two > img{
-        width: 60vh;
-    }
-}

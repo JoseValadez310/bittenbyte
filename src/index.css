@@ -44,9 +44,54 @@ main {
     grid-auto-flow: row;
     justify-content: center;
 }
-
 @media only screen and (max-width: 1680px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 7.5rem);
+        gap: 1em;
+    }
     .background-hero {
         height: 45vh;
     }
+    .card-article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .setUp-slider{
+        height: 50rem;
+    }
+
+    .set-slide-one > img{
+        width: 60vh;
+    }
+    .set-slide-two > img{
+        width: 60vh;
+    }
+}
+
+@media only screen and (max-width: 1092px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 6.5rem);
+        gap: 1em;
+    }
+}
+/*  card articles are going to be shifted side ways aka horizontal  */
+@media only screen and (max-width: 960px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 5rem);
+        gap: 1em;
+    }
+}
+
+
+@media only screen and (max-width: 775px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 2.75rem);
+        gap: 1em;
+    }
+    
 }

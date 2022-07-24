@@ -4,18 +4,29 @@ import instagram from '../content/images/card-images/icon-links/iconmonstr-insta
 import twitter from '../content/images/card-images/icon-links/iconmonstr-twitter-3.svg'
 import email from '../content/images/card-images/icon-links/iconmonstr-email-13.svg'
 import linkedin from '../content/images/card-images/icon-links/iconmonstr-linkedin-3.svg'
+import { useState,useEffect } from 'react' 
 
 
 const Article = (props) => {
-    
+    console.log(props)
+
     let article = data[props.article.sectionTitle][props.article.sectionId]
-    
-    // function indentingParagraphs() {
-        
-    // }
 
-    
+    const [articleIndent, setArticleIndent] = useState ()
 
+  
+    useEffect(()=>{
+        let indentHolder = []
+
+        for(let i = 0; i < article.story.length; i++ ){
+            indentHolder.push(<p className = 'indent'> {article.story[i]} </p>)
+        }
+
+        setArticleIndent(indentHolder)
+
+    },[article])
+  
+console.log(articleIndent)
     return (
         <main id = {props.darkMode? 'main-dark' : ' '}>
             <div className = 'article-details' id = {props.darkMode? 'article-details-dark' : ' '}>
@@ -35,8 +46,6 @@ const Article = (props) => {
                 <img className = 'svg-icon' src = {twitter} alt = 'Sharing link to twitter' />
                 <img className = 'svg-icon' src = {linkedin} alt = 'Sharing link linkedin' />
                 <img className = 'svg-icon' src = {email} alt = 'Sharing link through email' />
-               
-               
             </div>
                 
             <div className = 'article-image-wrapper'>
@@ -48,7 +57,7 @@ const Article = (props) => {
             </div>
 
             <div className = 'article-content'  id = {props.darkMode? 'article-content-dark' : ' '}>
-                {article.story}
+                {articleIndent}
             </div>
         </main>
     )
