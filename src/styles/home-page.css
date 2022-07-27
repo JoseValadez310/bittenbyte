@@ -432,7 +432,7 @@
 @media only screen and (max-width: 960px) {
     main {
         display: grid;
-        grid-template-columns: repeat(12, 5rem);
+        grid-template-columns: repeat(12, 1fr);
         gap: 1em;
     }
     .card-article {
@@ -455,10 +455,9 @@
         justify-content: flex-end;
     }
     .news-section{
-        
+        grid-column: 2/12;
         display: grid;
         grid-template-columns: repeat(8,1fr);
-      
     }
     .latest-panel-one{
         grid-column: 1/5;
@@ -471,6 +470,9 @@
         display: none;
     }
     /* technology cards */
+    .technology-section{
+        grid-column: 2/12;
+    }
     .tech-card-one, .tech-card-two, .tech-card-three {
         border-radius: 10px;
         height: 14rem;
@@ -478,19 +480,22 @@
         overflow: hidden;
     }
     /* Community set up */
+    .set-up-section {
+        grid-column: 2/12;
+    }
     .set-slide-one {
         grid-column: 1/9;
         display: flex;
         justify-content: center;
     }
-    .set-slide-one > img{
-        height: 90vh;
-    }
+
     .set-slide-two {
         display: none;
     }
     /* Hobby Cards */
-   
+    .hobby-section{
+    grid-column: 2/12;
+    }
     .hobby-card-one, .hobby-card-two, .hobby-card-three {   
         border-radius: 10px;
         height: 14rem;
@@ -499,6 +504,9 @@
     }
    
     /* Food Cards */
+    .food-section{
+        grid-column: 2/12;
+    }
     .food-card-one, .food-card-two, .food-card-three {
         border-radius: 10px;
         height: 14rem;
@@ -525,7 +533,7 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 780px) {
     main {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -534,15 +542,22 @@
     .section-title:after{
         width: 35%;
     }
+    .news-section, .technology-section, .set-up-section, .hobby-section, .food-section{
+        grid-column: 2/12;
+    }
+
+
+    /* technology cards */
+    .tech-card-one, .tech-card-two, .tech-card-three,
+    .hobby-card-one, .hobby-card-two, .hobby-card-three,
+    .food-card-one, .food-card-two, .food-card-three {
+        height: 11rem;
+    }
+    
+    .card-summary{
+        display: none ;
+    }
+    
 }
 
-@media only screen and (max-width: 360px) {
-    main {
-        display: grid;
-        grid-template-columns: repeat(12, 1rem);
-        gap: 1em;
-    }
-    .section-title:after{
-        width: 75%;
-    }
-}
+

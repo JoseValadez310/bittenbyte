@@ -43,3 +43,9 @@
 .nav-links .navLink.active {
     color: rgb(203, 103, 103);
 }
+
+@media only screen and (max-width: 780px) { 
+    .navBar{
+        flex-wrap: wrap;
+    }
+}

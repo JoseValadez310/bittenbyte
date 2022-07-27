@@ -73,3 +73,11 @@ a {
 .archive-card > a:visited{
     color: inherit;
  }
+
+
+
+ @media only screen and (max-width: 780px) {
+   .archive-article-display{
+    grid-column: 1/13;
+   }
+}

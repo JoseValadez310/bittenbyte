@@ -83,3 +83,14 @@
 }
 
 /* svg icon color */
+
+
+/* mobile media query */
+
+
+@media only screen and (max-width: 780px) {
+    
+    .article-content {
+        grid-column: 2/11;
+    }
+}
