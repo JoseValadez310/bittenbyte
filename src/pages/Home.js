@@ -127,7 +127,7 @@ return(
                                         </h3>
                             <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyOne].date} </small> - <small> {hobby[ranInt.hobbyOne].section} </small></span>
                         </div> 
-                    <br/>
+                    <hr/>
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : 'panel-card-dark-odd'}>
                             <small className = 'panel-author'> <i> 
                                 {hobby[ranInt.hobbyTwo].author} 
@@ -169,27 +169,6 @@ return(
                         </div>
                         
                     </div>
-
-
-                {/* <div className = 'news-banner'>
-                    <div className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}>
-                        <div className = 'news-banner-content'>
-                            {/* <p>
-                                {data['news-hero'][0].new}
-                            </p> 
-                        </div>
-                    </div>
-                </div> 
-                
-                <div className = 'editor-choice'>
-                    <div className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}>
-                        <div className = 'editor-choice-content'>
-                            <p>
-                                 Welcome to Bitten Bite. Our mission will follow that of creating meanful tales. To undertsand Bitten Bite is to know its a show ran by a single person with a ring to rule them all. Hello dear reader, I hope you find something you'll enjoy. I'm also wondering if i can run a site without wifi. Local site. 
-                            </p>
-                        </div>
-                    </div>
-                </div> */}
         </div>
        
         <div className = 'technology-section' >
@@ -325,37 +304,33 @@ return(
             </div>
         
         <div className = 'food-section'>
+
+
+
+
             <h1 className = 'section-title' id = {darkMode === false? 'section-title-light':'section-title-dark'}>Food</h1>           
                 
                 <div className = 'food-card-one'>
-                    <Link className = 'side-card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('food', food[foodLength-1].id)} to = {`/Article/${food[foodLength-1].title}`}>       
+                    <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('food', food[foodLength-1].id)} to = {`/Article/${food[foodLength-1].title}`}>   
+                        <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-1].date} </small>
+                            <img className = 'card-image' src = {food[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {food[foodLength-1].title}
                                 </h1>
                             <h4 className = 'card-author'><i>
                                 {food[foodLength-1].author}
-                                </i> </h4>
+                                </i></h4>
                             <p className = 'card-summary'>
                                 {food[foodLength-1].summary}
-                                </p>
-                        </div>
-                        
-                        <div className = 'image-container'>
-                            <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-1].date} </small>
-                            <img className = 'card-image' src = {food[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
-                        </div>
-                        
+                            </p>
+                        </div>  
                     </Link>
                 </div>
-
                 <div className = 'food-card-two'>
-                    <Link className = 'side-card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('food', food[foodLength-2].id)} to = {`/Article/${food[foodLength-2].title}`}> 
-                        <div className = 'image-container'>
+                    <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('food', food[foodLength-2].id)} to = {`/Article/${food[foodLength-2].title}`}>   
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-2].date} </small>
                             <img className = 'card-image' src = {food[foodLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
-                        </div>
-
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {food[foodLength-2].title}
@@ -366,12 +341,13 @@ return(
                             <p className = 'card-summary'>
                                 {food[foodLength-2].summary}
                             </p>
-                        </div>
+                        </div>  
                     </Link>
                 </div>
-
                 <div className = 'food-card-three'>
-                    <Link className = 'side-card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('food', food[foodLength-3].id)} to = {`/Article/${food[foodLength-3].title}`}>     
+                    <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('food', food[foodLength-3].id)} to = {`/Article/${food[foodLength-3].title}`}>   
+                        <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-3].date} </small>
+                            <img className = 'card-image' src = {food[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
                             <h1 className = 'card-title'>
                                 {food[foodLength-3].title}
@@ -382,15 +358,10 @@ return(
                             <p className = 'card-summary'>
                                 {food[foodLength-3].summary}
                             </p>
-                        </div>
-                        
-                        <div className = 'image-container'>
-                        <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-3].date} </small>
-                            <img className = 'card-image' src = {food[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
-                        </div>
+                        </div>  
                     </Link>
                 </div>
-            </div>
+            </div> 
         </main>
     )
 }

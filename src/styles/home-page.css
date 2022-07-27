@@ -352,21 +352,24 @@
 .food-section {
     grid-column: 3/11;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(12,1fr);
     gap: 1em
 }
 .food-card-one, .food-card-two, .food-card-three {
     border-radius: 10px;
-    height: 19rem;
-    grid-column: 1/9;
+    height: 45rem;
+    grid-column: 1/5;
     overflow: hidden;
 }
 .food-card-two{
-    grid-column: 1/9;
+    grid-column: 5/9;
 }
 .food-card-three{
-    grid-column: 1/9;
+    grid-column: 9/13;
 }
+
+
+
 
 #main-light {
     background-color: #F2F2F2;
@@ -403,6 +406,143 @@
 #section-title-dark{
     color: white;
 }
+@media only screen and (max-width: 1680px) {
+ 
+
+    .background-hero {
+        height: 45vh;
+    }
+    .card-article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .setUp-slider{
+        height: 50rem;
+    }
+
+    .set-slide-one > img{
+        width: 60vh;
+    }
+    .set-slide-two > img{
+        width: 60vh;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 5rem);
+        gap: 1em;
+    }
+    .card-article {
+        padding: 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+        width: 100%;
+        overflow: hidden;
+        height: inherit;
+        text-decoration: none;
+    }
+
+    /* Latest panel  */
+    .switch-container {
+        grid-column: 8/9;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .news-section{
+        
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+      
+    }
+    .latest-panel-one{
+        grid-column: 1/5;
+    }
+    
+    .latest-panel-two{
+        grid-column: 5/9;
+    }
+    .latest-panel-three {
+        display: none;
+    }
+    /* technology cards */
+    .tech-card-one, .tech-card-two, .tech-card-three {
+        border-radius: 10px;
+        height: 14rem;
+        grid-column: 1/13;
+        overflow: hidden;
+    }
+    /* Community set up */
+    .set-slide-one {
+        grid-column: 1/9;
+        display: flex;
+        justify-content: center;
+    }
+    .set-slide-one > img{
+        height: 90vh;
+    }
+    .set-slide-two {
+        display: none;
+    }
+    /* Hobby Cards */
+   
+    .hobby-card-one, .hobby-card-two, .hobby-card-three {   
+        border-radius: 10px;
+        height: 14rem;
+        grid-column: 1/13;
+        overflow: hidden;
+    }
+   
+    /* Food Cards */
+    .food-card-one, .food-card-two, .food-card-three {
+        border-radius: 10px;
+        height: 14rem;
+        grid-column: 1/13;
+        overflow: hidden;
+    }
 
 
+    /* article card interior   */
+    .card-description {
+        margin: 0%;
+    }
+   .card-title {
+        margin-top: 0%;
+   }
 
+   .card-author {
+        margin: 0% ;
+        font-size: .9rem;
+   }
+   .card-summary {
+     font-size: 1rem;
+   }
+}
+
+
+@media only screen and (max-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1em;
+    }
+    .section-title:after{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1rem);
+        gap: 1em;
+    }
+    .section-title:after{
+        width: 75%;
+    }
+}
