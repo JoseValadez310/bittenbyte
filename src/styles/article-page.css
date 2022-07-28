@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem ;
     width: max-content;
     font-family: 'Yantramanav', sans-serif;
 }
@@ -88,9 +88,20 @@
 /* mobile media query */
 
 
-@media only screen and (max-width: 780px) {
-    
+@media only screen and (max-width: 960px) {
+    .article-details {
+        grid-column: 2/12;
+    }
+    .article-image-wrapper {
+        grid-column: 2/12;
+    }
+    .article-share-icon {
+        grid-column: 1/2;
+    }
+    .article-image-credit {
+        display: none;    
+    }
     .article-content {
-        grid-column: 2/11;
+        grid-column: 2/12;
     }
 }

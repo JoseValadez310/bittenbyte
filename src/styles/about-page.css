@@ -83,3 +83,19 @@
 #text-dark {
     color: #F2F2F2;
 }
+
+@media only screen and (max-width: 960px) {
+    .about-me-container {
+        grid-column: 2/12;
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+    .tab-info-container {
+        grid-column: 2/12;
+    }
+    .about-me-image {
+        border-radius: 0%;
+    }
+
+}

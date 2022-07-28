@@ -127,7 +127,8 @@ return(
                                         </h3>
                             <span className = 'panel-date-section'><small> {hobby[ranInt.hobbyOne].date} </small> - <small> {hobby[ranInt.hobbyOne].section} </small></span>
                         </div> 
-                    <hr/>
+                    <hr/
+                    >
                         <div className = 'panel-card-odd' id = {darkMode === false ? 'panel-card-light' : 'panel-card-dark-odd'}>
                             <small className = 'panel-author'> <i> 
                                 {hobby[ranInt.hobbyTwo].author} 

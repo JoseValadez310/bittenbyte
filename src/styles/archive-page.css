@@ -74,7 +74,11 @@ a {
     color: inherit;
  }
 
-
+ @media only screen and (max-width: 960px) {
+    .archive-article-display{
+        grid-column: 2/12;
+    }
+ }
 
  @media only screen and (max-width: 780px) {
    .archive-article-display{
