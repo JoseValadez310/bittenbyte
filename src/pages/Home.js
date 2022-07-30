@@ -176,37 +176,47 @@ return(
             <h1 className = 'section-title' id = {darkMode === false? 'section-title-light':'section-title-dark'}>Technology</h1> 
                 <div className = 'tech-card-one' >
                     <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'} onClick= { () => props.PassThroughDetails('technology',technology[techLength-1].id)} to = {`/Article/${technology[techLength-1].title}`}>       
-                        <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-1].date} </small>
+                            <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-1].date} </small> 
                             <img className = 'card-image' src = {technology[techLength-1].image} loading="lazy" alt = 'something' />
-                            <div className = 'card-description'>
+                        <div className = 'card-description'>  
+                            <div className = 'mobile-layout-title-date'>
                                 <h1 className = 'card-title'>
                                     {technology[techLength-1].title}
                                     </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {technology[techLength-1].date} 
+                                    </small>    
+                            </div>                                
                                 <h4 className = 'card-author'><i>
                                     {technology[techLength-1].author}
                                     </i></h4>
                                 <p className = 'card-summary'>
                                     {technology[techLength-1].summary}
-                                </p>
-                            </div>
+                                    </p>
+                        </div>
                     </Link>
                 </div>
 
                 <div className = 'tech-card-two'>
                     <Link className = 'card-article' id = {darkMode === false ? 'card-light' : 'card-dark'}  onClick= { () => props.PassThroughDetails('technology', technology[techLength-2].id)} to = {`/Article/${technology[techLength-2].title}`}>       
-                        <small className = 'card-date'  id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-2].date} </small>
-                        <img className = 'card-image' src = {technology[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
-                            <div className = 'card-description'>
+                            <small className = 'card-date'  id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-2].date} </small>
+                            <img className = 'card-image' src = {technology[techLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
+                        <div className = 'card-description'>
+                            <div className = 'mobile-layout-title-date'>
                                 <h1 className = 'card-title'>
                                     {technology[techLength-2].title}
                                     </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {technology[techLength-2].date} 
+                                    </small>    
+                            </div> 
                                 <h4 className = 'card-author'><i>
                                     {technology[techLength-2].author} 
                                     </i></h4>
                                 <p className = 'card-summary'>
                                     {technology[techLength-2].summary}
                                 </p>
-                            </div>      
+                        </div>      
                     </Link>
                 </div>
 
@@ -215,15 +225,20 @@ return(
                         <small className = 'card-date'  id = {darkMode === false? 'date-light' : 'date-dark'}> {technology[techLength-3].date} </small>
                             <img className = 'card-image' src = {technology[techLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                             <div className = 'card-description'>
-                                <h1 className = 'card-title'>
-                                    {technology[techLength-3].title}
-                                    </h1>
-                                <h4 className = 'card-author'><i>
-                                    {technology[techLength-3].author}
-                                    </i></h4>
-                                <p className = 'card-summary'>
-                                    {technology[techLength-3].summary}
-                                </p>
+                                <div className = 'mobile-layout-title-date'>
+                                    <h1 className = 'card-title'>
+                                        {technology[techLength-3].title}
+                                        </h1>
+                                    <small className = 'card-date-mobile'> 
+                                        {technology[techLength-3].date} 
+                                        </small>    
+                                </div> 
+                                    <h4 className = 'card-author'><i>
+                                        {technology[techLength-3].author}
+                                        </i></h4>
+                                    <p className = 'card-summary'>
+                                        {technology[techLength-3].summary}
+                                    </p>
                             </div>
                     </Link>
                 </div>
@@ -254,15 +269,20 @@ return(
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {hobby[hobbyLength-1].date} </small>
                             <img className = 'card-image' src = {hobby[hobbyLength-1].image} loading="lazy" alt = 'Coming Soon near you' />    
                         <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {hobby[hobbyLength-1].title}
-                                </h1>
-                            <h4 className = 'card-author'><i>
-                                {hobby[hobbyLength-1].author}
-                                </i></h4>
-                            <p className = 'card-summary'>
-                                {hobby[hobbyLength-1].summary}
-                            </p>
+                            <div className = 'mobile-layout-title-date'>
+                                <h1 className = 'card-title'>
+                                    {hobby[hobbyLength-1].title}
+                                    </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {hobby[hobbyLength-1].date} 
+                                    </small>    
+                            </div>
+                                <h4 className = 'card-author'><i>
+                                    {hobby[hobbyLength-1].author}
+                                    </i></h4>
+                                <p className = 'card-summary'>
+                                    {hobby[hobbyLength-1].summary}
+                                </p>
                         </div>
                     </Link>
                 </div>
@@ -272,15 +292,20 @@ return(
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {hobby[hobbyLength-2].date} </small>
                             <img className = 'card-image' src = {hobby[hobbyLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {hobby[hobbyLength-2].title}
-                                </h1>
-                            <h4 className = 'card-author'><i>
-                                {hobby[hobbyLength-2].author}
-                                </i></h4>
-                            <p className = 'card-summary' id = {darkMode === false ? 'card-light' : 'card-dark'}>
-                                {hobby[hobbyLength-2].summary}
-                            </p>
+                            <div className = 'mobile-layout-title-date'>
+                                <h1 className = 'card-title'>
+                                    {hobby[hobbyLength-2].title}
+                                    </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {hobby[hobbyLength-2].date} 
+                                    </small>    
+                            </div>
+                                <h4 className = 'card-author'><i>
+                                    {hobby[hobbyLength-2].author}
+                                    </i></h4>
+                                <p className = 'card-summary' id = {darkMode === false ? 'card-light' : 'card-dark'}>
+                                    {hobby[hobbyLength-2].summary}
+                                </p>
                         </div>       
                     </Link>
                 </div>
@@ -290,15 +315,20 @@ return(
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {hobby[hobbyLength-3].date} </small>
                             <img className = 'card-image' src = {hobby[hobbyLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {hobby[hobbyLength-3].title}
-                                </h1>
-                            <h4 className = 'card-author'><i>
-                                {hobby[hobbyLength-3].author}
-                                </i></h4>
-                            <p className = 'card-summary'>
-                                {hobby[hobbyLength-3].summary}
-                            </p>
+                            <div className = 'mobile-layout-title-date'>
+                                <h1 className = 'card-title'>
+                                    {hobby[hobbyLength-3].title}
+                                    </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {hobby[hobbyLength-3].date} 
+                                    </small>    
+                            </div>
+                                <h4 className = 'card-author'><i>
+                                    {hobby[hobbyLength-3].author}
+                                    </i></h4>
+                                <p className = 'card-summary'>
+                                    {hobby[hobbyLength-3].summary}
+                                </p>
                         </div>  
                     </Link>
                 </div>
@@ -316,15 +346,20 @@ return(
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-1].date} </small>
                             <img className = 'card-image' src = {food[foodLength-1].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {food[foodLength-1].title}
-                                </h1>
-                            <h4 className = 'card-author'><i>
-                                {food[foodLength-1].author}
-                                </i></h4>
-                            <p className = 'card-summary'>
-                                {food[foodLength-1].summary}
-                            </p>
+                            <div className = 'mobile-layout-title-date'>
+                                <h1 className = 'card-title'>
+                                    {food[foodLength-1].title}
+                                    </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {food[foodLength-1].date} 
+                                    </small>    
+                            </div>
+                                <h4 className = 'card-author'><i>
+                                    {food[foodLength-1].author}
+                                    </i></h4>
+                                <p className = 'card-summary'>
+                                    {food[foodLength-1].summary}
+                                </p>
                         </div>  
                     </Link>
                 </div>
@@ -333,15 +368,20 @@ return(
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-2].date} </small>
                             <img className = 'card-image' src = {food[foodLength-2].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {food[foodLength-2].title}
-                                </h1>
-                            <h4 className = 'card-author'><i>
-                                {food[foodLength-2].author}
-                                </i></h4>
-                            <p className = 'card-summary'>
-                                {food[foodLength-2].summary}
-                            </p>
+                            <div className = 'mobile-layout-title-date'>
+                                <h1 className = 'card-title'>
+                                    {food[foodLength-2].title}
+                                    </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {food[foodLength-2].date} 
+                                    </small>    
+                            </div>
+                                <h4 className = 'card-author'><i>
+                                    {food[foodLength-2].author}
+                                    </i></h4>
+                                <p className = 'card-summary'>
+                                    {food[foodLength-2].summary}
+                                </p>
                         </div>  
                     </Link>
                 </div>
@@ -350,15 +390,20 @@ return(
                         <small className = 'card-date' id = {darkMode === false? 'date-light' : 'date-dark'}> {food[foodLength-3].date} </small>
                             <img className = 'card-image' src = {food[foodLength-3].image} loading="lazy" alt = 'Coming Soon near you' />
                         <div className = 'card-description'>
-                            <h1 className = 'card-title'>
-                                {food[foodLength-3].title}
-                                </h1>
-                            <h4 className = 'card-author'><i>
-                                {food[foodLength-3].author}
-                                </i></h4>
-                            <p className = 'card-summary'>
-                                {food[foodLength-3].summary}
-                            </p>
+                            <div className = 'mobile-layout-title-date'>
+                                <h1 className = 'card-title'>
+                                    {food[foodLength-3].title}
+                                    </h1>
+                                <small className = 'card-date-mobile'> 
+                                    {food[foodLength-3].date} 
+                                    </small>    
+                            </div>
+                                <h4 className = 'card-author'><i>
+                                    {food[foodLength-3].author}
+                                    </i></h4>
+                                <p className = 'card-summary'>
+                                    {food[foodLength-3].summary}
+                                </p>
                         </div>  
                     </Link>
                 </div>

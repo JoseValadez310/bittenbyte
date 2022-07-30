@@ -42,28 +42,10 @@
     box-shadow:  0px 5px 10px -5px grey;
     text-decoration: none;
 }
-
-.side-card-article {
-    height: inherit;
-    width: inherit;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-decoration: none;
-    overflow: hidden;
+.card-date-mobile {
+    display: none;
 }
 
-.side-card-article #dark  {
-    background-color: #65626277;
-}
-.card-image {
-    height: auto;
-    border-radius: 0px 0px 0px 0px;
-}
-.image-container > img {
-    width: 35rem;
-}
 
 .card-date {
     border-radius: 5px;
@@ -105,6 +87,7 @@
     margin-bottom: 0%;
     font-size: large;
     line-height: 160%;
+    text-align: center;
 }
 
 /* hero news 2 cards*/
@@ -177,45 +160,6 @@
 #panel-card-light > .panel-title > a {
     color: #454444; ;
 }
-
-/* .news-section {
-    grid-column: 3/11;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    gap: 1em;
-}
-
-.news-banner,.editor-choice {
-    border-radius: 10px;
-   
-    background-color: white;
-    overflow: hidden;
-    height: 25rem;
-}
-
-.editor-choice {
-    grid-column: 1/9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.news-banner{
-    grid-column: 1/9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.news-banner-content, .editor-choice-content {
-    padding: 1rem;
-    font-size: 2.5rem;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-weight: 100;
-    text-align: center;
-    
-} */
-
 
 /*Tech card stack of 3 with slider*/
 .technology-section{
@@ -554,3 +498,129 @@
 }
 
 
+@media only screen and (max-width: 500px) {
+    /* hidden  */
+    .news-section{
+        display: none;
+    }
+    .section-title{
+        display: none;
+    }
+    .set-up-section {
+        display: none;
+    }
+    .card-date {
+        display: none;
+    }
+
+    /* mobile view card layout */
+        .card-article {
+            flex-direction: column;
+            border-radius: 0 0 0 0 ;
+        }
+        .card-description {
+            width: 99%;
+            padding: 0%;
+        }
+        .mobile-layout-title-date { 
+            margin-block-start: .25rem;
+            margin-block-end: 1rem;
+            width: inherit;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            margin: 0%;
+        }
+        .card-date-mobile {
+            display: contents;
+            font-size: 12px;
+        }
+        .card-author {
+            display: none;
+        }
+        .card-summary {
+            display: contents;
+            color: lightgrey;
+            font-size: 14x;
+        }
+    /* technoology cards */
+    .technology-section{
+        grid-column: 1/13;
+    }
+
+        .tech-card-one > .card-article > .card-description {
+            margin-bottom: 1.5rem;
+        }
+        .tech-card-one{
+            border-bottom: 1px white solid ;
+        }
+
+    .tech-card-one, .tech-card-two, .tech-card-three{
+        height: auto;
+        border-radius: 0%;
+    }
+        .tech-card-two > a > .card-image {
+            display: none;
+        }
+        .tech-card-three > a > .card-image {
+            display: none;
+        }
+    
+    /* hobby section  */
+
+    .hobby-section {
+        grid-column: 1/13;
+    }
+
+        .hobby-card-one > .card-article > .card-description {
+            margin-bottom: 1.25rem;
+        }
+        .hobby-card-one{
+            border-bottom: 1px white solid ;
+        }
+
+    .hobby-card-one, .hobby-card-two, .hobby-card-three{
+        height: auto;
+        border-radius: 0%;
+    }
+        .hobby-card-two > a > .card-image {
+            display: none;
+        }
+        .hobby-card-three > a > .card-image {
+            display: none;
+        }
+    /* food section  */
+
+    .food-section {
+        grid-column: 1/13;
+    }
+
+        .food-card-one > .card-article > .card-description {
+            margin-bottom: 1.25rem;
+        }
+        .food-card-one{
+            border-bottom: 1px white solid ;
+        }
+
+    .food-card-one, .food-card-two, .food-card-three{
+        height: auto;
+        border-radius: 0%;
+    }
+        .food-card-two > a > .card-image {
+            display: none;
+        }
+        .food-card-three > a > .card-image {
+            display: none;
+        }
+
+
+
+
+    #card-dark {
+        background-color: #262626;
+    }
+}
