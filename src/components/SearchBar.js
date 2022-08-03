@@ -57,11 +57,16 @@ const SearchBar = (props) => {
 
     return (
         <div className ='search-wrapper'>
+            <div className = 'search-section-title-mobile'>
+                <p className = 'section-title-mobile'>{`${tab}`}</p>
+            </div>
+            
             <div className = 'hero-search-wrapper'>
                 <img className = 'tab-hero-section' src = {tabHero} alt = "hero for current tab section" />
+               
                 <div className='search-container'>
                     <img className = 'search-icon' src = {icon} height = {20} alt = 'search icon'/>
-                    <p className = 'search-section-title'>{`${tab}:`}</p>
+                    <p className = 'search-section-title'>{`${tab}`}</p>
                     <input 
                         className = 'searchBar' 
                         type = 'text' placeholder = 'Search an Article' 
