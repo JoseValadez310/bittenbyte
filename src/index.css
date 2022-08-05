@@ -61,23 +61,14 @@ main {
 }
 /*  card articles are going to be shifted side ways aka horizontal  */
 
-
 @media only screen and (max-width: 960px) {
     main {
         display: grid;
-        grid-template-columns: repeat(12, 5rem);
+        grid-template-columns: repeat(12, 1fr);
         gap: 1em;
     }
 }
 
-@media only screen and (max-width: 775px) {
-    main {
-        display: grid;
-        grid-template-columns: repeat(12, 2.75rem);
-        gap: 1em;
-    }
-    
-}
 @media only screen and (max-width: 475px) {
     main {
         display: grid;
