@@ -115,7 +115,6 @@ input:focus {
     .hero-search-wrapper{
         display: none;
     }
-   
     
     .search-section-title-mobile {
         grid-column: 1/13;
@@ -138,14 +137,10 @@ input:focus {
         grid-column: 1/13;
         height: 2.5rem;
     }
-
     .search-wrapper > hr {
         width: 100%;
         grid-column: 3/11;
     }
-    
-
-    
     .searchBar {
         width: 85%;
         padding: 0%;
@@ -153,9 +148,14 @@ input:focus {
     .search-result{
         grid-column: 1/13;
         height: .5rem;
+        padding-top: .5rem ;
+    }
+    .search-result-link{
+        height: inherit;
     }
     .search-result:nth-child(even) {
         background-color: #d9d9d967 ;
+        color: #D2D2D2;
     }
 
     

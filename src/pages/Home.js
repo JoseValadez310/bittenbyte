@@ -350,9 +350,9 @@ return(
                                 <h1 className = 'card-title'>
                                     {food[foodLength-1].title}
                                     </h1>
-                                <small className = 'card-date-mobile'> 
+                                <p className = 'card-date-mobile'> 
                                     {food[foodLength-1].date} 
-                                    </small>    
+                                    </p>    
                             </div>
                                 <h4 className = 'card-author'><i>
                                     {food[foodLength-1].author}

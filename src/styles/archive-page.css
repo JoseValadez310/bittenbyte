@@ -40,13 +40,15 @@
 .archive-card-content-wrapper {
     margin-block: 1rem;
 }
-
+.archive-card-date{
+    padding-inline: .5rem;
+}
 .archive-card-title {
     font-size: 1.60rem;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     padding-inline: .5rem;
-    margin: 0%;
+    margin-block: .5rem;
     text-decoration: inherit;
 }
 
@@ -84,5 +86,23 @@ a {
 @media only screen and (max-width: 475px) { 
     .archive-article-display{
         grid-column: 1/13;
+    }
+    .archive-article-display {
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: .5em
+    }
+    .archive-card-title {
+       
+    }
+    .archive-card-author{
+        display: none;
+    }
+    .archive-card-summary{
+       
+        margin: 0%;
+        padding-bottom: 2.5%;
     }
 }

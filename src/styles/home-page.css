@@ -517,11 +517,13 @@
         .card-article {
             flex-direction: column;
             border-radius: 0 0 0 0 ;
+            
         }
         .card-description {
             width: 99%;
             padding: 0%;
         }
+        
         .mobile-layout-title-date { 
             margin-block-start: .25rem;
             margin-block-end: 1rem;
@@ -563,6 +565,18 @@
         height: auto;
         border-radius: 0%;
     }
+
+    /* removing home card background color */
+    .tech-card-one  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .tech-card-two  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .tech-card-three  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+        /* removing card two and three's image */
         .tech-card-two > a > .card-image {
             display: none;
         }
@@ -587,6 +601,19 @@
         height: auto;
         border-radius: 0%;
     }
+
+    /* removing card background color */
+    .hobby-card-one  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .hobby-card-two  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .hobby-card-three  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    
+        /* removing two and three's image */
         .hobby-card-two > a > .card-image {
             display: none;
         }
@@ -610,6 +637,17 @@
         height: auto;
         border-radius: 0%;
     }
+    /* removing card background color */
+    .food-card-one  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .food-card-two  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+    .food-card-three  > #card-dark {
+        background-color: rgba(255, 0, 0, 0);
+    }
+        /* removing two and three's image */
         .food-card-two > a > .card-image {
             display: none;
         }
@@ -620,10 +658,5 @@
 
 
 
-    #card-dark {
-        background-color: #262626;
-    }
-    #card-light {
-        background-color: #F2F2F2;
-    }
+    
 }

@@ -105,3 +105,29 @@
         grid-column: 2/12;
     }
 }
+
+@media only screen and (max-width: 475px) { 
+    /* removal for smaller viewport */
+    .article-share-icon{
+        display: none;
+    }
+
+    /* article's header */
+    .article-details {
+        grid-column: 1/13;
+        padding: 0%;
+    }
+    .article-title {
+        margin-top: 0%;
+    }
+    .article-image-wrapper {
+        grid-column: 1/13;
+    }
+
+    /* article body */
+    .article-content {
+        grid-column: 1/13;
+        font-size: .85rem;
+        padding: 0%;
+    }
+}

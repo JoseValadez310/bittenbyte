@@ -22,10 +22,9 @@ const Archive = (props) => {
                                         </div>
                                             <br/>
                                         <div>
-                                            <h3 className = 'archive-card-title' > {data[tab][i].title} </h3>
-                                                <br/>
-                                            <small className = 'archive-card-author'> {data[tab][i].author} - {data[tab][i].date}</small>
-                                                <br/>
+                                            <small className = 'archive-card-date'> {data[tab][i].date} </small>
+                                            <h3 className = 'archive-card-title' > {data[tab][i].title} </h3>                                            
+                                            <small className = 'archive-card-author'> {data[tab][i].author} </small>
                                             <p className = 'archive-card-summary' id = {props.darkMode? 'article-content-dark' : ' '} > {data[tab][i].summary} </p>
                                         </div>
                                     </Link>
@@ -35,12 +34,11 @@ const Archive = (props) => {
                             arrayPlaceholder.push(
                                 <div className = 'archive-card' id = {darkMode? "card-dark" : "card-light"} >
                                     <Link  onClick = { () => props.PassThroughDetails(tab, data[tab][i].id)} to = {`/Article/${data[tab][i].title}`}>
-                                        <img className = 'archive-card-image' src = {data[tab][i].image} alt = 'archive article' />
-                                            <br/>
+                                        <img className = 'archive-card-image' src = {data[tab][i].image} alt = 'archive article' />                           
                                         <div className = 'archive-card-content-wrapper'>
+                                            <small className = 'archive-card-date'> {data[tab][i].date} </small>
                                             <h3 className = 'archive-card-title'> {data[tab][i].title} </h3>
-                                                <br/>
-                                            <small className = 'archive-card-author'> {data[tab][i].author} - {data[tab][i].date}</small>
+                                            <small className = 'archive-card-author'> {data[tab][i].author} </small>                                                   
                                         </div>
                                     </Link>
                                 </div>
