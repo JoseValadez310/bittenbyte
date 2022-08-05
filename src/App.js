@@ -55,7 +55,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Nav tabSection = {tabSection}/>
+        <Nav tabSection = {tabSection} currentTab = {currentTab}/>
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/:title"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />

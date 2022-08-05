@@ -4,13 +4,14 @@
     z-index: 999;
     bottom: 0%;
     top: 0%;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
 
 }
-
+.openbtn{
+    display: none;
+}
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: xx-large;
@@ -18,7 +19,9 @@
     margin-inline: 2px;
     text-decoration: none;
 }
-
+.mobile-nav-links{
+    display: none;
+}
 .nav-links {
     margin-inline: 2px;
     flex-wrap: wrap;
@@ -48,4 +51,65 @@
     .navBar{
         flex-wrap: wrap;
     }
+}
+
+@media only screen and (max-width: 475px) { 
+    .nav-links{
+        display: none;
+    }
+    .navBar{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .logo{
+        grid-column: 4/12;
+    }
+    .mobile-nav-links {
+        display: contents;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        height: 250px; /* Specify a height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0;
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    }
+    .navLink {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        font-size: 36px;
+        
+        background-color: red;
+        width: 2rem;
+        text-align: center;
+        
+      }
+
+    .openbtn {
+        grid-column: 2/3;
+        width: auto;
+        display: contents;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
 }
