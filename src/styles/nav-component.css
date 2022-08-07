@@ -10,7 +10,7 @@
 
 }
 .openbtn{
-    display: none;
+width: 1rem;
 }
 .logo {
     font-family: 'Playfair Display', serif;
@@ -60,6 +60,8 @@
     .navBar{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        background-color: #262626;
+        border-bottom: solid 1px white;
     }
     .logo{
         grid-column: 4/12;
@@ -102,13 +104,10 @@
       }
 
     .openbtn {
-        grid-column: 2/3;
-        width: auto;
-        display: contents;
+        grid-column: 1/2;
+        width: 1rem;
         font-size: 20px;
         cursor: pointer;
-        background-color: #111;
-        color: white;
         padding: 10px 15px;
         border: none;
       }
