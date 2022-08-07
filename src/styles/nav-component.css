@@ -62,16 +62,17 @@ width: 1rem;
         grid-template-columns: repeat(12, 1fr);
         background-color: #262626;
         border-bottom: solid 1px white;
+        padding-inline: 1rem;
     }
     .logo{
-        grid-column: 4/12;
+        grid-column: 3/12;
     }
     .mobile-nav-links {
         display: contents;
         display: flex;
         flex-direction: column;
         gap: 1em;
-        height: 250px; /* Specify a height */
+        height: 100vh; /* Specify a height */
         width: 0; /* 0 width - change this with JavaScript */
         position: fixed; /* Stay in place */
         z-index: 1; /* Stay on top */
@@ -105,10 +106,8 @@ width: 1rem;
 
     .openbtn {
         grid-column: 1/2;
-        width: 1rem;
-        font-size: 20px;
+        width: 100%;
         cursor: pointer;
-        padding: 10px 15px;
-        border: none;
+
       }
 }

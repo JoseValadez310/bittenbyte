@@ -14,7 +14,7 @@ const Nav = (props) => {
     console.log(props.currentTab)
 
     const openNav = () => {
-        setWidthValue(250);
+        setWidthValue(100);
     }
       
     /* Set the width of the sidebar to 0 (hide it) */
@@ -24,9 +24,9 @@ const Nav = (props) => {
 
     return(
         <nav className = 'navBar'>
-              
-                <NavLink to ='/' className = 'logo'> BITTEN BYTEZ </NavLink>  
                 <img src = {navIcon} alt = 'nav left lines from IconMonster' className = "openbtn" onClick= {openNav} />
+                <NavLink to ='/' className = 'logo'> BITTEN BYTEZ </NavLink>  
+              
             <div className = 'nav-links'> 
                 <NavLink className = 'navLink' to = '/Archive/Technology' onClick = {() => props.tabSection('Technology')}>
                     Technology
@@ -45,7 +45,7 @@ const Nav = (props) => {
                         </NavLink>
             </div>
             
-            <div className = 'mobile-nav-links' style = {{ width : `${widthValue}px` }}> 
+            <div className = 'mobile-nav-links' style = {{ width : `${widthValue}%` }}> 
                 
                 <div className = "closebtn" onClick = {closeNav} > &times; </div>
                 
