@@ -113,6 +113,13 @@
     .about-me-container {
       flex-direction: column-reverse;
     }
+    .about-me-image-wrapper {
+        height: auto;
+        width: 100%;
+    }
+    .about-me-image{
+        width: inherit;
+    }
     .mission-statement-container{
         padding-block: 20%;
         padding-inline: 4%;
