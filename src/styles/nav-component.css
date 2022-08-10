@@ -10,7 +10,8 @@
 
 }
 .openbtn{
-width: 1rem;
+    display: none;
+    width: 1rem;
 }
 .logo {
     font-family: 'Playfair Display', serif;
@@ -105,6 +106,7 @@ width: 1rem;
       }
 
     .openbtn {
+        display: block;
         grid-column: 1/2;
         width: 100%;
         cursor: pointer;

@@ -130,4 +130,7 @@
         font-size: .85rem;
         padding: 0%;
     }
+    .article-image-wrapper > img {
+        border-radius: 0px;
+    }
 }

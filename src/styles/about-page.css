@@ -56,7 +56,6 @@
 .tab-info-image-wrapper{
     position: relative;
     width: 100%;
-    height: 52%;
     overflow: hidden;
     border-radius: 0px;
 }   
@@ -69,9 +68,6 @@
     width: inherit;
     position: relative;
 
-}
-#tab-info-food {
-    bottom: 30px;
 }
 
 
@@ -98,4 +94,27 @@
         border-radius: 0%;
     }
 
+}
+
+@media only screen and (max-width: 830px) {
+    .about-me-container {
+        grid-column: 1/13;
+    }
+    .mission-statement-container { 
+        grid-column: 1/13;
+    }
+    .tab-info-container {
+        grid-column: 1/13;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .about-me-container {
+      flex-direction: column-reverse;
+    }
+    .mission-statement-container{
+        padding-block: 20%;
+        padding-inline: 4%;
+    }
 }

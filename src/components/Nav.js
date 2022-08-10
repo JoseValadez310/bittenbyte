@@ -34,7 +34,7 @@ const Nav = (props) => {
                 <NavLink className = 'navLink' to = '/Archive/Hobby' onClick = {() => props.tabSection('Hobby')}>
                     Hobbies 
                         </NavLink>
-                <NavLink className = 'navLink' to = '/Archive/Food' onClick = {() => props.tabSection('Fo00000od')} >
+                <NavLink className = 'navLink' to = '/Archive/Food' onClick = {() => props.tabSection('Food')} >
                     Food 
                         </NavLink>
                 {/* <NavLink className = 'navLink' to = '/Comunity'> 
