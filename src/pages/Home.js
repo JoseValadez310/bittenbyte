@@ -190,7 +190,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {technology[techLength-1].author}
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {technology[techLength-1].summary}
                                     </p>
                         </div>
@@ -213,7 +213,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {technology[techLength-2].author} 
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {technology[techLength-2].summary}
                                 </p>
                         </div>      
@@ -236,7 +236,7 @@ return(
                                     <h4 className = 'card-author'><i>
                                         {technology[techLength-3].author}
                                         </i></h4>
-                                    <p className = 'card-summary'>
+                                    <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                         {technology[techLength-3].summary}
                                     </p>
                             </div>
@@ -280,7 +280,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {hobby[hobbyLength-1].author}
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {hobby[hobbyLength-1].summary}
                                 </p>
                         </div>
@@ -326,7 +326,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {hobby[hobbyLength-3].author}
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {hobby[hobbyLength-3].summary}
                                 </p>
                         </div>  
@@ -357,7 +357,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {food[foodLength-1].author}
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {food[foodLength-1].summary}
                                 </p>
                         </div>  
@@ -379,7 +379,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {food[foodLength-2].author}
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {food[foodLength-2].summary}
                                 </p>
                         </div>  
@@ -401,7 +401,7 @@ return(
                                 <h4 className = 'card-author'><i>
                                     {food[foodLength-3].author}
                                     </i></h4>
-                                <p className = 'card-summary'>
+                                <p className = 'card-summary'id = {darkMode === false ? 'card-light' : 'card-dark'}>
                                     {food[foodLength-3].summary}
                                 </p>
                         </div>  

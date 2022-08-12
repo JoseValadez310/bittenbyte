@@ -104,6 +104,18 @@ input:focus {
    
 }
 
+@media only screen and (max-width: 500px) {
+    .search-container {
+        grid-column: 1/13;
+    }
+    .hero-search-wrapper{
+        grid-column: 1/13;
+    }
+    .search-result{
+        grid-column: 1/13;
+    }
+}
+
 @media only screen and (max-width: 475px) { 
     /* hidden */
     .tab-hero-section {

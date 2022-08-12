@@ -55,14 +55,14 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Nav tabSection = {tabSection} currentTab = {currentTab}/>
+        <Nav tabSection = {tabSection} currentTab = {currentTab} handleDarkMode = {handleDarkMode} darkMode = {darkMode}/>
           <Routes>
             <Route path = "/" element = {[<Hero />, <Home handleDarkMode = {handleDarkMode} PassThroughDetails = {PassThroughDetails} darkMode = {darkMode}/>]} />
             <Route path = "/Article/:title"  element = {[<ScrollToTopOnMount />, <Article article = {article} darkMode = {darkMode}/>]} />
             <Route path = "/Archive/:section" element = {[ <ScrollToTopOnMount />, <Archive darkMode = {darkMode} currentTab = {currentTab} PassThroughDetails = {PassThroughDetails}/>]} />
             <Route path = "/About" element = {<About darkMode = {darkMode}/>} />
           </Routes>
-        <Footer />
+        <Footer darkMode = {darkMode}/>
       </BrowserRouter>
     </>
   )

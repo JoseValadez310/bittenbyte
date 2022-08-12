@@ -4,10 +4,13 @@ import email from '../content/images/card-images/icon-links/iconmonstr-email-13.
 import linkedin from '../content/images/card-images/icon-links/iconmonstr-linkedin-3.svg'
 import "../styles/footer-component.css"
 
-const Footer = () => {
+const Footer = (props) => {
+    let darkMode = props.darkMode
+
+    console.log(darkMode? "dark": "light")
     return(
         <footer>
-            <div className = 'footer-container'>
+            <div className = 'footer-container' id = { darkMode? "darkFooter" : "lightFooter"}>
                 <div className = 'footer-icons'>
                     <ul className = 'icon-list'>
                         <li><img src = {instagram} alt = 'icons'/></li>

@@ -83,7 +83,7 @@ a {
 }
 
 
-@media only screen and (max-width: 475px) { 
+@media only screen and (max-width: 500px) { 
     .archive-article-display{
         grid-column: 1/13;
     }

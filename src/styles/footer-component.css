@@ -26,3 +26,18 @@
     font-family: 'Pavanam', sans-serif;
     color: azure;
 }
+
+
+@media only screen and (max-width: 500px) { 
+    #darkFooter {
+        border-top: solid 1px #f2f2f2 ;
+        background-color: #454444;
+    }
+    #lightFooter {
+        border-top: solid 1px grey ;
+        background-color: #f2f2f2;
+    }
+    .footer-summary {
+        color: black;
+    }
+}

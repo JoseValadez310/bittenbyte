@@ -515,7 +515,17 @@
     .card-date {
         display: none;
     }
-
+    /* changing background colors (darkMode) */
+    /* #card-dark {
+        color: #F2F2F2;
+        background-color:rgba(255, 0, 0, 0);
+        box-shadow: none;
+    }
+    #card-light {
+        color: black;
+        background-color:#F2F2F2;
+    }
+     */
     /* mobile view card layout */
         .card-article {
             flex-direction: column;
@@ -570,15 +580,30 @@
     }
 
     /* removing home card background color */
-    .tech-card-one  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
-    .tech-card-two  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
-    .tech-card-three  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
+        .tech-card-one  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+        .tech-card-two  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+        .tech-card-three  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+
+        .tech-card-one  >  #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+        .tech-card-two  >  #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+        .tech-card-three  > #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+       
+     
         /* removing card two and three's image */
         .tech-card-two > a > .card-image {
             display: none;
@@ -606,50 +631,77 @@
     }
 
     /* removing card background color */
-    .hobby-card-one  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
-    .hobby-card-two  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
-    .hobby-card-three  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
+        .hobby-card-one  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+        .hobby-card-two  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+        .hobby-card-three  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        } 
+
+        .hobby-card-one  >  #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+        .hobby-card-two  > #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+        .hobby-card-three >  #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
     
-        /* removing two and three's image */
-        .hobby-card-two > a > .card-image {
-            display: none;
-        }
-        .hobby-card-three > a > .card-image {
-            display: none;
-        }
+    /* removing two and three's image */
+    .hobby-card-two > a > .card-image {
+        display: none;
+    }
+    .hobby-card-three > a > .card-image {
+        display: none;
+    }
     /* food section  */
 
     .food-section {
         grid-column: 1/13;
     }
 
-        .food-card-one > .card-article > .card-description {
-            margin-bottom: 1.25rem;
-        }
-        .food-card-one{
-            border-bottom: 1px white solid ;
-        }
+    .food-card-one > .card-article > .card-description {
+        margin-bottom: 1.25rem;
+    }
+    .food-card-one{
+        border-bottom: 1px white solid ;
+    }
 
     .food-card-one, .food-card-two, .food-card-three{
         height: auto;
         border-radius: 0%;
     }
     /* removing card background color */
-    .food-card-one  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
-    .food-card-two  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
-    .food-card-three  > #card-dark {
-        background-color: rgba(255, 0, 0, 0);
-    }
+         .food-card-one  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+        .food-card-two  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+        .food-card-three  > #card-dark {
+            background-color: rgba(255, 0, 0, 0);
+        }
+
+        .food-card-one  > #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+        .food-card-two  > #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+        .food-card-three  > #card-light {
+            color: black;
+            background-color:#F2F2F2;
+        }
+
         /* removing two and three's image */
         .food-card-two > a > .card-image {
             display: none;
