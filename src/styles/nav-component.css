@@ -92,7 +92,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: #262626;
+        /* background-color: #262626; */
         border-bottom: solid 1px white;
         padding-inline: 1rem;
     }
@@ -100,7 +100,7 @@
         grid-column: 3/12;
     }
     .mobile-nav-links {
-        display: contents;
+        display: inline-block;
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -110,7 +110,6 @@
         z-index: 1; /* Stay on top */
         top: 0;
         left: 0;
-        background-color: #111; /* Black*/
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
@@ -141,4 +140,12 @@
         cursor: pointer;
 
       }
+
+    .mobile-nav > #darkNav{
+        background-color: #262626;
+    }
+
+    .mobile-nav > #lightNav{
+        background-color: #f2f2f2;
+    }
 }

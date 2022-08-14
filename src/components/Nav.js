@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 const Nav = (props) => {
 
+    let darkMode = props.darkMode
     const [widthValue , setWidthValue] = useState(0) 
 
     useEffect(() => {
@@ -49,7 +50,7 @@ const Nav = (props) => {
                         </NavLink>
             </div>
             
-            <div className = 'mobile-nav-links' style = {{ width : `${widthValue}%` }}> 
+            <div className = 'mobile-nav-links' id = { darkMode? "darkNav" : "lightNav"} style = {{ width : `${widthValue}%` }}> 
                 
                 <div className = "closebtn" onClick = {closeNav} > &times; </div>
                 
