@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    
 }
 .openbtn{
     display: none;
@@ -24,6 +24,7 @@
     color: white;
     margin-inline: 2px;
     text-decoration: none;
+
 }
 .mobile-nav-links{
     display: none;
@@ -113,6 +114,7 @@
         overflow-x: hidden; /* Disable horizontal scroll */
         padding-top: 60px; /* Place content 60px from the top */
         transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+        background-color: #262626;
     }
     .navLink {
         padding: 8px 8px 8px 32px;
@@ -141,11 +143,18 @@
 
       }
 
-    .mobile-nav > #darkNav{
+    #darkNav{
         background-color: #262626;
     }
 
-    .mobile-nav > #lightNav{
-        background-color: #f2f2f2;
+    #lightNav{
+        background-color: #F5F5F5;
+        border-bottom: solid 1px grey;
     }
+    #lightNav > .logo {
+        color:#262626;
+        font-size: xx-large;
+    }
+
+    
 }

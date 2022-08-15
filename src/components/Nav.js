@@ -25,7 +25,7 @@ const Nav = (props) => {
     }
 
     return(
-        <nav className = 'navBar'>
+        <nav className = 'navBar' id = { darkMode? "darkNav" : "lightNav"} >
                 <img src = {navIcon} alt = 'nav left lines from IconMonster' className = "openbtn" onClick= {openNav} />
                 <NavLink to ='/' className = 'logo'> BITTEN BYTE </NavLink>  
                 <div className = 'switch-container-mobile'  onClick = {props.handleDarkMode}> 
@@ -50,7 +50,7 @@ const Nav = (props) => {
                         </NavLink>
             </div>
             
-            <div className = 'mobile-nav-links' id = { darkMode? "darkNav" : "lightNav"} style = {{ width : `${widthValue}%` }}> 
+            <div className = 'mobile-nav-links' style = {{ width : `${widthValue}%` }}> 
                 
                 <div className = "closebtn" onClick = {closeNav} > &times; </div>
                 
