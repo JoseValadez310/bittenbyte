@@ -22,7 +22,7 @@ const App = () => {
 
   // Article Page content display 
 
-    const [article, setArticle] = useState( sessionStorage.length === 0? {sectionTitle : "", sectionId : null} : JSON.parse(sessionStorage.article) )
+    const [article, setArticle] = useState( localStorage.length === 0? {sectionTitle : "", sectionId : null} : JSON.parse(localStorage.article) )
    
     function PassThroughDetails(section, id) {
         setArticle(prevState => ({
@@ -33,12 +33,12 @@ const App = () => {
     }
 
     useEffect(()=>{
-      sessionStorage.setItem('article', JSON.stringify(article)) 
+      localStorage.setItem('article', JSON.stringify(article)) 
     },[article])
     
   // passing data to correct tab search 
 
-    const [currentTab, setCurrentTab] = useState(JSON.parse(sessionStorage.getItem('tab')))
+    const [currentTab, setCurrentTab] = useState(JSON.parse(localStorage.getItem('tab')))
     
     function tabSection(section) {
       if(section !== undefined){
@@ -47,7 +47,7 @@ const App = () => {
     }
 
     useEffect(() => {
-      sessionStorage.setItem('tab', JSON.stringify(currentTab))
+      localStorage.setItem('tab', JSON.stringify(currentTab))
     },[currentTab])
 
 
