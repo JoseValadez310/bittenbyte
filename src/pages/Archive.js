@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import SearchBar from "../components/SearchBar";
 import data from "../content/data";
 import "../styles/archive-page.css"
 
 const Archive = (props) => {
-
+    // let { section } = useParams()
     let darkMode = props.darkMode
     let tab = props.currentTab.toLowerCase()
 
